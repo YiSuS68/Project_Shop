@@ -57,6 +57,9 @@ body {
 .hover:hover {
     color:#56ae6c;
 }
+.hover-w:hover {
+    color:#fff;
+}
 
     /*====== color ======*/
 
@@ -711,6 +714,9 @@ h1 {
     background-color: #e9eef5;
     transition: .3s;
 }
+.footer-setup_icon:hover a {
+    color: #212934;
+}
 
 .icon {
     font-size: 1.33333em;
@@ -735,6 +741,13 @@ h1 {
     position: absolute;
     width: 1px;
     display:inline-block;
+}
+.footer-input input:focus {
+    outline: none;
+}
+
+.footer-input input {
+    color: white;
 }
 
 .footer-input {
@@ -771,12 +784,6 @@ h1 {
     border: 1px solid #56ae6c;
     border-radius: .25rem;
     line-height: 1.5;
-}
-
-.footer-copyright-four {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 100%;
 }
 
 .link_text {
@@ -835,6 +842,10 @@ h1 {
 .services-css:hover {
     transition: .3s;
     background-color: #56ae6c;
+    color: #fff;
+}
+
+.services-css:hover .services-emote {
     color: #fff;
 }
 

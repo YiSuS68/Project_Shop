@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Green Shop</title>
 </head>
 <body>
     
     <div id="main">
-         <!-- navbar onTop -->
-         <div class="d-none position-rel p_t-b items-center setup992" id="navbar"> 
+        <!-- navbar onTop -->
+        <div class="d-none position-rel p_t-b items-center setup992" id="navbar"> 
             <div class="container grey">
                 <div class="space-flex">
-                    <div>
+                    <div class="p_t">
                         <i class="m_l-r fas fa-envelope"></i>
                         <a class="n-decoration grey" href="mailto:">info@company.com</a>
                         <i class="m_l-r fas fa-phone"></i>
                         <a class="n-decoration grey" href="callto:">010-020-0304</a>
                     </div>
                     <div>
+                        <!--click vào thì có hiện ra (hoặc có thể mở ra blank mới) để đăng nhập hoặc đăng ký-->
+                        <p><a class="hover n-decoration grey" href="#">Đăng Nhập</a> / <a a class="hover n-decoration grey" href="#">Đăng Ký</a></p>
                         <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
                             <i class="navbar-icon m_r w fab fa-facebook-f"></i>
                         </a>
@@ -44,7 +46,7 @@
         <!-- navbar directional -->
         <div class="position-rel space-flex-wrap p_t-b items-center setup992" id="header-navbar">   
             <div class="items-center space-flex container flex-inhe">
-                <a class="m_r2 m_b items-center n-decoration" id="logo" href="#">Zay</a>
+                <a class="m_r2 m_b items-center n-decoration" id="logo" href="./index.html">Green Shop</a>
                 <i class="fas fa-bars" id="btn"></i>
                 <div class="header-setup all-center" id="collapse_btn">
                     <div class="flex-auto">
@@ -65,12 +67,14 @@
                             </div>
                         </div>
                         <a class="unsee m_r3" href="#"><i class="w20 black fas fa-search"></i></a>
+                        <!-- Thêm popup bên trên icon với backend -->
                         <a class="m_r3" href="#"><i class="w20 black fas fa-cart-arrow-down"></i><span class="pop black">7</span></a>
+                        <!-- Thêm popup bên trên icon với backend -->
                         <a class="m_r3" href="#"><i class="w20 black fas fa-user"></i><span class="pop black">+99</span></a>
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
         
 
         <!-- card category -->
@@ -584,33 +588,33 @@
             <div class="containers">
                 <div class="flex-wrap">
                     <div class="footer-card">
-                        <h2 class="footer-logo b_b green h2 p_b2 m_b">Zay Shop</h2>
+                        <h2 class="footer-logo b_b green h2 p_b2 m_b">Green Shop</h2>
                         <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><i class="w fas fa-map-marker-alt"></i>  123 Consectetur at ligula 10660  </li>
-                            <li class="footer-inline"><i class="w fas fa-phone"></i><a class="light n-decoration" href="#">010-020-0340</a></li>
-                            <li class="footer-inline"><i class="w fas fa-envelope"></i><a class="light n-decoration" href="#">info@company.com</a></li>
+                            <li class="footer-inline"><i class="w fas fa-map-marker-alt"></i><a class="light n-decoration" href="https://www.google.com/maps/place/96+P.+%C3%94+Ch%E1%BB%A3+D%E1%BB%ABa,+Ch%E1%BB%A3+D%E1%BB%ABa,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0195498,105.8251211,17z/data=!4m13!1m7!3m6!1s0x3135ab7841103fd3:0x68b658822cd76f94!2zOTYgUC4gw5QgQ2jhu6MgROG7q2EsIENo4bujIEThu6thLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!3b1!8m2!3d21.0195498!4d105.8273098!3m4!1s0x3135ab7841103fd3:0x68b658822cd76f94!8m2!3d21.0195498!4d105.8273098?hl=vi-VN" target="_blank"> 96 Phố Ô Chợ Dừa, Đống Đa, Hà Nội, Việt Nam</a></li>
+                            <li class="footer-inline"><i class="w fas fa-phone"></i><a class="light n-decoration" href="callto:"> 010-020-0340</a></li>
+                            <li class="footer-inline"><i class="w fas fa-envelope"></i><a class="light n-decoration" href="mailto:"> info@company.com</a></li>
                         </ul>
                     </div>
                     <div class="footer-card">
-                        <h2 class="b_b h2 light p_b2 m_b">Products</h2>
+                        <h2 class="b_b h2 light p_b2 m_b">Các sản phẩm</h2>
                         <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Luxury</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Sport Wear</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Men's Shoes</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Women's Shoes</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Popular Dress</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Gym Accessories</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Sport Shoes</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">sang trọng</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">đồ thể thao</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày nam</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày nữ</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">váy phổ biến</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">phụ kiện dụng cụ thể hình</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày thể thao</a></li>
                         </ul>
                     </div>
                     <div class="footer-card">
-                        <h2 class="b_b h2 light p_b2 m_b">Further Info</h2>
+                        <h2 class="b_b h2 light p_b2 m_b">thông tin thêm</h2>
                         <ul class="light m_b2 n-list_style">
                             <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">About Us</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Shop Locations</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./about.html">About Us</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./contact.html">Shop Locations</a></li>
                             <li class="footer-inline"><a class="n-decoration light" href="#">FAQs</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Contact</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -633,22 +637,17 @@
                     <div class="footer-search">
                         <lablel class="footer-label" for="Hellodue">Email</lablel>
                         <div class="footer-input">
-                            <input type="type" class="form-control" id="Hellodue" placeholder="email">
-                            <div class="footer-subscribe">Subscriber</div>
+                            <input type="email" class="form-control" id="Hellodue" placeholder="email">
+                            <button type="submit"class="footer-subscribe">subscribe</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-black p_t-b2 w-100">
-                <div class="containers">
-                    <div class="flex-wrap p_t">
-                        <div class="footer-copyright-four">
-                            <p class="light m_b2">Copyright © 2021 Company Name | Designed by <a class="link_text" rel="sponsored" href="#" target="_blank">TemplateMo</a></p>
-                        </div>
-                    </div>
+                <div class="footer-final">
+                    <p class="light">© 2021 DEMO J2TEAM.</p>
                 </div>
             </div>
         </div>
+        
     </div>
 
     <script src="./assets/js/index.js"></script>

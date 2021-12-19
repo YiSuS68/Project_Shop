@@ -1,0 +1,142 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+#div-all{
+  width: 100%;
+  height: 1000px;
+  background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+}
+/*div trên*/
+#div-space-top{
+  width: 100%;
+  height: 75px;
+}
+#div-top{
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  text-align:center;
+}
+#div-top > .left{
+  width: 10%;
+  height: 100%;
+  float: left;
+  border: 10px solid #f7f7f7;
+  border-radius: 15px;
+  line-height: 1.8;
+}
+#div-top > .right{
+  width: 90%;
+  height: 100%;
+  float: left;
+  line-height: 100px;
+  padding-left: 10px;
+  border: 2px solid #f7f7f7;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+}
+
+/*div dưới*/
+#div-bot{
+  width: 100%;
+  height: 100%;
+}
+#div-space-bot-left{
+  width: 10%;
+  height: 100%;
+  float: left;
+}
+#div-bot > .left{
+  width: 10%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #f7f7f7;
+  background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+} 
+
+#div-bot > .left > .top{
+  width: 100%;
+  height: 72%;
+}
+#div-bot > .left > .bot{
+  width: 100%;
+  height: 28%;
+}        
+
+#div-bot > .right{
+  width: 90%;
+  height: 100%;
+  float: left; 
+  background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+
+} 
+#div-bot > .right > .left{  
+  width: 85%;
+  height: 100%;
+  float: left;
+}
+#div-bot > .right > .left > .top{  
+  width: 100%;
+  height: 30%;
+  padding: 40px;
+}
+.form_table{
+  align-items: center;
+  width: 60%;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.box-space-bot-right-right{
+  width: 15%;
+  height: 100%;
+  float: left;
+}
+#div-bot > .right > .right{
+  width: 14%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+}
+.button {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  border-radius: 5px;
+}
+.button:after {
+  position: absolute;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+  height: 120%;
+  left: -10%;
+  transform: skewX(15deg);
+  z-index: -1;
+}
+.button:hover {
+  cursor: pointer;
+  color: #5bcaff;
+  border-radius: 30px;
+}
+.button:hover:after {
+  width: 120%;
+  left: -10%;
+}

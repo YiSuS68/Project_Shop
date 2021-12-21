@@ -7,21 +7,44 @@
 </head>
 <body>
 	<form method="post" action="process_insert.php">
-		<table width=""50% align="center" border="2px">
+		<table width="50%" align="center" border="2px">
 			<tr>
-				<th colspan="10">NHÂN VIÊN</th>
+				<th colspan="2">NHÂN VIÊN</th>
 			</tr>
 			<tr>
-				<th>ID</th>
-				<th>Name</th>
-				<th>Gender</th>
-				<th>Phone</th>
-				<th>Identity</th>
-				<th>Address</th>
-				<th>Level</th>
-				<th>Wage</th>
-				<th>Sửa</th>
-				<th>Xóa</th>
+				<th>Họ và tên</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<th>Giới tính</th>
+				<td>
+					<input type="radio" name="gender" value="Nam">Nam
+					<input type="radio" name="gender" value="Nữ">Nữ
+					<input type="radio" name="gender" value="Khác">Khác
+				</td>
+			</tr>
+			<tr>
+				<th>Số điện thoại</th>
+				<td><input type="number" name="phone"></td>
+			</tr>
+			<tr>
+				<th>CCCD</th>
+				<td><input type="number" name="identity"></td>
+			</tr>
+			<tr>
+				<th>Địa chỉ</th>
+				<td><textarea name="address"></textarea></td>
+			</tr>
+			<tr>
+				<th>Cấp bậc</th>
+				<td><input type="number" name="level"></td>
+			</tr>
+			<tr>
+				<th>Lương</th>
+				<td><input type="number" name="wage"></td>
+			</tr>
+			<tr>
+				<th colspan="2"><button>Thêm</button></th>
 			</tr>
 		</table>
 	</form>

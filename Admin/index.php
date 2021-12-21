@@ -39,10 +39,13 @@
       </div>
       <div class="right">
         <div class="top">  
+          <a href="./nhan_vien/form_insert.php">Thêm nhân viên</a>
+        </div>
+        <div class="bot">
+
         </div>
       </div>
     </div>
   </div>
-</div>
 </body>
 </html>

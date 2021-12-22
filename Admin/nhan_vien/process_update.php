@@ -25,6 +25,11 @@ id='$id'
 
 mysqli_query($connect,$query);
 $loi= mysqli_error($connect);
-echo $loi;
+if ($loi) {
+	echo "Sai rồi !!!<br>";
+	echo $loi;
+}else{
+	action="./nhan_vien/index.php";
+}
 mysqli_close($connect);
 

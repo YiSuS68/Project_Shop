@@ -1,6 +1,6 @@
     <div id="div-top">
       <div class="left">
-        <a href="index.php" style="text-decoration: none;">
+        <a href="../root" style="text-decoration: none;">
           <h1>ADMIN</h1>
         </a>
       </div>
@@ -17,17 +17,17 @@
         <div class="top">
           <ul type="none">
             <a href="../nhan_vien" style="text-decoration: none;">
-              <li class="button">
+              <li class="button"> 
                 NHÂN VIÊN
               </li>
             </a>
             <a href="../san_pham" style="text-decoration: none;">
-              <li class="button">
+              <li class="button"">
                 SẢN PHẨM
               </li>
             </a>
             <a href="../nha_san_xuat" style="text-decoration: none;">
-              <li class="button">
+              <li class="button"  id="active">
                 NHÀ SẢN XUẤT
               </li>
             </a>

@@ -14,7 +14,7 @@
 	$get_nhan_vien = mysqli_fetch_array($resume);
 	?>
 	<form method="post" action="process_update.php?id=<?php echo $get_nhan_vien['id']; ?>">
-		<table width=""50% align="center" border="2px">
+		<table width="60%" align="center" border="2px">
 			<tr>
 				<th colspan="2">NHÂN VIÊN</th>
 			</tr>

@@ -18,12 +18,12 @@
     <div class="top">
       <ul type="none">
         <a href="../nhan_vien" style="text-decoration: none;">
-          <li class="button" id="active"> 
+          <li class="button"> 
             NHÂN VIÊN
           </li>
         </a>
         <a href="../san_pham" style="text-decoration: none;">
-          <li class="button">
+          <li class="button" id="active">
             SẢN PHẨM
           </li>
         </a>

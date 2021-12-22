@@ -37,22 +37,22 @@ function showSlides(n) {
 
 
 // auto slider
-var sliderIndex = 0;
-showSlides();
+// var sliderIndex = 0;
+// showSlides();
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("hi");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    sliderIndex++;
-    if (sliderIndex > slides.length) {
-        sliderIndex = 1;
-    }
-    slides[sliderIndex - 1].style.display = "block";
-    setTimeout(showSlides, 4000);
-}
+// function showSlides() {
+//     var i;
+//     var slides = document.getElementsByClassName("hi");
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     sliderIndex++;
+//     if (sliderIndex > slides.length) {
+//         sliderIndex = 1;
+//     }
+//     slides[sliderIndex - 1].style.display = "block";
+//     setTimeout(showSlides, 4000);
+// }
 
 
 // click minisize

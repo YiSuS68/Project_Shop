@@ -10,12 +10,11 @@
 <body>
   <?php  
   require '../connect.php';
+  $search='';
   if (isset($_GET['search'])) {
     $search = $_GET['search'];
-    $query = "select * from nha_san_xuat where name like '%$search%'";
-  }else{
-    $query = "select * from nha_san_xuat ";
   }
+  $query = "select * from nha_san_xuat where name like '%$search%'";
   $resume=mysqli_query($connect,$query);
   ?>
 
@@ -34,7 +33,7 @@
         </a>
         <form style="float: left; margin: 5px 0 0 0;">
           Tìm kiếm tên<br>
-          <input type="search" name="search">
+          <input type="search" name="search" value="<?php echo $search ?>">
         </form>
       </div>
       <div class="bot" style="align:center;">
@@ -50,24 +49,24 @@
               <th>Sửa</th>
               <th>Xóa</th>
             </tr>
-              <?php foreach ($resume as $get_nha_san_xuat){ ?>
-                <tr>
-                  <td style="text-align:center"><?php echo $get_nha_san_xuat['name']; ?></td>
-                  <td style="text-align:center"><?php echo $get_nha_san_xuat['phone']; ?></td>
-                  <td style="text-align:center"><?php echo $get_nha_san_xuat['address']; ?></td>
-                  <td style="text-align:center">
-                    <a href="form_update.php?id=<?php echo $get_nha_san_xuat['id']; ?>" style="color: blue;">X</a>
-                  </td>
-                  <td style="text-align:center">
-                    <a href="delete.php?id=<?php echo $get_nha_san_xuat['id']; ?>" style="color: red;">X</a>
-                  </td>
-                </tr>
-                <?php } ?>
-              </table>
-            </form>
-          </div>
-        </div>
+            <?php foreach ($resume as $get_nha_san_xuat){ ?>
+              <tr>
+                <td style="text-align:center"><?php echo $get_nha_san_xuat['name']; ?></td>
+                <td style="text-align:center"><?php echo $get_nha_san_xuat['phone']; ?></td>
+                <td style="text-align:center"><?php echo $get_nha_san_xuat['address']; ?></td>
+                <td style="text-align:center">
+                  <a href="form_update.php?id=<?php echo $get_nha_san_xuat['id']; ?>" style="color: blue;">X</a>
+                </td>
+                <td style="text-align:center">
+                  <a href="delete.php?id=<?php echo $get_nha_san_xuat['id']; ?>" style="color: red;">X</a>
+                </td>
+              </tr>
+            <?php } ?>
+          </table>
+        </form>
       </div>
     </div>
-  </body>
-  </html>
+  </div>
+</div>
+</body>
+</html>

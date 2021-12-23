@@ -16,7 +16,7 @@
 	<form method="post" action="process_update.php?id=<?php echo $get_nhan_vien['id']; ?>">
 		<table width="60%" align="center" border="2px">
 			<tr>
-				<th colspan="2">NHÂN VIÊN</th>
+				<th colspan="2">SỬA NHÂN VIÊN</th>
 			</tr>
 <!-- 			<tr>
 				<th colspan="2"><input type="hidden" name="id" value="<?php echo $get_nhan_vien['id'] ?>"></th>

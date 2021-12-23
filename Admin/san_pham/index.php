@@ -10,12 +10,11 @@
 <body>
   <?php  
   require '../connect.php';
+  $search='';
   if (isset($_GET['search'])) {
     $search = $_GET['search'];
-    $query = "select * from san_pham where name like '%$search%'";
-  }else{
-    $query = "select * from san_pham ";
   }
+  $query = "select * from san_pham where name like '%$search%'";
   $resume=mysqli_query($connect,$query);
   ?>
 
@@ -34,7 +33,7 @@
         </a>
         <form style="float: left; margin: 5px 0 0 0;">
           Tìm kiếm tên<br>
-          <input type="search" name="search">
+          <input type="search" name="search" value="<?php echo $search ?>">
         </form>
       </div>
       <div class="bot" style="align:center;">

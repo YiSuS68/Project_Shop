@@ -9,7 +9,7 @@
 	<form method="post" action="process_insert.php">
 		<table width="50%" align="center" border="2px">
 			<tr>
-				<th colspan="2">NHÂN VIÊN</th>
+				<th colspan="2">THÊM NHÂN VIÊN</th>
 			</tr>
 			<tr>
 				<th>Họ và tên</th>

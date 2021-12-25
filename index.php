@@ -13,6 +13,7 @@
 <body>
     
     <div id="main">
+        
         <!-- navbar onTop -->
         <div class="d-none position-rel p_t-b items-center setup992" id="navbar">
             <div class="container grey">
@@ -46,15 +47,15 @@
         <!-- navbar directional -->
         <div class="position-rel space-flex-wrap p_t-b items-center setup992" id="header-navbar">   
             <div class="items-center space-flex container flex-inhe">
-                <a class="m_r2 m_b items-center n-decoration" id="logo" href="#">Green Shop</a>
+                <a class="m_r2 m_b items-center n-decoration" id="logo" href="index.php">Green Shop</a>
                 <i class="fas fa-bars" id="btn"></i>
                 <div class="header-setup all-center" id="collapse_btn">
                     <div class="flex-auto">
                         <ul class="header-click space-flex-wrap">
-                            <li><a class="hover dark n-decoration p d-block" href="./index.html">Home</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./about.html">About</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./shop.html">Shop</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./contact.html">Contact</a></li>
+                            <li><a class="hover dark n-decoration p d-block" href="./index.php">Home</a></li>
+                            <li><a class="hover dark n-decoration p d-block" href="./about.php">About</a></li>
+                            <li><a class="hover dark n-decoration p d-block" href="./shop.php">Shop</a></li>
+                            <li><a class="hover dark n-decoration p d-block" href="./contact.php">Contact</a></li>
                         </ul>
                     </div>
                     <div class="header-all p_t-b space-flex-wrap position-rel items-center text-center">
@@ -273,23 +274,23 @@
                     <div class="footer-card">
                         <h2 class="b_b h2 light p_b2 m_b">Các sản phẩm</h2>
                         <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">sang trọng</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">đồ thể thao</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày nam</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày nữ</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">váy phổ biến</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">phụ kiện dụng cụ thể hình</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.html">giày thể thao</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">sang trọng</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">đồ thể thao</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày nam</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày nữ</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">váy phổ biến</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">phụ kiện dụng cụ thể hình</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày thể thao</a></li>
                         </ul>
                     </div>
                     <div class="footer-card">
                         <h2 class="b_b h2 light p_b2 m_b">thông tin thêm</h2>
                         <ul class="light m_b2 n-list_style">
                             <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./about.html">About Us</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./contact.html">Shop Locations</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./about.php">About Us</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./contact.php">Shop Locations</a></li>
                             <li class="footer-inline"><a class="n-decoration light" href="#">FAQs</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./contact.html">Contact</a></li>
+                            <li class="footer-inline"><a class="n-decoration light" href="./contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ require '../connect.php';
 // }elseif ($gender === 'orther') {
 // 	$gender ='Khác';	
 // }
-$query = "insert into manage(name,gender,phone,identity,address,level,wage)
+$query = "insert into serve(name,gender,phone,identity,address,level,wage)
 values('$name','$gender','$phone','$identity','$address','$level','$wage')";
 
 mysqli_query($connect,$query);

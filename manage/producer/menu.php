@@ -1,7 +1,7 @@
     <div id="div-top">
       <div class="left">
-        <a href="index.php" style="text-decoration: none;">
-          <h1>ADMIN</h1>
+        <a href="../root" style="text-decoration: none;">
+          <h1>QUẢN LÝ</h1>
         </a>
       </div>
       <div class="right" >
@@ -16,18 +16,13 @@
       <div class="left">
         <div class="top">
           <ul type="none">
-            <a href="../serve" style="text-decoration: none;">
-              <li class="button">
-                NHÂN VIÊN
-              </li>
-            </a>
             <a href="../product" style="text-decoration: none;">
-              <li class="button">
+              <li class="button"">
                 SẢN PHẨM
               </li>
             </a>
             <a href="../producer" style="text-decoration: none;">
-              <li class="button">
+              <li class="button"  id="active">
                 NHÀ SẢN XUẤT
               </li>
             </a>

@@ -17,7 +17,7 @@
   <div class="left">
     <div class="top">
       <ul type="none">
-        <a href="../manage" style="text-decoration: none;">
+        <a href="../serve" style="text-decoration: none;">
           <li class="button" id="active"> 
             NHÂN VIÊN
           </li>

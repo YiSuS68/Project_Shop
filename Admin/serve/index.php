@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/media.css">
-  <title>Sản phẩm</title> 
+  <title>Nhân viên</title> 
 </head>
 <body>
   <?php  
   require '../connect.php';
-
+  
   $page=1;
   if (isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -21,26 +21,23 @@
     $search = $_GET['search'];
   }
 
-  $query_quantity_value="select count(*) from product where name like '%$search%'";
+
+  $query_quantity_value="select count(*) from serve where name like '%$search%'";
   $array_quantity_value = mysqli_query($connect,$query_quantity_value);
   $resume_quantitu_value=mysqli_fetch_array($array_quantity_value);
   $quantity_value=$resume_quantitu_value['count(*)'];
 
-  $quantity_value_one_page=2;
+  $quantity_value_one_page=3;
 
   $quantity_page=ceil($quantity_value/$quantity_value_one_page);
   $quantity_value_pass=$quantity_value_one_page*($page-1);
 
-  $query = "select * from product 
+  $query = "select * from serve 
   where 
   name like '%$search%' 
   limit $quantity_value_one_page
   offset $quantity_value_pass";
   $resume=mysqli_query($connect,$query);
-
-  $query_producer = "select * from producer ";
-  $resume_producer=mysqli_query($connect,$query_producer);
-  mysqli_close($connect);
   ?>
 
   <div id="div-all">
@@ -64,33 +61,33 @@
       <div class="bot" style="align:center;">
         <table width="100%" align="center" border="2px">
           <tr>
-            <th colspan="10">SẢN PHẨM</th>
+            <th colspan="10">NHÂN VIÊN</th>
           </tr>
           <tr>
-            <th>Tên sản phẩm</th>
-            <th>Mô tả</th>
-            <th>Nội dung</th>
-            <th>Ảnh</th>
-            <th>Giá</th>
-            <th>Đánh giá</th>
+            <th>Họ và tên</th>
+            <th>Giới tính</th>
+            <th>Số điện thoại</th>
+            <th>CCCD</th>
+            <th>Địa chỉ</th>
+            <th>Cấp bậc</th>
+            <th>Lương</th>
             <th>Sửa</th>
             <th>Xóa</th>
           </tr>
-          <?php foreach ($resume as $each){ ?>
+          <?php foreach ($resume as $get_serve){ ?>
             <tr>
-              <td style="text-align:center"><?php echo $each['name']; ?></td>
-              <td style="text-align:center"><p><?php echo nl2br($each['description']); ?></p></td>
-              <td style="text-align:center"><?php echo nl2br($each['detail']); ?></td>
+              <td style="text-align:center"><?php echo $get_serve['name']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['gender']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['phone']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['identity']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['address']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['level']; ?></td>
+              <td style="text-align:center"><?php echo $get_serve['wage']; ?></td>
               <td style="text-align:center">
-                <img height="100px" src="history_image/<?php echo $each['image'] ?>">
+                <a href="form_update.php?id=<?php echo $get_serve['id']; ?>" style="color: blue;">X</a>
               </td>
-              <td style="text-align:center"><?php echo $each['price']; ?></td>
-              <td style="text-align:center"><?php echo $each['vote']; ?></td>
               <td style="text-align:center">
-                <a href="form_update.php?id=<?php echo $each['id']; ?>" style="color: blue;">X</a>
-              </td>
-              <td style="text-align:center">
-                <a href="delete.php?id=<?php echo $each['id']; ?>" style="color: red;">X</a>
+                <a href="delete.php?id=<?php echo $get_serve['id']; ?>" style="color: red;">X</a>
               </td>
             </tr>
           <?php } ?>
@@ -106,3 +103,18 @@
 </div>
 </body>
 </html>
+<!--                 <form>
+          <table width="30%">
+            <tr>
+              <td rowspan="2">
+                <a href="form_insert.php">
+                  <button>Thêm</button>
+                </a>
+              </td>
+              <td>Tìm kiếm tên</td><br>
+            </tr>
+            <tr>
+              <td><input type="search" name="search"></td>
+            </tr>
+          </table>
+        </form> -->

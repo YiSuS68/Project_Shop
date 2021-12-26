@@ -10,7 +10,7 @@ $wage = $_POST['wage'];
 
 require '../connect.php';
 
-$query = "update manage 
+$query = "update serve 
 set
 name='$name',
 gender='$gender',

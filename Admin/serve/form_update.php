@@ -9,7 +9,7 @@
 	<?php 	
 	$id=$_GET['id'];
 	require '../connect.php';
-	$query = "select * from manage where id=$id";
+	$query = "select * from serve where id=$id";
 	$resume = mysqli_query($connect,$query);
 	$each = mysqli_fetch_array($resume);
 	?>

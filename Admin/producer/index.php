@@ -57,11 +57,12 @@
         </form>
       </div>
       <div class="bot" style="align:center;">
-        <table width="95%" align="center" border="2px">
+        <table width="100%" align="center" border="2px">
           <tr>
             <th colspan="10">NHÂN VIÊN</th>
           </tr>
           <tr>
+            <th>Ảnh</th>
             <th>Họ và tên</th>
             <th>Số điện thoại</th>
             <th>Địa chỉ</th>
@@ -70,6 +71,9 @@
           </tr>
           <?php foreach ($resume as $each){ ?>
             <tr>
+              <td style="text-align:center">
+                <img height="100px" src="history_image/<?php echo $each['image'] ?>">
+              </td>
               <td style="text-align:center"><?php echo $each['name']; ?></td>
               <td style="text-align:center"><?php echo $each['phone']; ?></td>
               <td style="text-align:center"><?php echo $each['address']; ?></td>

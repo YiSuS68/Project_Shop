@@ -38,7 +38,7 @@
       </div>
       <div class="bot" style="align:center;">
         <form>
-          <table width="95%" align="center" border="2px">
+          <table width="95%" style="align:center; border:2px">
             <tr>
               <th colspan="10">NHÂN VIÊN</th>
             </tr>

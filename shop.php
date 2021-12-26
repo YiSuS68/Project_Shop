@@ -13,68 +13,9 @@
 <body>
     
     <div id="main">
-        <!-- navbar onTop -->
-        <div class="d-none position-rel p_t-b items-center setup992" id="navbar"> 
-            <div class="container grey">
-                <div class="space-flex">
-                    <div class="p_t">
-                        <i class="m_l-r fas fa-envelope"></i>
-                        <a class="n-decoration grey" href="mailto:">info@company.com</a>
-                        <i class="m_l-r fas fa-phone"></i>
-                        <a class="n-decoration grey" href="callto:">010-020-0304</a>
-                    </div>
-                    <div>
-                        <!--click vào thì có hiện ra (hoặc có thể mở ra blank mới) để đăng nhập hoặc đăng ký-->
-                        <p><a class="hover n-decoration grey" href="#">Đăng Nhập</a> / <a a class="hover n-decoration grey" href="#">Đăng Ký</a></p>
-                        <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
-                            <i class="navbar-icon m_r w fab fa-facebook-f"></i>
-                        </a>
-                        <a class="n-decoration grey" href="https://www.instagram.com" target="_blank">
-                            <i class="navbar-icon m_r w fab fa-instagram"></i>
-                        </a>
-                        <a class="n-decoration grey" href="https://twitter.com" target="_blank">
-                            <i class="navbar-icon m_r w fab fa-twitter"></i>
-                        </a>
-                        <a class="n-decoration grey" href="https://www.linkedin.com" target="_blank">
-                            <i class="navbar-icon m_r w fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- navbar directional -->
-        <div class="position-rel space-flex-wrap p_t-b items-center setup992" id="header-navbar">   
-            <div class="items-center space-flex container flex-inhe">
-                <a class="m_r2 m_b items-center n-decoration" id="logo" href="./index.php">Green Shop</a>
-                <i class="fas fa-bars" id="btn"></i>
-                <div class="header-setup all-center" id="collapse_btn">
-                    <div class="flex-auto">
-                        <ul class="header-click space-flex-wrap">
-                            <li><a class="hover dark n-decoration p d-block" href="./index.php">Home</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./about.php">About</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./shop.php">Shop</a></li>
-                            <li><a class="hover dark n-decoration p d-block" href="./contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-all p_t-b space-flex-wrap position-rel items-center text-center">
-                        <div class="header-search m_t2 m_b4">
-                            <div class="header-input">
-                                <input type="text" class="search-time black" id="inputMobileSearch" placeholder="Search...">
-                                <div class="search-icon black">
-                                    <i class="search w20 fas fa-search"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="unsee m_r3" href="#"><i class="w20 black fas fa-search"></i></a>
-                        <!-- Thêm popup bên trên icon với backend -->
-                        <a class="m_r3" href="#"><i class="w20 black fas fa-cart-arrow-down"></i><span class="pop black">7</span></a>
-                        <!-- Thêm popup bên trên icon với backend -->
-                        <a class="m_r3" href="#"><i class="w20 black fas fa-user"></i><span class="pop black">+99</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--navbar-->
+        <?php include "navbar.php" ?>
         
 
         <!-- card category -->
@@ -582,71 +523,10 @@
                 </div>
             </div>
         </div>
+        
 
         <!-- footer -->
-        <div id="footer"> 
-            <div class="containers">
-                <div class="flex-wrap">
-                    <div class="footer-card">
-                        <h2 class="footer-logo b_b green h2 p_b2 m_b">Green Shop</h2>
-                        <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><i class="w fas fa-map-marker-alt"></i><a class="light n-decoration" href="https://www.google.com/maps/place/96+P.+%C3%94+Ch%E1%BB%A3+D%E1%BB%ABa,+Ch%E1%BB%A3+D%E1%BB%ABa,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0195498,105.8251211,17z/data=!4m13!1m7!3m6!1s0x3135ab7841103fd3:0x68b658822cd76f94!2zOTYgUC4gw5QgQ2jhu6MgROG7q2EsIENo4bujIEThu6thLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!3b1!8m2!3d21.0195498!4d105.8273098!3m4!1s0x3135ab7841103fd3:0x68b658822cd76f94!8m2!3d21.0195498!4d105.8273098?hl=vi-VN" target="_blank"> 96 Phố Ô Chợ Dừa, Đống Đa, Hà Nội, Việt Nam</a></li>
-                            <li class="footer-inline"><i class="w fas fa-phone"></i><a class="light n-decoration" href="callto:"> 010-020-0340</a></li>
-                            <li class="footer-inline"><i class="w fas fa-envelope"></i><a class="light n-decoration" href="mailto:"> info@company.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-card">
-                        <h2 class="b_b h2 light p_b2 m_b">Các sản phẩm</h2>
-                        <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">sang trọng</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">đồ thể thao</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày nam</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày nữ</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">váy phổ biến</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">phụ kiện dụng cụ thể hình</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./shop.php">giày thể thao</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-card">
-                        <h2 class="b_b h2 light p_b2 m_b">thông tin thêm</h2>
-                        <ul class="light m_b2 n-list_style">
-                            <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./about.php">About Us</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./contact.php">Shop Locations</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="#">FAQs</a></li>
-                            <li class="footer-inline"><a class="n-decoration light" href="./contact.php">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-second flex-wrap light">
-                    <div class="footer-rule">
-                        <div class="rule"></div>
-                    </div>
-                    <div class="footer-icon">
-                        <ul class="n-list_style m_b2">
-                            <li class="footer-setup_icon text-center">
-                                <a class="n-decoration light text-center" href="https://www.facebook.com" target="_blank"><i class="icon w fab fa-facebook-f"></i></a></li>
-                            <li class="footer-setup_icon text-center">
-                                <a class="n-decoration light text-center" href="https://www.instagram.com" target="_blank"><i class="icon w fab fa-instagram"></i></a></li>
-                            <li class="footer-setup_icon text-center">                        
-                                <a class="n-decoration light text-center" href="https://twitter.com" target="_blank"><i class="icon w fab fa-twitter"></i></a></li>
-                            <li class="footer-setup_icon text-center">
-                                <a class="n-decoration light text-center" href="https://www.linkedin.com" target="_blank"><i class="icon w fab fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-search">
-                        <lablel class="footer-label" for="Hellodue">Email</lablel>
-                        <div class="footer-input">
-                            <input type="email" class="form-control" id="Hellodue" placeholder="email">
-                            <button type="submit"class="footer-subscribe">subscribe</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-final">
-                    <p class="light">© 2021 DEMO J2TEAM. made by <b>Huy</b> and <b>Việt</b></p>
-                </div>
-            </div>
-        </div>
+        <?php include "footer.php" ?>
         
     </div>
 

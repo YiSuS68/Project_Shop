@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <!--click vào thì có hiện ra (hoặc có thể mở ra blank mới) để đăng nhập hoặc đăng ký-->
-                        <p><a class="hover n-decoration grey" href="#">Đăng Nhập</a> / <a a class="hover n-decoration grey" href="#">Đăng Ký</a></p>
+                        <p><a class="hover n-decoration grey" href="./login-site/login_page.php">Đăng Nhập</a> / <a class="hover n-decoration grey" href="./signin-site/signin_page.php">Đăng Ký</a></p>
                         <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
                             <i class="navbar-icon m_r w fab fa-facebook-f"></i>
                         </a>

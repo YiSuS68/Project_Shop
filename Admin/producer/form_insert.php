@@ -12,12 +12,12 @@
 				<th colspan="2">Nhà sản xuất</th>
 			</tr>
 			<tr>
-				<th>Họ và tên</th>
+				<th>Tên nhà sản xuất</th>
 				<td><input type="text" name="name"></td>
 			</tr>
 			<tr>
 				<th>Số điện thoại</th>
-				<td><input type="number" name="phone"></td>
+				<td><input type="text" name="phone"></td>
 			</tr>
 			<tr>
 				<th>Địa chỉ</th>

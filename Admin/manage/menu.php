@@ -17,17 +17,17 @@
   <div class="left">
     <div class="top">
       <ul type="none">
-        <a href="../nhan_vien" style="text-decoration: none;">
-          <li class="button"> 
+        <a href="../manage" style="text-decoration: none;">
+          <li class="button" id="active"> 
             NHÂN VIÊN
           </li>
         </a>
-        <a href="../san_pham" style="text-decoration: none;">
-          <li class="button" id="active">
+        <a href="../product" style="text-decoration: none;">
+          <li class="button">
             SẢN PHẨM
           </li>
         </a>
-        <a href="../nha_san_xuat" style="text-decoration: none;">
+        <a href="../producer" style="text-decoration: none;">
           <li class="button">
             NHÀ SẢN XUẤT
           </li>

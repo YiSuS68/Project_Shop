@@ -1,12 +1,8 @@
 <?php  
 
 $name = $_POST['name'];
-$gender = $_POST['gender'];
 $phone = $_POST['phone'];
-$identity = $_POST['identity'];
 $address = $_POST['address'];
-$level = $_POST['level'];
-$wage = $_POST['wage'];
 
 require '../connect.php';
 // if ($gender === 'Male') {
@@ -16,8 +12,8 @@ require '../connect.php';
 // }elseif ($gender === 'orther') {
 // 	$gender ='Khác';	
 // }
-$query = "insert into nhan_vien(name,gender,phone,identity,address,level,wage)
-values('$name','$gender','$phone','$identity','$address','$level','$wage')";
+$query = "insert into producer(name,phone,address)
+values('$name','$phone','$address')";
 
 mysqli_query($connect,$query);
 $loi= mysqli_error($connect);

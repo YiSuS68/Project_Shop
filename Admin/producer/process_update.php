@@ -6,7 +6,7 @@ $address = $_POST['address'];
 
 require '../connect.php';
 
-$query = "update nha_san_xuat 
+$query = "update producer 
 set
 name='$name',
 phone='$phone',

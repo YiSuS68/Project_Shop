@@ -25,7 +25,7 @@
 			</tr>
 			<tr>
 				<th>Số điện thoại</th>
-				<td><input type="number" name="phone"></td>
+				<td><input type="text" name="phone"></td>
 			</tr>
 			<tr>
 				<th>CCCD</th>

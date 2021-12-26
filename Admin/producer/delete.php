@@ -3,7 +3,7 @@ $id =$_GET['id'];
 
 require '../connect.php';
 
-$query = "delete from nhan_vien where id='$id'";
+$query = "delete from producer where id='$id'";
 
 mysqli_query($connect,$query);
 $loi= mysqli_error($connect);

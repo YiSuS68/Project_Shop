@@ -10,7 +10,7 @@
                     </div>
                     <div>
                         <!--click vào thì có hiện ra (hoặc có thể mở ra blank mới) để đăng nhập hoặc đăng ký-->
-                        <p><a class="hover n-decoration grey" href="./login-site/login_page.php">Đăng Nhập</a> / <a class="hover n-decoration grey" href="./signin-site/signin_page.php">Đăng Ký</a></p>
+                        <p><a class="hover n-decoration grey" href="./login-site/login_page.php">Đăng Nhập</a> / <a class="hover n-decoration grey" href="./login-site/login_page.php">Đăng Ký</a></p>
                         <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
                             <i class="navbar-icon m_r w fab fa-facebook-f"></i>
                         </a>
@@ -30,7 +30,7 @@
 
 
 <!-- navbar directional -->
-<div class="position-rel space-flex-wrap p_t-b items-center setup992" id="header-navbar">   
+<div class="position-rel space-flex-wrap p_t-b items-center setup992 bg-white" id="header-navbar">   
     <div class="items-center space-flex container flex-inhe">
         <a class="m_r2 m_b items-center n-decoration" id="logo" href="index.php">Green Shop</a>
         <i class="fas fa-bars" id="btn"></i>

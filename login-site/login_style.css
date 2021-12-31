@@ -1,13 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    background: url('../assets/img/green-slate.jpg') 50% fixed;
+    background: url('../assets/img/green-slate.jpg');
     background-size: cover;
 }
 
@@ -117,6 +111,7 @@ body {
 /* sign up */
 .container-signUp {
   display: none;
+  margin-top: 300px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -208,6 +203,20 @@ body .showLoginForm .container-signUp {
   padding-left: 15px;
 }
 
+.gender-fix {
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  transition: border-width 0.2s ease;
+  border-radius: 2px;
+  color: #ccc;
+}
+
+.gender-fix option {
+  font-size: 16px;
+}
 /* button */
 
 .open-popup {

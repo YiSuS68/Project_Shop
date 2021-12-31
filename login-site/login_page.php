@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./login_style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Login Green Shop</title>
 </head>
 <body>
 
+    <?php include "../navbar.php" ?>
+    
     <!--co the them phan navbar + logo o tren doan na`y-->
     <div id="login_form" class="container_login">
-        <form class="login">
+        <form class="login" method="post" action="process_insert.php">
 
             <p class="title">Đăng Nhập</p>
 
@@ -72,10 +76,22 @@
                 <input class="put-something" type="password" placeholder="nhập lại mật khẩu" name="password" required >
                 <i class="fas fa-key"></i>
             </div>
-            <div class="input-form">
-                <label class="input-label" for="birthday">Ngày Sinh:</label>
-                <input class="put-something" type="date" id="birthday" name="birthday" required >
-                    <i class="fas fa-table"></i>
+
+            <div class="sign-up_name">
+                <div class="input-form">
+                    <label class="input-label" for="birthday">Ngày Sinh:</label>
+                    <input class="put-something" type="date" id="birthday" name="birthday" required >
+                        <i class="fas fa-table"></i>
+                </div>
+                <div class="input-form">
+                    <label class="input-label">Giới Tính:</label>
+                    <select class="gender-fix">
+                        <option> </option>
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                        <option>Không xác định</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <button class="btn-button">Đăng ký</button>
@@ -87,8 +103,7 @@
         <button id="btn-sign-up" class="bubbly-button" onclick="openPopupRegister()">Đăng ký!</button>
     </div>
 
-    
-
     <script src="login_js.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 </html>

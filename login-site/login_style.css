@@ -5,26 +5,20 @@ body {
     background-size: cover;
 }
 
-.container_login {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-  position: relative; 
-  /* new */
+.center-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
   
 .login {
   border-radius: 2px 2px 5px 5px;
   padding: 10px 20px 20px 20px;
-  width: 90%;
-  max-width: 320px;
   background: #ffffff;
   position: relative;
   padding-bottom: 80px;
+  width: 25rem;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -62,11 +56,38 @@ body {
   transition: all 0.25s ease-out;
 }
 
+.hide-password {
+  display: inline-block;
+  position: absolute;
+	text-decoration: none;
+  right: 0;
+  top: 0;
+  padding: 6px 15px;
+  border-left: 1px solid #d2d8d8;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #343642;
+}
+
 .forgot-pass {
   font-size: 0.8em;
   color: #2196f3;
   text-decoration: none;
 }
+
+/* .signup-press {
+  font-size: 0.8em;
+  color: #2196f3;
+  text-decoration: none;
+  float: right;
+} */
 
 .title {
   color: #444;
@@ -109,21 +130,6 @@ body {
 }
 
 /* sign up */
-.container-signUp {
-  display: none;
-  margin-top: 300px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-  padding: 20px;
-  position: absolute;
-  z-index: 1;
-  overflow: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%) scale(1.15);
-}
 
 body .showLoginForm {
   display: block;
@@ -217,32 +223,69 @@ body .showLoginForm .container-signUp {
 .gender-fix option {
   font-size: 16px;
 }
-/* button */
 
-.open-popup {
-  text-align: center;
-}
+/* new */
 
-.bubbly-button {
-  font-family: "Helvetica", "Arial", sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #59ab6e;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
+.tabs {
+  margin-top: 100px;
+  display: flex;
   position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgb(0 255 8 / 50%);
 }
 
-.bubbly-button:hover {
-  transform: scale(0.9);
-  background-color: #00e632;
-  box-shadow: 0 2px 25px rgb(0 255 102 / 50%);
+.tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #253143;
+  transition: all 0.2s ease;
+}
+
+.tab-item {
+  width: 12.5rem;
+  min-width: 80px;
+  padding: 16px 20px 11px 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #253143;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 5px solid transparent;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tab-icon {
+  font-size: 24px;
+  width: 32px;
+  position: relative;
+  top: 2px;
+}
+
+.tab-item:hover {
+  opacity: 1;
+  background-color: rgba(194, 53, 100, 0.05);
+  border-color: rgba(194, 53, 100, 0.1);
+}
+
+.tab-item.active {
+  opacity: 1;
+}
+
+.tab-pane {
+  color: #333;
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.tab-pane h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
 }

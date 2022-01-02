@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login-site/login_style.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
@@ -16,6 +17,7 @@
 
         <!--navbar-->
         <?php include "navbar.php" ?>
+
         
 
         <!--body-->
@@ -27,6 +29,7 @@
 
     </div>
 
+    <script src="./login-site/login_js.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 </html>

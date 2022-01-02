@@ -90,13 +90,17 @@
                         <h1 class="h1 m_b">Nhãn hiệu của chúng tôi</h1>
                         <p class="m_b2">các nhãn hiệu nổi tiếng như nike, adidas, H&M, levi's, ...</p>
                     </div>
+
+                    <!-- start slides -->
                     <div class="brand-slider p_l-r">
                         <div class="brand-btn flex-wrap">
+                            
                             <!-- prev button -->
                             <div class="brand-prev p_l-r self-center">
                                 <a class="black m_b h1" role="button" onclick="minisize(-1)"><i class="light fas fa-chevron-left"></i></a>
                             </div>
                             
+
                             <!-- slider brand -->
                             <div class="brand-icon p_l-r">
                                 <div class="position-rel">
@@ -129,12 +133,16 @@
                                 </div>
                             </div>
 
+
                             <!-- next button -->
                             <div class="brand-prev p_l-r self-center">
                                 <a class="black m_b h1" role="button" onclick="minisize(1)"><i class="light fas fa-chevron-right"></i></a>
                             </div>
+
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

@@ -872,6 +872,7 @@ h1 {
 }
 
 .brand-slider {
+    position: relative;
     margin: auto;
     max-width: 100%;
     width: 100%;

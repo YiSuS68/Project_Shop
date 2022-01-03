@@ -42,3 +42,14 @@ tabs.forEach((tab, index) => {
 
   };
 });
+
+// open form login
+// document.getElementById("login").addEventListener("click", () => {
+//   // location.href = "./login_page.php";
+//   console.log("aaa");
+// })
+
+// // open form register
+// function openRegister() {
+  
+// }

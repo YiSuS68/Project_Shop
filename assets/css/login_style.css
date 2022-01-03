@@ -1,8 +1,7 @@
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: url('../assets/img/green-slate.jpg');
-    background-size: cover;
+#background-sign {
+  background: url('../assets/img/green-slate.jpg');
+  background-size: cover;
 }
 
 .center-form {
@@ -30,7 +29,7 @@ body {
   border: 1px solid #ddd;
   transition: border-width 0.2s ease;
   border-radius: 2px;
-  color: #ccc;
+  color: black;
 }
 
 .login .input-login + i.fas {
@@ -56,7 +55,7 @@ body {
   transition: all 0.25s ease-out;
 }
 
-.hide-password {
+/* .hide-password {
   display: inline-block;
   position: absolute;
 	text-decoration: none;
@@ -74,28 +73,12 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   color: #343642;
-}
+} */
 
 .forgot-pass {
   font-size: 0.8em;
   color: #2196f3;
   text-decoration: none;
-}
-
-/* .signup-press {
-  font-size: 0.8em;
-  color: #2196f3;
-  text-decoration: none;
-  float: right;
-} */
-
-.title {
-  color: #444;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 10px 0 30px 0;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
 }
 
 .btn-button {
@@ -131,16 +114,6 @@ body {
 
 /* sign up */
 
-body .showLoginForm {
-  display: block;
-}
-
-body .showLoginForm .container-signUp {
-  opacity: 1;
-  transform: translate(-50%,-50%) scale(1);
-  top: 50%;
-}
-
 .sign-up {
   border-radius: 2px 2px 5px 5px;
   padding: 10px 20px 20px 20px;
@@ -159,7 +132,7 @@ body .showLoginForm .container-signUp {
   border: 1px solid #ddd;
   transition: border-width 0.2s ease;
   border-radius: 2px;
-  color: #ccc;
+  color: black;
 }
 
 .put-something + i.fas,
@@ -188,12 +161,6 @@ body .showLoginForm .container-signUp {
   position: absolute;
 }
 
-.popup-close {
-  float: right;
-  font-size: 30px;
-  cursor: pointer;
-}
-
 .sign-up_name {
   display: flex;
 }
@@ -207,21 +174,6 @@ body .showLoginForm .container-signUp {
   font-size: 14px;
   color: #444;
   padding-left: 15px;
-}
-
-.gender-fix {
-  display: block;
-  padding: 15px 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  border: 1px solid #ddd;
-  transition: border-width 0.2s ease;
-  border-radius: 2px;
-  color: #ccc;
-}
-
-.gender-fix option {
-  font-size: 16px;
 }
 
 /* new */

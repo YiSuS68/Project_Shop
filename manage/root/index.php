@@ -12,11 +12,7 @@
     <?php 
     require_once '../menu.php'
     ?>
-    <div class="right">
-      
-    </div>
   </div>
-</div>
 </div>
 </body>
 </html>

@@ -8,7 +8,7 @@ $price = $_POST['price'];
 $vote = $_POST['vote'];
 $id_producer = $_POST['id_producer'];
 
-$folder='../../Admin/product/history_image/';
+$folder='../../history_image/';
 $file_extension = explode('.', $image['name'])[1];
 $file_image_name=time() . '.' . $file_extension;
 $path_file = $folder . $file_image_name;

@@ -13,6 +13,17 @@
 </head>
 <body>
 
+    <!-- có lỗi sẽ hiển thị ra -->
+    <?php
+        if(isset($_GET['error'])) {
+    ?>
+            <span style='color:red'>
+                <?php echo $_GET['error'] ?>
+            </span>
+    <?php
+        }
+    ?>
+
 
     <!-- navbar -->
     <?php include "../component_navbar_shortcut.php" ?>
@@ -44,7 +55,7 @@
 
             <!-- 2.1 đăng nhập -->
             <div class="tab-pane active">
-                <form class="login" method="post" action="../process_login.php">
+                <form class="login" method="post" action="../process_login.php" enctype="multipart/form-data">
                     
                     <!-- 2.1.1 nhập tên và mật khẩu -->
                     <input class="input-login" type="text" name="username-login" placeholder="Tên đăng nhập" required>
@@ -75,7 +86,7 @@
 
             <!-- 2.2 đăng ký -->
             <div class="tab-pane">
-                <form class="login" action="process_register.php" method="post">
+                <form class="login" action="process_register.php" method="post" enctype="multipart/form-data">
 
                     <!-- 2.2.1 tên đăng nhập -->
                     <div class="input-form">

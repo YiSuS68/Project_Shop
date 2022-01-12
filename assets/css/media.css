@@ -1,4 +1,4 @@
-/* 1 => 768 */
+/* nhỏ hơn 1 => 768 */
 @media only screen and (max-width: 768px) {
     .media-w100 {
         width: 100%;
@@ -13,7 +13,7 @@
 }
 
 
-/* 1 => 992 */
+/* nhỏ hơn 1 => 992 */
 @media only screen and (max-width:992px) {
     .media-w100 {
         width: 100%;
@@ -25,7 +25,6 @@
 
     .header-setup.active {
         display: block;
-        
     }
 
     .header-click {
@@ -140,11 +139,10 @@
         flex: 0 0 auto;
         width: 50%;
     }
-
-    
     #navbar {
         display: block;
     }
+
     /*end navbar*/
     .header-setup {
         display: flex;
@@ -156,11 +154,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-
-    #btn {
+    #button_hidden_small {
         display: none;
     }
-
     .header-search {
         display: none;
     }

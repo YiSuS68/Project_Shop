@@ -1,5 +1,5 @@
 
-<!-- //slider -->
+<!-- part one //slider -->
 <div id="slider">
     <div class="slider-start">
 
@@ -92,7 +92,7 @@
 
 
 
-<!-- //product -->  
+<!-- part two //product -->  
 <div class="container" id="category">   
 
     <!-- part one -->
@@ -136,7 +136,7 @@
 
 
 
-<!-- //Featured Product --> 
+<!-- part three //Featured Product --> 
 <div id="featured"> 
     <div class="featured-product container">
 

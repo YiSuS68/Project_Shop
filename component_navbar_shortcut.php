@@ -4,7 +4,9 @@
 
         <!-- part one -->
         <a class="m_r2 m_b items-center n-decoration" id="logo" href="../khach_hang/index.php">Green Shop</a>
-        <i class="fas fa-bars" id="btn"></i>
+
+        <!-- nút bấm khi màn hình thu nhỏ dưới 992px -->
+        <i class="fas fa-bars" id="button_hidden_small"></i>
 
         <!-- part two -->
         <div class="header-setup all-center" id="collapse_btn">

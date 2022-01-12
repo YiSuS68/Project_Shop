@@ -1,11 +1,4 @@
 // button click
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".header-setup");
-
-
-btn.onclick = function() {
-    sidebar.classList.toggle("active");
-}
 
 
 // click slider
@@ -58,9 +51,9 @@ function showSlides(n) {
 
 // click minisize
 
-document.getElementById("aboutUs").addEventListener("click",  function() {
-    console.log("aaa");
-  });
+// document.getElementById("aboutUs").addEventListener("click",  function() {
+//     console.log("aaa");
+//   });
 
 // new
 

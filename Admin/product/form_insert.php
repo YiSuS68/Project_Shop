@@ -6,6 +6,8 @@
 	<title>Thêm sản phẩm</title>
 </head>
 <body>
+
+
 	<?php 	
 	require '../connect.php';
 	// $query_product = "select * from product ";
@@ -14,6 +16,8 @@
 	$resume_producer=mysqli_query($connect,$query_producer);
 	mysqli_close($connect);	
 	?>
+
+
 	<form method="post" action="process_insert.php" enctype="multipart/form-data">
 		<table width="50%" align="center" border="2px">
 			<tr>
@@ -60,5 +64,7 @@
 			</tr>
 		</table>
 	</form>
+
+
 </body>
 </html>

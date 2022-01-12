@@ -8,6 +8,7 @@
   <title>Sản phẩm</title> 
 </head>
 <body>
+  
   <?php  
   require '../connect.php';
 

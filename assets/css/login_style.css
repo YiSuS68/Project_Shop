@@ -1,6 +1,6 @@
 
-#background-sign {
-  background: url('../assets/img/green-slate.jpg');
+body {
+  background: url('../img/green-slate.jpg');
   background-size: cover;
 }
 

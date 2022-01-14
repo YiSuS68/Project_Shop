@@ -1,5 +1,11 @@
+<!-- liên kết với database -->
+<?php 
+    require 'admin/connect.php';
+    $sql = "SELECT * from product";
+    $result = mysqli_query($connect,$sql);
+?>
 
-<!-- part one //slider -->
+<!-- part ONE //slider -->
 <div id="slider">
     <div class="slider-start">
 
@@ -92,7 +98,9 @@
 
 
 
-<!-- part two //product -->  
+<!-- START -->
+
+<!-- part TWO //product -->  
 <div class="container" id="category">   
 
     <!-- part one -->
@@ -109,34 +117,51 @@
 
         <!-- 2.1 -->
         <div class="category-item media-w100 m_t2 text-center">
-            <a href="../khach_hang/singleShop.html"><img src="../assets/img/category_img_01.jpg" width="344px" height="344px" class="category-img"></a>
+        <?php foreach ($result as $each): ?>
+            <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
-            <h5 class="m_t-b2 h5">Đồng Hồ</h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.html">Tìm hiểu</a></p>
+            <h5 class="m_t-b2 h5">
+                <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+            </h5>
+            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            </p> <!-- có link id chỏ đến trang khác -->
+        <?php endforeach ?>
         </div>
 
         <!-- 2.2 -->
         <div class="category-item media-w100 m_t2 text-center">
-            <a href="../khach_hang/singleShop.html"><img src="../assets/img/category_img_02.jpg" width="344px" height="344px" class="category-img"></a>
+        <?php foreach ($result as $each): ?>
+        <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
-            <h5 class="m_t-b2 h5">Giày</h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.html">Tìm hiểu</a></p>
+            <h5 class="m_t-b2 h5">
+                <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+            </h5>
+            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            </p> <!-- có link id chỏ đến trang khác -->
+        <?php endforeach ?>
         </div>
 
         <!-- 2.3 -->
         <div class="category-item media-w100 m_t2 text-center">
-            <a href="../khach_hang/singleShop.html"><img src="../assets/img/category_img_03.jpg" width="344px" height="344px" class="category-img"></a>
+        <?php foreach ($result as $each): ?>
+        <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
-            <h5 class="m_t-b2 h5">Phụ kiện</h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.html">Tìm hiểu</a></p>
+            <h5 class="m_t-b2 h5">
+                <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+            </h5>
+            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            </p> <!-- có link id chỏ đến trang khác -->
+            <?php endforeach ?>
         </div>
     </div>
 
 </div>
 
+<!-- END -->
 
 
-<!-- part three //Featured Product --> 
+
+<!-- part THREE //Featured Product --> 
 <div id="featured"> 
     <div class="featured-product container">
 
@@ -154,8 +179,8 @@
             <!-- 2.1 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.html">
-                        <img src="../assets/img/feature_prod_01.jpg"  alt="Featured" class="featured-img"> 
+                    <a href="../khach_hang/singleShop.php">
+                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>"  alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -167,11 +192,11 @@
                                 <i class="w-grey fas fa-star"></i>
                                 <i class="w-grey fas fa-star"></i>
                             </li>
-                            <li class="w-grey">240.000 VNĐ</li> <!-- cập nhập giá từ db về -->
+                            <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.html" class="black h2 n-decoration m_b">Đèn mini</a>
-                        <p class="featured-about m_b2">Một chiếc đèn nhỏ tiện dụng, bạn có thể để nó vào balo hay túi quần áo, rất tiện 
-                            lợi trong những lúc cần thiết
+                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Đèn mini</a>
+                        <p class="featured-about m_b2">
+                            <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->
                         <p class="featured-reviews w-grey m_b2">lượt đánh giá (388)</p> <!--đánh giá số lượng ở đây-->
                     </div>
@@ -181,8 +206,8 @@
             <!-- 2.2 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.html">
-                        <img src="../assets/img/feature_prod_02.jpg" alt="Featured" class="featured-img"> 
+                    <a href="../khach_hang/singleShop.php">
+                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -194,13 +219,13 @@
                                 <i class="w-grey fas fa-star"></i>
                                 <i class="w-grey fas fa-star"></i>
                             </li>
-                            <li class="w-grey">480.000 VNĐ</li> <!-- cập nhập giá từ db về -->
+                            <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.html" class="black h2 n-decoration m_b">Đồng hồ theo dõi sức khỏe</a>
-                        <p class="featured-about m_b2">Đồng hồ là vật dụng cần thiết với mỗi người, những sẽ ra sao nếu nó còn 
-                            tích hợp thêm chức năng theo dõi sức khỏe đếm được nhịp tim và nhiều công dụng khác hữu ích hơn?
+                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Đồng hồ theo dõi sức khỏe</a>
+                        <p class="featured-about m_b2">
+                            <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->
-                        <p class="featured-reviews w-grey m_b2">lượt đánh giá (233)</p> <!--đánh giá số lượng ở đây-->
+                        <p class="featured-reviews w-grey m_b2">lượt đánh giá (388)</p> <!--đánh giá số lượng ở đây-->
                     </div>
                 </div>
             </div>
@@ -208,8 +233,8 @@
             <!-- 2.3 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.html">
-                        <img src="../assets/img/feature_prod_03.jpg" alt="Featured" class="featured-img"> 
+                    <a href="../khach_hang/singleShop.php">
+                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -221,11 +246,11 @@
                                 <i class="yellow fas fa-star"></i>
                                 <i class="yellow fas fa-star"></i>
                             </li>
-                            <li class="w-grey">780.000VNĐ</li> <!-- cập nhập giá từ db về -->
+                            <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.html" class="black h2 n-decoration m_b">Máy chụp ảnh polaroid</a>
-                        <p class="featured-about m_b2">Bạn muốn có những bức ảnh đẹp và sống động? đây chắc hẳn là thứ mà bạn 
-                            đang tìm kiếm lâu nay
+                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Máy chụp ảnh polaroid</a>
+                        <p class="featured-about m_b2">
+                            <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->
                         <p class="featured-reviews w-grey m_b2">lượt đánh giá (620)</p> <!--đánh giá số lượng ở đây-->
                     </div>

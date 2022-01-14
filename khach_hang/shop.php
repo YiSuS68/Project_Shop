@@ -112,9 +112,9 @@
                             <div class="buynow-setup_card_start">
 
                                 <!-- 2.2.1.1 ảnh của sản phẩm -->
+                                <?php foreach ($result as $each): ?>
                                 <div class="buynow-img">
-                                    <img src="../assets/img/shop_01.jpg"> <!-- lấy ảnh từ db về hiển thị ở đây -->
-
+                                    <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>"> <!-- lấy ảnh từ db về hiển thị ở đây -->
                                     <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
                                         <ul class="n-list_style m_b2">
                                             <li>
@@ -131,13 +131,13 @@
                                             </li>
                                         </ul>
                                     </div>
-
                                 </div>
 
 
                                 <!-- thông tin của sản phẩm -->
                                 <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non
+                                    <a class="black n-decoration m_b" href="#">
+                                        <?php echo $each['name'] ?>
                                     </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
 
                                     <ul class="space-flex n-list_style">
@@ -154,8 +154,9 @@
                                             <i class="grey fas fa-star"></i>
                                         </li>
                                     </ul>
-                                    <p class="text-center">$250.00</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
+                                    <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
                                 </div>
+                                <?php endforeach ?>
                             </div>
                         </div>
 

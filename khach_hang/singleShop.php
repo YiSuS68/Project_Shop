@@ -11,6 +11,15 @@
     <title>Green Shop</title>
 </head>
 <body>
+
+    <?php
+        $id =$_GET['id'];
+        require '../admin/connect.php';
+        $sql = "SELECT * from product
+        where id = $id";
+        $result =mysqli_query($connect,$sql);
+        $each = mysql_fetch_array($result);
+    ?>
     
     <div id="main">
 
@@ -124,10 +133,10 @@
                             <div class="single-product_setup_textall">
 
                                 <!-- 2.1 tên sản phẩm -->
-                                <h1 class="h2 m_b">Active Wear</h1> <!-- lấy từ db về -->
+                                <h1 class="h2 m_b"><?php echo $each['name'] ?></h1> <!-- lấy từ db về -->
 
                                 <!-- 2.2 giá sản phẩm -->
-                                <p class="h5 p_t-b m_b">$25.00</p> <!-- lấy từ db về -->
+                                <p class="h5 p_t-b m_b"><?php echo $each['price'] ?>VNĐ</p> <!-- lấy từ db về -->
 
                                 <!-- 2.3 đánh giá chất lượng sản phẩm bằng sao -->
                                 <p class="p_t-b m_b2"> <!-- có thể tự thêm hoặc làm bằng db (nó không quan trọng lắm) -->
@@ -142,12 +151,13 @@
                                 <!-- 2.4 hãng, tên nhà sản xuất -->
                                 <ul class="n-list_style m_b2">
                                     <li class="d-inline m-r"><h6 class="h6 m_b">Brand:</h6></li>
-                                    <li class="d-inline m-r"><p class="grey m_b2"><strong>Easy Wear</strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
+                                    <li class="d-inline m-r"><p class="grey m_b2"><strong><?php echo $each['producer'] ?></strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
                                 </ul>
 
                                 <!-- 2.5 nội dung sản phẩm -->
                                 <h6 class="h6 m_b">Description:</h6>
-                                <p class="h6 m_b2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.
+                                <p class="h6 m_b2">
+                                    <?php echo $each['description'] ?>
                                 </p> <!-- thêm phần nội dung nhiều chữ từ db vào đây -->
 
                                 <!-- 2.6 màu sắc sản phẩm -->

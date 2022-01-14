@@ -1,3 +1,24 @@
+<!-- có lỗi sẽ hiển thị ra, lấy ra lỗi -->
+<?php
+    session_start();
+    if(isset($_COOKIE['remember'])) {
+        $token = $_COOKIE['remember'];
+        require '../connect.php';
+        $sql = "SELECT * from register where token = '$token' limit 1";
+        $result = mysqli_query($connect,$sql);
+        $number_rows = mysqli_num_rows($result);
+        if ($number_rows == 1) {
+            $each = mysqli_fetch_array($result);
+            $_SESSION['id'] = $each['id'];
+            $_SESSION['last_name'] = $each['last_name'];
+        }
+    }
+    if (isset($_SESSION['id'])) {
+        header('Location: signafter.php');
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +33,6 @@
     <title>Login Green Shop</title>
 </head>
 <body>
-
-    <!-- có lỗi sẽ hiển thị ra -->
-    <?php
-        if(isset($_GET['error'])) {
-    ?>
-            <span style='color:red'>
-                <?php echo $_GET['error'] ?>
-            </span>
-    <?php
-        }
-    ?>
 
 
     <!-- navbar -->
@@ -58,16 +68,16 @@
                 <form class="login" method="post" action="../process_login.php" enctype="multipart/form-data">
                     
                     <!-- 2.1.1 nhập tên và mật khẩu -->
-                    <input class="input-login" type="text" name="username-login" placeholder="Tên đăng nhập" required>
+                    <input class="input-login" type="text" name="username" placeholder="Tên đăng nhập" required>
                         <i class="fas fa-user"></i>
-                    <input class="input-login" type="password" name="password-login" placeholder="Mật khẩu" required>
+                    <input class="input-login" type="password" name="password" placeholder="Mật khẩu" required>
                         <i class="fas fa-key"></i>
                         <!-- <a href="#0" class="hide-password">Show</a> -->
 
                     <!-- 2.1.2 ghi nhớ đăng nhập, quên mật khẩu -->
                     <div class="box-center">
                         <div>
-                            <input type="checkbox" value="RememberMe" id="rememberMe"> 
+                            <input type="checkbox" value="RememberMe" id="rememberMe" name="remember"> 
                             <label class="rememberme-text" for="rememberMe">Ghi nhớ Đăng Nhập?</label>
                         </div> <!-- tạo dữ liệu lưu lại lượt đăng nhập -->
                         <div>
@@ -86,7 +96,7 @@
 
             <!-- 2.2 đăng ký -->
             <div class="tab-pane">
-                <form class="login" action="process_register.php" method="post" enctype="multipart/form-data">
+                <form class="login" action="../process_register.php" method="post" enctype="multipart/form-data">
 
                     <!-- 2.2.1 tên đăng nhập -->
                     <div class="input-form">

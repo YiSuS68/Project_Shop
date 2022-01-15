@@ -3,6 +3,39 @@
     // lấy dữ liệu từ form 
     $username = $_POST['username'];
     $password = $_POST['password'];
+
+        // liên kết file đến database
+        require 'admin/connect.php';
+
+        // đếm xem đã xuất hiện username chưa
+        $sql = "select * from customers 
+        where username = '$username'";
+        $result = mysqli_query($connect, $sql);
+        // đếm xem có bao nhiêu bản ghi
+        $number_rows = mysqli_num_rows($result);
+
+        // nếu có = 1 như dưới, tức có bản ghi rồi thì chạy điều kiện
+        if ($number_rows == 1) {
+            session_start();
+            $each = mysqli_fetch_array($result);
+            $_SESSION['id'] = $each['id'];
+            $_SESSION['lastname'] = $each['lastname'];
+
+            header('location:user.php');
+            exit;
+        }
+        // đăng nhập sai hiển thị ra dùng dưới
+            header('location:login_register.php?error = kiểm tra lại tài khoản hoặc mật khẩu của bạn đã đúng chưa');
+
+
+
+
+
+
+
+
+
+
     if(isset($_POST['$remember'])) {
         $remember = true;
     } else {

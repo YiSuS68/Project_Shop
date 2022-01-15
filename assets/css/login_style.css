@@ -86,7 +86,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 10px 10px;
-  background: #2196f3;
+  background: #59ab6e;
   color: #fff;
   display: block;
   border: none;
@@ -191,7 +191,7 @@ body {
   width: 0;
   height: 6px;
   border-radius: 15px;
-  background-color: #253143;
+  background-color: #59ab6e;
   transition: all 0.2s ease;
 }
 
@@ -201,7 +201,7 @@ body {
   padding: 16px 20px 11px 20px;
   font-size: 20px;
   text-align: center;
-  color: #253143;
+  color: #59ab6e;
   background-color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;

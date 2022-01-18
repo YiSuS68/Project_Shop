@@ -47,18 +47,3 @@
   </div>
 </body>
 </html>
-<!--                 <form>
-          <table width="30%">
-            <tr>
-              <td rowspan="2">
-                <a href="form_insert.php">
-                  <button>Thêm</button>
-                </a>
-              </td>
-              <td>Tìm kiếm tên</td><br>
-            </tr>
-            <tr>
-              <td><input type="search" name="search"></td>
-            </tr>
-          </table>
-        </form> -->

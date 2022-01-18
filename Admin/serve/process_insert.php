@@ -7,17 +7,12 @@ $identity = $_POST['identity'];
 $address = $_POST['address'];
 $level = $_POST['level'];
 $wage = $_POST['wage'];
+$account = $_POST['account'];
+$password = $_POST['password'];
 
 require '../connect.php';
-// if ($gender === 'Male') {
-// 	$gender ='Nam';	
-// }elseif ($gender === 'female') {
-// 	$gender ='Nữ';	
-// }elseif ($gender === 'orther') {
-// 	$gender ='Khác';	
-// }
-$query = "insert into serve(name,gender,phone,identity,address,level,wage)
-values('$name','$gender','$phone','$identity','$address','$level','$wage')";
+$query = "insert into serve(name,gender,phone,identity,address,level,wage,account,password)
+values('$name','$gender','$phone','$identity','$address','$level','$wage','$account','$password')";
 
 mysqli_query($connect,$query);
 $loi= mysqli_error($connect);

@@ -38,8 +38,6 @@
   offset $quantity_value_pass";
   $resume=mysqli_query($connect,$query);
 
-  $query_producer = "select * from producer ";
-  $resume_producer=mysqli_query($connect,$query_producer);
   mysqli_close($connect);
   ?>
 

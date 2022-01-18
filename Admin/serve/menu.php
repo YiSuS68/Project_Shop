@@ -55,7 +55,7 @@
         <input type="search" name="search" value="<?php echo $search ?>">
       </form>
     </div>
-    <div class="bot" style="align:center;">
+    <div class="bot">
       <table width="100%" align="center" border="2px">
         <tr>
           <th colspan="10">NHÂN VIÊN</th>

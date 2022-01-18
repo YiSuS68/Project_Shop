@@ -1,7 +1,7 @@
     <div id="div-top">
       <div class="left">
         <a href="../root" style="text-decoration: none;">
-          <h1>ADMIN</h1>
+          <h1>QUẢN LÝ</h1>
         </a>
       </div>
       <div class="right" >
@@ -17,7 +17,7 @@
         <div class="top">
           <ul type="none">
             <a href="../serve" style="text-decoration: none;">
-              <li class="button"> 
+              <li class="button">
                 NHÂN VIÊN
               </li>
             </a>
@@ -70,7 +70,7 @@
             <?php foreach ($resume as $each){ ?>
               <tr>
                 <td style="text-align:center">
-                  <img height="100px" src="../history_image//<?php echo $each['image'] ?>">
+                  <img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
                 </td>
                 <td style="text-align:center"><?php echo $each['name']; ?></td>
                 <td style="text-align:center"><?php echo $each['phone']; ?></td>
@@ -91,4 +91,4 @@
           <?php } ?>
         </div>
       </div>
-    </div>  
+    </div>

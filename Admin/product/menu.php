@@ -1,7 +1,8 @@
+
 <div id="div-top">
   <div class="left">
     <a href="../root" style="text-decoration: none;">
-      <h1>ADMIN</h1>
+      <h1>QUẢN LÝ</h1>
     </a>
   </div>
   <div class="right" >
@@ -17,10 +18,11 @@
     <div class="top">
       <ul type="none">
         <a href="../serve" style="text-decoration: none;">
-          <li class="button"> 
+          <li class="button">
             NHÂN VIÊN
           </li>
         </a>
+
         <a href="../product" style="text-decoration: none;">
           <li class="button" id="active">
             SẢN PHẨM
@@ -75,7 +77,7 @@
             <td style="text-align:center"><p><?php echo nl2br($each['description']); ?></p></td>
             <td style="text-align:center"><?php echo nl2br($each['detail']); ?></td>
             <td style="text-align:center">
-              <img height="100px" src="../history_image/<?php echo $each['image'] ?>">
+              <img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
             </td>
             <td style="text-align:center"><?php echo $each['price']; ?></td>
             <td style="text-align:center"><?php echo $each['vote']; ?></td>

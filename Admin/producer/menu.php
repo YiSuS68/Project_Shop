@@ -70,7 +70,7 @@
             <?php foreach ($resume as $each){ ?>
               <tr>
                 <td style="text-align:center">
-                  <img height="100px" src="../../history_image//<?php echo $each['image'] ?>">
+                  <img height="100px" src="../history_image//<?php echo $each['image'] ?>">
                 </td>
                 <td style="text-align:center"><?php echo $each['name']; ?></td>
                 <td style="text-align:center"><?php echo $each['phone']; ?></td>

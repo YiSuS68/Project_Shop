@@ -3,7 +3,7 @@ $id = $_GET['id'];
 $name = $_POST['name'];
 $new_image = $_FILES['new_image'];
 if ($new_image['size'] > 0) {
-	$folder='../../history_image/';
+	$folder='../history_image/';
 	$file_extension = explode('.', $new_image['name'])[1];
 	$file_image_name=time() . '.' . $file_extension;
 	$path_file = $folder . $file_image_name;

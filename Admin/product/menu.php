@@ -75,7 +75,7 @@
             <td style="text-align:center"><p><?php echo nl2br($each['description']); ?></p></td>
             <td style="text-align:center"><?php echo nl2br($each['detail']); ?></td>
             <td style="text-align:center">
-              <img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
+              <img height="100px" src="../history_image/<?php echo $each['image'] ?>">
             </td>
             <td style="text-align:center"><?php echo $each['price']; ?></td>
             <td style="text-align:center"><?php echo $each['vote']; ?></td>

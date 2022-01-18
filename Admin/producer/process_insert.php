@@ -5,7 +5,7 @@ $image = $_FILES['image'];
 $phone = $_POST['phone'];
 $address = $_POST['address'];
 
-$folder='../../history_image/';
+$folder='../history_image/';
 $file_extension = explode('.', $image['name'])[1];
 $file_image_name=time() . '.' . $file_extension;
 $path_file = $folder . $file_image_name;

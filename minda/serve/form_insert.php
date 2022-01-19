@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../error_validate.css">
+<link rel="stylesheet" type="text/css" href="../error_validate.css">
 <form method="post" action="process_insert.php">
 	<table width="50%" align="center" border="2px">
 		<tr>
@@ -59,17 +59,19 @@
 			<th>Tài khoản</th>
 			<td>
 				<input id="account" type="text" name="account">
+				<span id="error_account" class="error_validate"></span>
 			</td>
 		</tr>
 		<tr>
 			<th>Mật khẩu</th>
 			<td>
 				<input id="password" type="password" name="password">
+				<span id="error_password" class="error_validate"></span>
 			</td>
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button	type="submit" onclick="return check()">Thêm</button>
+				<button	type="button" onclick="return check()">Thêm</button>
 			</th>
 		</tr>
 	</table>

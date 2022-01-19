@@ -8,8 +8,8 @@ function check()
 	let address = document.getElementById('address').value;
 	let level = document.getElementById('level').value;
 	let wage = document.getElementById('wage').value;
-	// let account = document.getElementById('account').value;
-	// let password = document.getElementById('password').value;
+	let account = document.getElementById('account').value;
+	let password = document.getElementById('password').value;
 	//validate tên
 	if(name.length === 0)
 	{
@@ -99,8 +99,48 @@ function check()
 	}else{
 		document.getElementById('error_wage').innerHTML = '';
 	}
+	//validate account
+	if(level == 1)
+	{
+		document.getElementById('error_account').innerHTML = '';
+	}else if (level == 2) 
+	{
+		if(account.length === 0)
+		{
+			document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
+		}else {
+			document.getElementById('error_account').innerHTML = '';
+		}
+	}else if (level == 3) {
+		if(account.length === 0)
+		{
+			document.getElementById('error_account').innerHTML = 'Admin cần có tài khoản';
+		}else {
+			document.getElementById('error_account').innerHTML = '';
+		}
+	}
 
-
+	//validate mật khẩu
+	if(level == 1)
+	{
+		document.getElementById('error_password').innerHTML = '';
+	}else if (level == 2) 
+	{
+		if(password.length === 0)
+		{
+			document.getElementById('error_password').innerHTML = 'Quản lý cần có mật khẩu';
+		}else {
+			document.getElementById('error_password').innerHTML = '';
+		}
+	}else if (level == 3) {
+		if(password.length === 0)
+		{
+			document.getElementById('error_password').innerHTML = 'Admin cần có mật khẩu';
+		}else {
+			document.getElementById('error_password').innerHTML = '';
+		}
+	}
+	
 	if (check_error) 
 	{
 		return false;

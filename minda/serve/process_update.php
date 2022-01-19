@@ -1,5 +1,5 @@
 <?php  
-
+$id = $_GET['id'];
 $name = $_POST['name'];
 $gender = $_POST['gender'];
 $phone = $_POST['phone'];
@@ -11,8 +11,21 @@ $account = $_POST['account'];
 $password = $_POST['password'];
 
 require '../connect.php';
-$query = "insert into serve(name,gender,phone,identity,address,level,wage,account,password)
-values('$name','$gender','$phone','$identity','$address','$level','$wage','$account','$password')";
+
+$query = "update serve 
+set
+name='$name',
+gender='$gender',
+phone='$phone',
+identity='$identity',
+address='$address',
+level='$level',
+wage='$wage',
+account='$account',
+password='$password'
+where
+id='$id'
+";
 
 mysqli_query($connect,$query);
 $loi= mysqli_error($connect);

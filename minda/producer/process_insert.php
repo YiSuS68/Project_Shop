@@ -1,4 +1,11 @@
 <?php  
+if (empty($_POST['name']
+|| $_FILES['image']
+|| $_POST['phone']
+|| $_POST['address'])) 
+{
+	header('location:index.php?error=Phải điền đầy đủ thông tin');
+}
 
 $name = $_POST['name'];
 $image = $_FILES['image'];

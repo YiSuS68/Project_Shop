@@ -72,6 +72,14 @@
 				<td><input type="text" name="wage" value="<?php echo $each['wage'] ?>"></td>
 			</tr>
 			<tr>
+				<th>Tài khoản</th>
+				<td><input type="text" name="account" value="<?php echo $each['account'] ?>"></td>
+			</tr>
+			<tr>
+				<th>Mật khẩu</th>
+				<td><input type="text" name="password" value="<?php echo $each['password'] ?>"></td>
+			</tr>
+			<tr>
 				<th colspan="2"><button>Cập nhật</button></th>
 			</tr>
 		</table>

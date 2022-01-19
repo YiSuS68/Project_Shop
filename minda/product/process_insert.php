@@ -1,5 +1,16 @@
 <?php  
 
+if (empty($_POST['name']
+|| $_POST['description']
+|| $_POST['detail']
+|| $_FILES['image']
+|| $_POST['price']
+|| $_POST['vote']
+|| $_POST['id_producer'])) 
+{
+	header('location:index.php?error=Phải điền đầy đủ thông tin');
+}
+
 $name = $_POST['name'];
 $description = $_POST['description'];
 $detail = $_POST['detail'];

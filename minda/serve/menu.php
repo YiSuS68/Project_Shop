@@ -1,4 +1,3 @@
-
 <div id="div-top">
   <div class="left">
     <a href="../root" style="text-decoration: none;">

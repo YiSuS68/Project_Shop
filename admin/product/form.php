@@ -6,11 +6,7 @@
 <div class="bot" style="width: 100%; height: 60%;">
   <div style="width: 50%; height: 12%; float: left;">
     <?php 
-      if (isset($_GET['error'])) {
-    ?>
-    <span style="color:red;"><?php echo $_GET['error'] ?></span>
-    <?php  
-      }
+      require '../event_crud.php';
     ?>
   </div>
   <div style="width: 50%; height: 12%; float: left;">

@@ -59,12 +59,11 @@ function check()
 	{
 		document.getElementById('error_vote').innerHTML = 'Đánh giá không được để trống';
 		check_error = true;
-	}else if (vote.length <5) {
-		document.getElementById('error_vote').innerHTML = 'Đánh giá không hợp lệ';
-		check_error = true;
 	}else{
 		document.getElementById('error_vote').innerHTML = '';
-		
 	}
-
+	if (check_error) 
+	{
+		return false;
+	}
 }

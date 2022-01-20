@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../error_validate.css">
+<link rel="stylesheet" type="text/css" href="../event.css">
 <form method="post" action="process_insert.php">
 	<table width="50%" align="center" border="2px">
 		<tr>
@@ -71,7 +71,7 @@
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button	type="button" onclick="return check()">Thêm</button>
+				<button	type="submit" onclick="return check()">Thêm</button>
 			</th>
 		</tr>
 	</table>

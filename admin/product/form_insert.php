@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../error_validate.css">
+<link rel="stylesheet" href="../event.css">
 <?php 	
 require '../connect.php';
 $query_producer = "select * from producer ";
@@ -66,7 +66,7 @@ mysqli_close($connect);
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button	type="button" onclick="return check()">Thêm</button>
+				<button	type="submit" onclick="return check()">Thêm</button>
 			</th>
 		</tr>
 	</table>

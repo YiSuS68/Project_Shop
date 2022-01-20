@@ -1,15 +1,16 @@
 <?php  
 if (empty($_POST['name']
-|| $_FILES['image']
-|| $_POST['phone']
-|| $_POST['address'])) 
+	|| $_FILES['image']
+	|| $_POST['phone']
+	|| $_POST['address'])) 
 {
-	header('location:index.php?error=Phải điền đầy đủ thông tin');
+	header('location:index.php?empty_insert');
+	die();
 }
 
 $name = $_POST['name'];
 $image = $_FILES['image'];
-$phone = $_POST['phone'];
+$phone = $_POST['phone'];	
 $address = $_POST['address'];
 
 $folder='../../history_image/';
@@ -25,7 +26,9 @@ $query = "insert into producer(name,image,phone,address)
 values('$name','$file_image_name','$phone','$address')";
 
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
+$error= mysqli_error($connect);
+echo $error;
 mysqli_close($connect);
+
+header('location:index.php?insert');
 

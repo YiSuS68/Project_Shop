@@ -3,10 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../event.css">
 	<title>Sửa nhân viên</title>
 </head>
 <body>
 	<?php 	
+	if (empty($_GET['id']))
+	{
+		header('location:index.php?empty_update');
+	}
 	$id=$_GET['id'];
 	require '../connect.php';
 	$query = "select * from serve where id=$id";
@@ -23,7 +28,10 @@
 			</tr> -->
 			<tr>
 				<th>Họ và tên</th>
-				<td><input type="text" name="name" value="<?php echo $each['name'] ?>"></td>
+				<td>
+					<input id="name" type="text" name="name" value="<?php echo $each['name'] ?>">
+					<span id="error_name" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Giới tính</th>
@@ -49,40 +57,65 @@
 					}
 					?>
 					>Khác
+					<span id="error_gender" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>
 				<th>Số điện thoại</th>
-				<td><input type="text" name="phone" value="<?php echo $each['phone'] ?>"></td>
+				<td>
+					<input id="phone" type="text" name="phone" value="<?php echo $each['phone'] ?>">
+					<span id="error_phone" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>CCCD</th>
-				<td><input type="text" name="identity" value="<?php echo $each['identity'] ?>"></td>
+				<td>
+					<input id="identity" type="text" name="identity" value="<?php echo $each['identity'] ?>">
+					<span id="error_identity" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Địa chỉ</th>
-				<td><textarea name="address"><?php echo $each['name'] ?></textarea></td>
+				<td>
+					<textarea id="address" name="address"><?php echo $each['name'] ?></textarea>
+					<span id="error_address" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Cấp bậc</th>
-				<td><input type="text" name="level" value="<?php echo $each['level'] ?>"></td>
+				<td>
+					<input id="level" type="text" name="level" value="<?php echo $each['level'] ?>">
+					<span id="error_level" class="error_validate">1.NV | 2.QL | 3.AD</span>
+				</td>
 			</tr>
 			<tr>
 				<th>Lương</th>
-				<td><input type="text" name="wage" value="<?php echo $each['wage'] ?>"></td>
+				<td>
+					<input id="wage" type="text" name="wage" value="<?php echo $each['wage'] ?>">
+					<span id="error_wage" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Tài khoản</th>
-				<td><input type="text" name="account" value="<?php echo $each['account'] ?>"></td>
+				<td>
+					<input id="account" type="text" name="account" value="<?php echo $each['account'] ?>">
+					<span id="error_account" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Mật khẩu</th>
-				<td><input type="text" name="password" value="<?php echo $each['password'] ?>"></td>
+				<td>
+					<input id="password" type="text" name="password" value="<?php echo $each['password'] ?>">
+					<span id="error_password" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
-				<th colspan="2"><button>Cập nhật</button></th>
+				<th colspan="2">
+					<button	type="submit" onclick="return check()">Cập nhật</button>
+				</th>
 			</tr>
 		</table>
 	</form>
+	<script src="validate.js"></script>
 </body>
 </html>

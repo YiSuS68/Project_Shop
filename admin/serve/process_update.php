@@ -1,4 +1,19 @@
 <?php  
+if (empty($_POST['name']
+	|| $_POST['gender']
+	|| $_POST['phone']
+	|| $_POST['identity']
+	|| $_POST['address']
+	|| $_POST['level']
+	|| $_POST['wage']
+	|| $_POST['account']
+	|| $_POST['password'])) 
+{
+	header('location:index.php?empty_update');
+	die();
+}
+
+
 $id = $_GET['id'];
 $name = $_POST['name'];
 $gender = $_POST['gender'];
@@ -28,7 +43,7 @@ id='$id'
 ";
 
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
+$error= mysqli_error($connect);
+echo $error;
 mysqli_close($connect);
-
+header('location:index.php?update');

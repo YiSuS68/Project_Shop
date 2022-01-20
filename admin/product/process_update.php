@@ -1,4 +1,16 @@
 <?php  
+if (empty($_GET['id']
+	|| $_POST['name']
+	|| $_POST['description']
+	|| $_POST['detail']
+	|| $_FILES['image']
+	|| $_POST['price']
+	|| $_POST['vote']
+	|| $_POST['id_producer'])) 
+{
+	header('location:index.php?empty_update');
+	die();
+}
 $id = $_GET['id'];
 $name = $_POST['name'];
 $description = $_POST['description'];
@@ -33,7 +45,9 @@ where
 id ='$id'
 ";
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
+$error= mysqli_error($connect);
+echo $error;
 mysqli_close($connect);
+
+header('location:index.php?update');
 

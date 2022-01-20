@@ -1,5 +1,17 @@
 <?php  
 
+if (empty($_POST['name']
+	|| $_POST['description']
+	|| $_POST['detail']
+	|| $_FILES['image']
+	|| $_POST['price']
+	|| $_POST['vote']
+	|| $_POST['id_producer'])) 
+{
+	header('location:index.php?empty_insert');
+	die();
+}
+
 $name = $_POST['name'];
 $description = $_POST['description'];
 $detail = $_POST['detail'];
@@ -20,7 +32,15 @@ $query = "insert into product(name,description,detail,image,price,vote,id_produc
 values('$name','$description','$detail','$file_image_name','$price','$vote','$id_producer')";
 
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
-mysqli_close($connect);
+$error= mysqli_error($connect);
+if ($error){
+	mysqli_close($connect);
+	header('location:index.php?error_insert');
+	die();
+}
+else{ 
+	mysqli_close($connect);
+	header('location:index.php?insert');
+}
+
 

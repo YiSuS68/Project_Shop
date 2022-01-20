@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../event.css">
-	<title>Sửa nhân viên</title>
+	<title>SỬA NHÂN VIÊN</title>
 </head>
 <body>
 	<?php 	

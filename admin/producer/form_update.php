@@ -18,7 +18,7 @@
 	$resume = mysqli_query($connect,$query);
 	$each = mysqli_fetch_array($resume);
 	?>
-	<form method="post" action="process_update.php?id=<?php echo $each['id']; ?>">
+	<form method="post" action="process_update.php?id=<?php echo $each['id']; ?>" enctype="multipart/form-data">
 		<table width="60%" align="center" border="2px">
 			<tr>
 				<th colspan="2">SỬA NHÀ SẢN XUẤT</th>
@@ -35,34 +35,36 @@
 			<tr>
 				<th>Giữ ảnh cũ</th>
 				<td>
-					<img height="100px" src="history_image/<?php echo $each['image'] ?>">
-					<input type="hidden" name="ole_image" value="<?php echo $each['image'] ?>">
+					<img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
+					<input id="image" type="hidden" name="ole_image" value="<?php echo $each['image'] ?>">
 					<span id="error_image" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>
 				<th>Tên nhà sản xuất</th>
 				<td>
-					<input type="text" name="name" value="<?php echo $each['name'] ?>">
+					<input id="name" type="text" name="name" value="<?php echo $each['name'] ?>">
 					<span id="error_name" class="error_validate"></span>
-				</td>
+				</td> 
 			</tr>
 			<tr>
 				<th>Số điện thoại</th>
 				<td>
-					<input type="text" name="phone" value="<?php echo $each['phone'] ?>">
+					<input id="phone" type="text" name="phone" value="<?php echo $each['phone'] ?>">
 					<span id="error_phone" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>
 				<th>Địa chỉ</th>
 				<td>
-					<textarea name="address"><?php echo $each['name'] ?></textarea>
+					<textarea id="address" name="address"><?php echo $each['name'] ?></textarea>
 					<span id="error_address" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>
-				<th colspan="2"><button>Cập nhật</button></th>
+				<th colspan="2">
+					<button	type="submit" onclick="return check()">Cập nhật</button>
+				</th>
 			</tr>
 		</table>
 	</form>

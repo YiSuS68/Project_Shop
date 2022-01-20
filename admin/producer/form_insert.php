@@ -34,7 +34,7 @@
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button	type="button" onclick="return check()">Thêm</button>
+				<button	type="submit" onclick="return check()">Thêm</button>
 			</th>
 		</tr>
 	</table>

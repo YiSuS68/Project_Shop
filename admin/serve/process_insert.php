@@ -29,8 +29,13 @@ values('$name','$gender','$phone','$identity','$address','$level','$wage','$acco
 
 mysqli_query($connect,$query);
 $error= mysqli_error($connect);
-echo $error;
-mysqli_close($connect);
-
-header('location:index.php?insert');
+if ($error){
+	mysqli_close($connect);
+	header('location:index.php?error_insert');
+	die();
+}
+else{ 
+	mysqli_close($connect);
+	header('location:index.php?insert');
+}
 

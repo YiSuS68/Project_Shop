@@ -3,10 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sửa sản phẩm</title>
+	<link rel="stylesheet" type="text/css" href="../event.css">
+	<title>SỬA SẢN PHẨM</title>
 </head>
 <body>
 	<?php 	
+	if (empty($_GET['id']))
+	{
+		header('location:index.php?empty_update');
+	}
 	$id=$_GET['id'];
 	require '../connect.php';
 	$query = "select * from product where id=$id";
@@ -28,15 +33,24 @@
 			</tr> -->
 			<tr>
 				<th>Tên sản phẩm</th>
-				<td><input type="text" name="name" value="<?php echo $each['name'] ?>"></td>
+				<td>
+					<input id="name" type="text" name="name" value="<?php echo $each['name'] ?>">
+					<span id="error_name" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Mô tả</th>
-				<td><textarea name="description"><?php echo $each['description'] ?></textarea></td>
+				<td>
+					<textarea id="description" name="description"><?php echo $each['description'] ?></textarea>
+					<span id="error_description" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Nội dung</th>
-				<td><textarea name="detail"><?php echo $each['detail'] ?></textarea></td>
+				<td>
+					<textarea id="detail" name="detail"><?php echo $each['detail'] ?></textarea>
+					<span id="error_detail" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Đổi ảnh mới</th>
@@ -45,17 +59,24 @@
 			<tr>
 				<th>Giữ ảnh cũ</th>
 				<td>
-					<img height="100px" src="history_image/<?php echo $each['image'] ?>">
-					<input type="hidden" name="ole_image" value="<?php echo $each['image'] ?>">
+					<img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
+					<input id="image" type="hidden" name="ole_image" value="<?php echo $each['image'] ?>">
+					<span id="error_image" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>
 				<th>Giá</th>
-				<td><input type="number" name="price" value="<?php echo $each['price'] ?>"></td>
+				<td>
+					<input id="price" type="number" name="price" value="<?php echo $each['price'] ?>">
+					<span id="error_price" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Đánh giá</th>
-				<td><input type="number" name="vote" value="<?php echo $each['vote'] ?>"> </td>
+				<td>
+					<input id="vote" type="number" name="vote" value="<?php echo $each['vote'] ?>"> 
+					<span id="error_vote" class="error_validate"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Nhà sản xuất</th>
@@ -75,9 +96,12 @@
 			</td>
 		</tr>
 		<tr>
-			<th colspan="2"><button>Sửa</button></th>
+			<th colspan="2">
+				<button	type="submit" onclick="return check()">Cập nhật</button>
+			</th>
 		</tr>
 	</table>
 </form>
+<script src="validate.js"></script>
 </body>
 </html>

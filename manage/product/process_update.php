@@ -1,4 +1,16 @@
 <?php  
+if (empty($_GET['id']
+	|| $_POST['name']
+	|| $_POST['description']
+	|| $_POST['detail']
+	|| $_FILES['image']
+	|| $_POST['price']
+	|| $_POST['vote']
+	|| $_POST['id_producer'])) 
+{
+	header('location:index.php?empty_update');
+	die();
+}
 $id = $_GET['id'];
 $name = $_POST['name'];
 $description = $_POST['description'];
@@ -12,7 +24,7 @@ if ($new_image['size'] > 0) {
 
 	move_uploaded_file($new_image["tmp_name"], $path_file);
 }else{
-	$file_image_name= $_POST['old_image'];
+	$file_image_name= $_POST['ole_image'];
 }
 $price = $_POST['price'];
 $vote = $_POST['vote'];
@@ -33,7 +45,14 @@ where
 id ='$id'
 ";
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
-mysqli_close($connect);
+$error= mysqli_error($connect);
+if ($error){
+	mysqli_close($connect);
+	header('location:index.php?error_update');
+	die();
+}
+else{ 
+	mysqli_close($connect);
+	header('location:index.php?update');
+}
 

@@ -41,9 +41,14 @@ password='$password'
 where
 id='$id'
 ";
-
 mysqli_query($connect,$query);
 $error= mysqli_error($connect);
-echo $error;
-mysqli_close($connect);
-header('location:index.php?update');
+if ($error){
+	mysqli_close($connect);
+	header('location:index.php?error_update');
+	die();
+}
+else{ 
+	mysqli_close($connect);
+	header('location:index.php?update');
+}

@@ -9,16 +9,10 @@ function check()
 	//validate tên
 	if(name.length === 0)
 	{
-		document.getElementById('error_gender').innerHTML = 'Tên không được để trống';
+		document.getElementById('error_name').innerHTML = 'Tên không được để trống';
 		check_error = true;
 	}else {
-		let regex_name = /^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/;
-		if (!regex_name.test(name)) {
-			document.getElementById('error_name').innerHTML = 'Tên không hợp lệ';
-			check_error = true;
-		}else {
 			document.getElementById('error_name').innerHTML = '';
-		}
 	}
 
 	//validate ảnh nhà sản xuất

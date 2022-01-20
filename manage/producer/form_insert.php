@@ -1,36 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Thêm nhà sản xuất</title>
-</head>
-<body>
-	<form method="post" action="process_insert.php" enctype="multipart/form-data">
-		<table width="50%" align="center" border="2px">
-			<tr>
-				<th colspan="2">Nhà sản xuất</th>
-			</tr>
-			<tr>
-				<th>Tên nhà sản xuất</th>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<th>Ảnh</th>
-				<td><input type="file" name="image"></td>
-			</tr>
-			<tr>
-				<th>Số điện thoại</th>
-				<td><input type="text" name="phone"></td>
-			</tr>
-			<tr>
-				<th>Địa chỉ</th>
-				<td><textarea name="address"></textarea></td>
-			</tr>
-			<tr>
-				<th colspan="2"><button>Thêm</button></th>
-			</tr>
-		</table>
-	</form>
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="../event.css">
+<form method="post" action="process_insert.php" enctype="multipart/form-data">
+	<table width="50%" align="center" border="2px">
+		<tr>
+			<th colspan="2">THÊM NHÀ SẢN XUÂT</th>
+		</tr>
+		<tr>
+			<th>Tên nhà sản xuất</th>
+			<td>
+				<input id="name" type="text" name="name">
+				<span id="error_name" class="error_validate"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>Ảnh</th>
+			<td>
+				<input id="image" type="file" name="image">
+				<span id="error_image" class="error_validate"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>Số điện thoại</th>
+			<td>
+				<input id="phone" type="text" name="phone">
+				<span id="error_phone" class="error_validate"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>Địa chỉ</th>
+			<td>
+				<textarea id="address" name="address"></textarea>
+				<span id="error_address" class="error_validate"></span>
+			</td>
+		</tr>
+		<tr>
+			<th colspan="2">
+				<button	type="submit" onclick="return check()">Thêm</button>
+			</th>
+		</tr>
+	</table>
+</form>
+<script src="validate.js"></script>

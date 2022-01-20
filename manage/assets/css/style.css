@@ -73,15 +73,6 @@
   float: left; 
   background-color: white;
 } 
-#div-bot > .right > .top{
-  width: 100%;
-  height: 10%;
-  bot: 0px;
-} 
-#div-bot > .right > .bot{
-  width: 100%;
-  height: 90%;
-} 
 
 
 .box-space-bot-right-right{

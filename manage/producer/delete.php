@@ -1,4 +1,11 @@
 <?php 
+
+if (empty($_GET['id']))
+{
+	header('location:index.php?empty_delete');
+	die();
+}
+
 $id =$_GET['id'];
 
 require '../connect.php';
@@ -6,6 +13,13 @@ require '../connect.php';
 $query = "delete from producer where id='$id'";
 
 mysqli_query($connect,$query);
-$loi= mysqli_error($connect);
-echo $loi;
-mysqli_close($connect);
+$error= mysqli_error($connect);
+if ($error){
+	mysqli_close($connect);
+	header('location:index.php?error_delete');
+	die();
+}
+else{ 
+	mysqli_close($connect);
+	header('location:index.php?delete');
+}

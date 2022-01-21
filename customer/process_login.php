@@ -5,7 +5,7 @@
     $password = $_POST['password'];
 
         // liên kết file đến database
-        require 'admin/connect.php';
+        require '../admin/connect.php';
 
         // đếm xem đã xuất hiện username chưa
         $sql = "select * from customers 

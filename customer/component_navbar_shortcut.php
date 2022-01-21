@@ -3,7 +3,7 @@
     <div class="items-center space-flex container flex-inhe">
 
         <!-- part one -->
-        <a class="m_r2 m_b items-center n-decoration" id="logo" href="../khach_hang/index.php">Green Shop</a>
+        <a class="m_r2 m_b items-center n-decoration" id="logo" href="index.php">Green Shop</a>
 
         <!-- nút bấm khi màn hình thu nhỏ dưới 992px -->
         <i class="fas fa-bars" id="button_hidden_small"></i>
@@ -14,10 +14,10 @@
             <!-- 2.1 -->
             <div class="flex-auto">
                 <ul class="header-click space-flex-wrap">
-                    <li><a class="hover dark n-decoration p d-block" href="../khach_hang/index.php">Home</a></li>
-                    <li><a class="hover dark n-decoration p d-block" href="../khach_hang/about.php">About</a></li>
-                    <li><a class="hover dark n-decoration p d-block" href="../khach_hang/shop.php">Shop</a></li>
-                    <li><a class="hover dark n-decoration p d-block" href="../khach_hang/contact.php">Contact</a></li>
+                    <li><a class="hover dark n-decoration p d-block" href="index.php">Home</a></li>
+                    <li><a class="hover dark n-decoration p d-block" href="about.php">About</a></li>
+                    <li><a class="hover dark n-decoration p d-block" href="shop.php">Shop</a></li>
+                    <li><a class="hover dark n-decoration p d-block" href="contact.php">Contact</a></li>
                 </ul>
             </div>
 

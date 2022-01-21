@@ -15,7 +15,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_01.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_01.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -39,7 +39,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_02.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_02.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -64,7 +64,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_03.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_03.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -118,12 +118,12 @@
         <!-- 2.1 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-            <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+            <a href="singleShop.php"><img src="admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
             </h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            <p class="m_b2 text-center"><a class="category-submit" href="singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
             </p> <!-- có link id chỏ đến trang khác -->
         <?php endforeach ?>
         </div>
@@ -131,12 +131,12 @@
         <!-- 2.2 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-        <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+        <a href="singleShop.php"><img src="admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
             </h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            <p class="m_b2 text-center"><a class="category-submit" href="singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
             </p> <!-- có link id chỏ đến trang khác -->
         <?php endforeach ?>
         </div>
@@ -144,12 +144,12 @@
         <!-- 2.3 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-        <a href="../khach_hang/singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+        <a href="singleShop.php"><img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
             </h5>
-            <p class="m_b2 text-center"><a class="category-submit" href="../khach_hang/singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
+            <p class="m_b2 text-center"><a class="category-submit" href="singleShop.php?id=<?php echo $each['id'] ?>">Tìm hiểu</a>
             </p> <!-- có link id chỏ đến trang khác -->
             <?php endforeach ?>
         </div>
@@ -179,8 +179,8 @@
             <!-- 2.1 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.php">
-                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>"  alt="Featured" class="featured-img"> 
+                    <a href="singleShop.php">
+                        <img src="admin/product/photoproduct/<?php echo $each['image'] ?>"  alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -194,7 +194,7 @@
                             </li>
                             <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Đèn mini</a>
+                        <a href="singleShop.php" class="black h2 n-decoration m_b">Đèn mini</a>
                         <p class="featured-about m_b2">
                             <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->
@@ -206,8 +206,8 @@
             <!-- 2.2 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.php">
-                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
+                    <a href="singleShop.php">
+                        <img src="admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -221,7 +221,7 @@
                             </li>
                             <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Đồng hồ theo dõi sức khỏe</a>
+                        <a href="singleShop.php" class="black h2 n-decoration m_b">Đồng hồ theo dõi sức khỏe</a>
                         <p class="featured-about m_b2">
                             <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->
@@ -233,8 +233,8 @@
             <!-- 2.3 -->
             <div class="featured-card">
                 <div class="featured-setup">
-                    <a href="../khach_hang/singleShop.php">
-                        <img src="./admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
+                    <a href="singleShop.php">
+                        <img src="admin/product/photoproduct/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -248,7 +248,7 @@
                             </li>
                             <li class="w-grey"><?php echo $each['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
                         </ul>
-                        <a href="../khach_hang/singleShop.php" class="black h2 n-decoration m_b">Máy chụp ảnh polaroid</a>
+                        <a href="singleShop.php" class="black h2 n-decoration m_b">Máy chụp ảnh polaroid</a>
                         <p class="featured-about m_b2">
                             <?php echo $each['detail'] ?>
                         </p> <!-- đánh giá ngắn cập nhập từ db về -->

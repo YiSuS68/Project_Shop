@@ -12,7 +12,7 @@
     // $address = addslashes($_POST['address']);
 
         // liên kết file đến database
-        require 'admin/connect.php';
+        require '../admin/connect.php';
 
         // đếm xem đã xuất hiện username email hay phone number chưa
         $sql = "select count(*) from customers 
@@ -48,29 +48,6 @@
         // đóng kết nối sau xử lý
         mysqli_close($connect);
 
-
-        
-
-    // kiểm tra xem có trùng username, email, phonenumber hay không
-    // $sql = "SELECT count(*) from customers where username = '$username' and email = '$email' and phonenumber = '$phonenumber'";
-    // $result = mysqli_query($connect,$sql);
-    // $number_rows = mysqli_fetch_array($result)['count(*)'];
-
-
-
-    // nhập vào mysql
-
-    // kiểm tra chỉ lấy id của 1 tài khoản, không bị trùng
-    // $sql = "select id from customers where email ='$email'";
-
-    // chạy xử lý
-
-    // $id = mysqli_fetch_array($result)['id'];
-
-    // // sử dụng session để lưu thông tin
-    // session_start();
-    // $_SESSION['id'] = $id;
-    // $_SESSION['lastname'] = $lastname;
 
 
 

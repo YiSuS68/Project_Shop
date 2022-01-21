@@ -12,7 +12,11 @@
 
             <!-- part two -->
             <div>
-                <p><a id="login" class="hover n-decoration grey" href="./login_register.php">Đăng Nhập</a> / <a id="register" class="hover n-decoration grey" href="#">Đăng Ký</a></p>
+                <p>
+                    <a id="login" class="hover n-decoration grey" href="login_register.php">
+                        Đăng Nhập / Đăng Ký
+                    </a>
+                </p>
                 <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
                     <i class="navbar-icon m_r w fab fa-facebook-f"></i>
                 </a>

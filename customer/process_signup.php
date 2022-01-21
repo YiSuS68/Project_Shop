@@ -10,6 +10,7 @@
     $phonenumber = addslashes($_POST['phonenumber']);
     $date = $_POST['birthday'];
     // $address = addslashes($_POST['address']);
+    // chưa thêm trường address
 
         // liên kết file đến database
         require '../admin/connect.php';

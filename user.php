@@ -1,6 +1,5 @@
 <?php 
     session_start();
-
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
     if(empty($_SESSION['id'])) {
         // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
@@ -23,12 +22,11 @@
 <body>
 
         <!-- có thể thêm 1 số lựa chọn như ảnh đại diện, ... ở trang này để người dùng đã đăng nhập cài đặt tài khoản bản thân -->
-
 <div id="main">
 
     <!--navbar-->
-    <?php include "../component_navbar_ontop.php" ?>
-    <?php include "../component_navbar_shortcut.php" ?>
+    <?php include "customer/component_navbar_ontop.php" ?>
+    <?php include "customer/component_navbar_shortcut.php" ?>
 
         Xin chào bạn
     <?php 

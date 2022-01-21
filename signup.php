@@ -1,12 +1,7 @@
-<?php 
-    if(isset($_GET['error'])) {
-        echo $_GET['error'];
-    }
-?>
 
 <!-- 2.2 đăng ký -->
 <div class="tab-pane">
-    <form class="login" action="../process_signup.php" method="post">
+    <form class="login" action="customer/process_signup.php" method="post">
 
         <!-- 2.2.1 tên đăng nhập -->
         <div class="input-form">
@@ -74,7 +69,7 @@
 
         <!-- 2.2.8 nút đăng ký -->
         <div>
-            <button class="btn-button">Đăng ký</button>
+            <button class="btn-button" onclick="return formValidate()">Đăng ký</button>
         </div>
     </form>
 </div>

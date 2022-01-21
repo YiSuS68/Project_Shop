@@ -1,5 +1,6 @@
+
 <div class="tab-pane active">
-    <form class="login" method="post" action="../process_login.php" enctype="multipart/form-data">
+    <form class="login" method="post" action="customer/process_login.php" enctype="multipart/form-data">
         
         <!-- 2.1.1 nhập tên và mật khẩu -->
         <input class="input-login" type="text" name="username" placeholder="Tên đăng nhập" required>

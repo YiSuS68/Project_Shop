@@ -15,8 +15,7 @@ where account ='$account' and password ='$password'";
 $resume = mysqli_query($connect,$query);
 $number_rows = mysqli_num_rows($resume);
 
-if($number_rows == 1)
-{
+if($number_rows == 1) {
 	session_start();
 	$each = mysqli_fetch_array($resume);
 	$id =$each['id'];
@@ -33,8 +32,7 @@ if($number_rows == 1)
 	}
 	require 'level.php';
 	mysqli_close($connect);
-}
-else{ 
+} else { 
 	header('location:index.php?error');
 	mysqli_close($connect);
 }

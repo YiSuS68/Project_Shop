@@ -151,3 +151,6 @@ function showSlides(n) {
     
     advance();
   });
+
+
+// collapse button shop.php

@@ -1,7 +1,7 @@
     <div id="div-top">
       <div class="left">
-        <a href="../root" style="text-decoration: none;">
-          <h1>ADMIN</h1>
+        <a href="index.php" style="text-decoration: none;">
+          <h1>QUẢN LÝ</h1>
         </a>
       </div>
       <div class="right" >
@@ -16,13 +16,13 @@
       <div class="left">
         <div class="top">
           <ul type="none">
-            <a href="../product" style="text-decoration: none;">
-              <li class="button"">
+            <a href="product" style="text-decoration: none;">
+              <li class="button">
                 SẢN PHẨM
               </li>
             </a>
-            <a href="../producer" style="text-decoration: none;">
-              <li class="button"  id="active">
+            <a href="producer" style="text-decoration: none;">
+              <li class="button">
                 NHÀ SẢN XUẤT
               </li>
             </a>
@@ -30,14 +30,14 @@
         </div>
         <div class="bot">
           <ul type="none">
-            <li class="button">SETTING</li>
+            <a href="../signout.php" style="text-decoration: none;">
+              <li class="button">ĐĂNG XUẤT</li>
+            </a>
             <li class="button">ACCOUNT</li>
           </ul>
         </div>
       </div>
       <div class="right">
-        <?php 
-        require 'form.php';
-        ?>
+
       </div>
     </div>

@@ -8,8 +8,8 @@ if (empty($_GET['id']
 	header('location:index.php?empty_update');
 	die();
 }
-$id = $_GET['id'];
-$name = $_POST['name'];
+$id = addslashes($_GET['id']);
+$name = addslashes($_POST['name']);
 $new_image = $_FILES['new_image'];
 if ($new_image['size'] > 0) {
 	$folder='../../history_image/';
@@ -19,10 +19,10 @@ if ($new_image['size'] > 0) {
 
 	move_uploaded_file($new_image["tmp_name"], $path_file);
 }else{
-	$file_image_name= $_POST['ole_image'];
+	$file_image_name= addslashes($_POST['ole_image']);
 }
-$phone = $_POST['phone'];
-$address = $_POST['address'];
+$phone = addslashes($_POST['phone']);
+$address = addslashes($_POST['address']);
 
 require '../connect.php';
 

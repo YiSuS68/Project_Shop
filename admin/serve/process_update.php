@@ -14,16 +14,16 @@ if (empty($_POST['name']
 }
 
 
-$id = $_GET['id'];
-$name = $_POST['name'];
-$gender = $_POST['gender'];
-$phone = $_POST['phone'];
-$identity = $_POST['identity'];
-$address = $_POST['address'];
-$level = $_POST['level'];
-$wage = $_POST['wage'];
-$account = $_POST['account'];
-$password = $_POST['password'];
+$id = addslashes($_GET['id']);
+$name = addslashes($_POST['name']);
+$gender = addslashes($_POST['gender']);
+$phone = addslashes($_POST['phone']);
+$identity = addslashes($_POST['identity']);
+$address = addslashes($_POST['address']);
+$level = addslashes($_POST['level']);
+$wage = addslashes($_POST['wage']);
+$account = addslashes($_POST['account']);
+$password = addslashes($_POST['password']);
 
 require '../connect.php';
 

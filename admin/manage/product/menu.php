@@ -1,8 +1,8 @@
 
 <div id="div-top">
   <div class="left">
-    <a href="../root" style="text-decoration: none;">
-      <h1>ADMIN</h1>
+    <a href="../index.php" style="text-decoration: none;">
+      <h1>QUẢN LÝ</h1>
     </a>
   </div>
   <div class="right" >
@@ -31,7 +31,9 @@
     </div>
     <div class="bot">
       <ul type="none">
-        <li class="button">SETTING</li>
+        <a href="../signout.php" style="text-decoration: none;">
+          <li class="button">ĐĂNG XUẤT</li>
+        </a>
         <li class="button">ACCOUNT</li>
       </ul>
     </div>

@@ -16,6 +16,11 @@
       <div class="left">
         <div class="top">
           <ul type="none">
+            <a href="../serve" style="text-decoration: none;">
+              <li class="button">
+                NHÂN VIÊN
+              </li>
+            </a>
             <a href="../product" style="text-decoration: none;">
               <li class="button">
                 SẢN PHẨM
@@ -30,12 +35,14 @@
         </div>
         <div class="bot">
           <ul type="none">
-            <li class="button">SETTING</li>
-            <li class="button">ACCOUNT</li>
-          </ul>
+            <a href="../signout.php" style="text-decoration: none;">
+              <li class="button">ĐĂNG XUẤT</li>
+            </a>
+              <li class="button">ACCOUNT</li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+
         </div>
       </div>
-      <div class="right">
-
-      </div>
-    </div>

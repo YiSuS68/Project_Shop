@@ -4,7 +4,7 @@ if (empty($_GET['id']))
 	header('location:index.php?empty_delete');
 	die();
 }
-$id =$_GET['id'];
+$id =addslashes($_GET['id']);
 
 require '../connect.php';
 

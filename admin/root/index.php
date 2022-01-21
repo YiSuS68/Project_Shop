@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (!isset($_SESSION['id'])){
+  header('location:../index.php?error');
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +17,7 @@
 <body>
   <div id="div-all">
     <?php 
-    require_once '../menu.php'
+    require_once 'menu.php'
     ?>
   </div>
 </div>

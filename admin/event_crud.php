@@ -54,3 +54,19 @@ if (isset($_GET['error_delete'])) {
   <?php  
 }
 ?>
+
+<?php 
+if (isset($_GET['error_insert'])) {
+  ?>
+  <span class="error_crud"><?php echo 'KHÔNG THÊM ĐƯỢC'; ?></span>
+  <?php  
+}
+?>
+
+<?php 
+if (isset($_GET['error_update'])) {
+  ?>
+  <span class="error_crud"><?php echo 'KHÔNG SỬA ĐƯỢC'; ?></span>
+  <?php  
+}
+?>

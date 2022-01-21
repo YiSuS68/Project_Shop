@@ -6,7 +6,7 @@ if (empty($_GET['id']))
 	die();
 }
 
-$id =$_GET['id'];
+$id =addslashes($_GET['id']);
 
 require '../connect.php';
 

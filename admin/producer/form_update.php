@@ -12,7 +12,7 @@
 	{
 		header('location:index.php?empty_update');
 	}
-	$id=$_GET['id'];
+	$id=addslashes($_GET['id']);
 	require '../connect.php';
 	$query = "select * from producer where id=$id";
 	$resume = mysqli_query($connect,$query);

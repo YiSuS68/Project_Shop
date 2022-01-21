@@ -35,7 +35,9 @@
         </div>
         <div class="bot">
           <ul type="none">
-            <li class="button">SETTING</li>
+            <a href="../signout.php" style="text-decoration: none;">
+              <li class="button">ĐĂNG XUẤT</li>
+            </a>
             <li class="button">ACCOUNT</li>
           </ul>
         </div>

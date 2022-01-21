@@ -8,10 +8,10 @@ if (empty($_POST['name']
 	die();
 }
 
-$name = $_POST['name'];
+$name = addslashes($_POST['name']);
 $image = $_FILES['image'];
-$phone = $_POST['phone'];	
-$address = $_POST['address'];
+$phone = addslashes($_POST['phone']);	
+$address = addslashes($_POST['address']);
 
 $folder='../../history_image/';
 $file_extension = explode('.', $image['name'])[1];

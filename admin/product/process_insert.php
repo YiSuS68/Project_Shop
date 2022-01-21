@@ -12,13 +12,13 @@ if (empty($_POST['name']
 	die();
 }
 
-$name = $_POST['name'];
-$description = $_POST['description'];
-$detail = $_POST['detail'];
+$name = addslashes($_POST['name']);
+$description = addslashes($_POST['description']);
+$detail = addslashes($_POST['detail']);
 $image = $_FILES['image'];
-$price = $_POST['price'];
-$vote = $_POST['vote'];
-$id_producer = $_POST['id_producer'];
+$price = addslashes($_POST['price']);
+$vote = addslashes($_POST['vote']);
+$id_producer = addslashes($_POST['id_producer']);
 
 $folder='../../history_image/';
 $file_extension = explode('.', $image['name'])[1];

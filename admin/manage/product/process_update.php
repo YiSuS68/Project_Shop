@@ -11,10 +11,10 @@ if (empty($_GET['id']
 	header('location:index.php?empty_update');
 	die();
 }
-$id = addslashes($_GET['id']);
-$name = addslashes($_POST['name']);
-$description = addslashes($_POST['description']);
-$detail = addslashes($_POST['detail']);
+$id = $_GET['id'];
+$name = $_POST['name'];
+$description = $_POST['description'];
+$detail = $_POST['detail'];
 $new_image = $_FILES['new_image'];
 if ($new_image['size'] > 0) {
 	$folder='../../history_image/';
@@ -24,11 +24,11 @@ if ($new_image['size'] > 0) {
 
 	move_uploaded_file($new_image["tmp_name"], $path_file);
 }else{
-	$file_image_name= addslashes($_POST['ole_image']);
+	$file_image_name= $_POST['ole_image'];
 }
-$price = addslashes($_POST['price']);
-$vote = addslashes($_POST['vote']);
-$id_producer = addslashes($_POST['id_producer']);
+$price = $_POST['price'];
+$vote = $_POST['vote'];
+$id_producer = $_POST['id_producer'];
 
 require '../connect.php';
 

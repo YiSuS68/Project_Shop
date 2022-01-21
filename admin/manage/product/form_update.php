@@ -12,7 +12,7 @@
 	{
 		header('location:index.php?empty_update');
 	}
-	$id=addslashes($_GET['id']);
+	$id=$_GET['id'];
 	require '../connect.php';
 	$query = "select * from product where id=$id";
 	$resume = mysqli_query($connect,$query);

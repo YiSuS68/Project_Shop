@@ -12,12 +12,12 @@ if (!isset($_SESSION['id'])){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/media.css">
-  <title>ADMIN</title> 
+  <title>QUẢN LÝ</title> 
 </head>
 <body>
   <div id="div-all">
     <?php 
-    require_once 'menu.php'
+    require_once 'menu.php';
     ?>
   </div>
 </div>

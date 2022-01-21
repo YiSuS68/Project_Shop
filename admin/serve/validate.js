@@ -69,12 +69,14 @@ function check()
 	{
 		document.getElementById('error_identity').innerHTML = 'Căn cước không được để trống';
 		check_error = true;
-	}else if (identity.length <12) {
-		document.getElementById('error_identity').innerHTML = 'Căn cước không hợp lệ (12 số)';
-		check_error = true;
 	}else{
-		document.getElementById('error_identity').innerHTML = '';
-		
+		if (identity.length  != 12 ) {
+			document.getElementById('error_identity').innerHTML = 'Căn 1 cước không hợp lệ (12 số)';
+			check_error = true;
+		}else{
+			document.getElementById('error_identity').innerHTML = '';
+
+		}
 	}
 
 	//validate cấp bậc
@@ -85,6 +87,27 @@ function check()
 	}else{
 		if (level == 1 || level == 2 || level == 3){
 			document.getElementById('error_level').innerHTML = '';
+				if(level == 1)
+	{
+		document.getElementById('error_account').innerHTML = '';
+	}else if (level == 2) 
+	{
+		if(account.length === 0)
+		{
+			document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
+			check_error = true;
+		}else {
+			document.getElementById('error_account').innerHTML = '';
+		}
+	}else if (level == 3) {
+		if(account.length === 0)
+		{
+			document.getElementById('error_account').innerHTML = 'Admin cần có tài khoản';
+			check_error = true;
+		}else {
+			document.getElementById('error_account').innerHTML = '';
+		}
+	}
 		}else {
 			document.getElementById('error_level').innerHTML = 'Cấp bậc không hợp lệ(1.NV | 2.QL | 3.AD)';
 			check_error = true;
@@ -103,11 +126,13 @@ function check()
 	if(level == 1)
 	{
 		document.getElementById('error_account').innerHTML = '';
+		document.getElementById('error_account').disabled = true;
 	}else if (level == 2) 
 	{
 		if(account.length === 0)
 		{
 			document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
+			check_error = true;
 		}else {
 			document.getElementById('error_account').innerHTML = '';
 		}
@@ -115,6 +140,7 @@ function check()
 		if(account.length === 0)
 		{
 			document.getElementById('error_account').innerHTML = 'Admin cần có tài khoản';
+			check_error = true;
 		}else {
 			document.getElementById('error_account').innerHTML = '';
 		}
@@ -124,11 +150,13 @@ function check()
 	if(level == 1)
 	{
 		document.getElementById('error_password').innerHTML = '';
+		document.getElementById('error_password').disabled = true;
 	}else if (level == 2) 
 	{
 		if(password.length === 0)
 		{
 			document.getElementById('error_password').innerHTML = 'Quản lý cần có mật khẩu';
+			check_error = true;
 		}else {
 			document.getElementById('error_password').innerHTML = '';
 		}
@@ -136,6 +164,7 @@ function check()
 		if(password.length === 0)
 		{
 			document.getElementById('error_password').innerHTML = 'Admin cần có mật khẩu';
+			check_error = true;
 		}else {
 			document.getElementById('error_password').innerHTML = '';
 		}

@@ -37,10 +37,12 @@
                 ";
                 mysqli_query($connect,$sql);
                 setcookie('remember', $token, time() + 60*60*24*30);
+                header('location: login_register');
                 mysqli_close($connect);
             }
+            header('location: login_register');
         } else {
-            header('location:login_register.php?error=tài khoản hoặc mật khẩu không đúng vui lòng thử lại');
+            header('location: login_register?error');
             exit;
         }
 

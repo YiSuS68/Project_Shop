@@ -10,10 +10,12 @@ function formValidate() {
         let lastName = document.getElementById('lastName').value;
         let errorFirstName = document.getElementById('errorFirstName');
         let errorLastName = document.getElementById('errorLastName');
-        // let regexFirstName = 
-        // let regexLastName =
-
+        let regexFirstname = /^[A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)*$/;
+        let regexLastname = /^(?:[ ][A-ZÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ][a-zàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]*)$/;
     
+        let phonenumber = document.getElementById('phoneNumber').value;
+        let errorPhonenumber = document.getElementById('errorPhonenumber');
+        // let regexPhonenumber =
 
     // lấy id của email và chỗ hiển thị lỗi
         let email = document.getElementById('email').value;
@@ -30,6 +32,12 @@ function formValidate() {
     // lấy id của confirm password và chỗ hiển thị lỗi
         let confirm_password = document.getElementById('confirm_password').value;
         let errorConfirm_password = document.getElementById('errorConfirm_password');
+
+        let birthday = document.getElementById('birthday').value;
+        let errorBirthday = document.getElementById('errorBirthday');
+
+        let gender = document.getElementById('gender').value;
+        let errorGender = document.getElementById('errorGender');
 
 
 // bắt đầu vào điều kiện email

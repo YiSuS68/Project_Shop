@@ -154,3 +154,11 @@ function showSlides(n) {
 
 
 // collapse button shop.php
+$(function() {
+  var b = $("#collapse-shop");
+  var w = $("#collapse-shop_wrapper");
+  var l = $("#collapse-shop_list");
+  b.click(function() {
+    w.toggleClass('open'); /* <-- toggle the application of the open class on click */
+  });
+});

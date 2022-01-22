@@ -32,13 +32,11 @@
     <?php 
         echo $_SESSION['lastname'];
     ?>
-    <a href="process_signout.php">
+    <a href="customer/process_signout.php">
         Đăng xuất
     </a>
 
 </div>
-    
-
 
 </body>
 </html>

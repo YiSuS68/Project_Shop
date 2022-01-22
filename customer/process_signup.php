@@ -21,17 +21,15 @@
         $result = mysqli_query($connect, $sql);
         $number_rows = mysqli_fetch_array($result)['count(*)'];
 
-        if ($number_rows == 1) {
-            session_start();
-            $_SESSION['error'] = 'Trùng rồi, vui lòng thử lại';
-            header("Location:login_register.php?error=");
+        if ($number_rows == 1) { 
+            header("location:../login_register.php?error=");
             exit;
         }
 
     
         // lấy dữ liệu từ form hiển thị bảng trên DB
         $sql = "insert into customers(username, firstname, lastname, gender, email, password, phonenumber, date)
-        value ('$username', '$firstname', '$lastname', '$gender', '$email', '$password', '$phonenumber', '$date')" ;
+        values ('$username', '$firstname', '$lastname', '$gender', '$email', '$password', '$phonenumber', '$date')" ;
         mysqli_query($connect,$sql);
 
 
@@ -39,13 +37,13 @@
         $sql = "select id from customers 
         where username = '$username' and email = '$email' and phonenumber = '$phonenumber'" ;
         $result = mysqli_query($connect,$sql);
-        $id = mysqli_fetch_array($result)['id'];
+        $id = mysqli_fetch_array($result)['id']; // lỗi ở đây, khồng hiểu sao lỗi mặc dù làm giống y hệt Anh Long
         session_start();
         // lưu lại id gồm(username, email, phonmenumber) và tên sau
         $_SESSION['id'] = $id;
         $_SESSION['lastname'] = $lastname;
 
-
+        header("location:../login_register.php");
         // đóng kết nối sau xử lý
         mysqli_close($connect);
 

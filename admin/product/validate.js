@@ -1,5 +1,4 @@
-function check()
-{
+function check() {
 	let check_error = false;
 	let name = document.getElementById('name').value;
 	let description = document.getElementById('description').value;

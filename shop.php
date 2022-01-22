@@ -31,15 +31,16 @@
                     <ul class="n-list_style m_b2">
                         <!-- 1.1 -->
                         <li class="p_b2">
-                            <a class="space-flex m_b n-decoration black" href="#0">Gender
+                            <a class="space-flex m_b n-decoration black" href="#0" id="collapse-shop">Gender
                                 <i class="w p_t0 fas fa-chevron-circle-down">
                                 </i>
                             </a> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
-
-                            <ul class="n-list_style d-none">
-                                <li><a class="n-decoration" href="#">Men</a></li>
-                                <li><a class="n-decoration" href="#">Women</a></li>
-                            </ul>
+                            <div id="collapse-shop_wrapper">
+                                <ul class="n-list_style" id="collapse-shop_list">
+                                    <li><a class="n-decoration" href="#">Men</a></li>
+                                    <li><a class="n-decoration" href="#">Women</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <!-- 1.2 -->
                         <li class="p_b2">

@@ -1,5 +1,4 @@
 <?php 
-	$level = $each['level'];
 	if($level == 1){
 		header('location:index.php?error');
 		exit;

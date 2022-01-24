@@ -1,23 +1,22 @@
-<?php
-    session_start();
-    if(isset($_COOKIE['remember'])) {
-        $token = $_COOKIE['remember'];
-        require 'admin/connect.php';
-        $sql = "select * from customers where token = '$token' limit 1";
-        $result = mysqli_query($connect,$sql);
-        $number_rows = mysqli_num_rows($result);
-        if ($number_rows == 1) {
-            $each = mysqli_fetch_array($result);
-            $_SESSION['id'] = $each['id'];
-            $_SESSION['lastname'] = $each['lastname'];
+<?php 
+session_start();
+if(isset($_COOKIE['remember'])) {
+    $token = $_COOKIE['remember'];
+    require 'admin/connect.php';
+    $sql = "select * from customer where token = '$token' limit 1";
+    $result = mysqli_query($connect,$sql);
+    $number_rows = mysqli_num_rows($result);
+    if ($number_rows == 1) {
+        $each = mysqli_fetch_array($result);
+        $_SESSION['id'] = $each['id'];
+        $_SESSION['user_name'] = $each['user_name'];
+        if (isset($_SESSION['id'])){
+            header('location:customer\index.php');
+            exit;
         }
     }
-    if (isset($_SESSION['id'])) {
-        header('Location: user.php');
-        exit;
-    }
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,18 +30,18 @@
     <title>Green Shop</title>
 </head>
 <body>
-    
+
     <div id="main">
 
         <!--navbar-->
-        <?php include "customer/component_navbar_ontop.php" ?>
-        <?php include "customer/component_navbar_shortcut.php" ?>
+        <?php include "component_navbar_ontop.php" ?>
+        <?php include "component_navbar_shortcut.php" ?>
 
         <!--body-->
-        <?php include "customer/component_index_body.php" ?>
+        <?php include "component_index_body.php" ?>
 
         <!-- footer -->
-        <?php include "customer/component_footer.php" ?>
+        <?php include "component_footer.php" ?>
 
     </div>
 

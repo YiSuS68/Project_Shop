@@ -22,7 +22,6 @@
             NHÂN VIÊN
           </li>
         </a>
-
         <a href="../product" style="text-decoration: none;">
           <li class="button" id="active">
             SẢN PHẨM
@@ -31,6 +30,11 @@
         <a href="../producer" style="text-decoration: none;">
           <li class="button">
             NHÀ SẢN XUẤT
+          </li>
+        </a>
+        <a href="../bill" style="text-decoration: none;">
+          <li class="button">
+            HÓA ĐƠN
           </li>
         </a>
       </ul>

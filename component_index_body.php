@@ -1,10 +1,9 @@
 <!-- liên kết với database -->
 <?php 
-    require '../admin/connect.php';
+    require 'admin/connect.php';
     $sql = "SELECT * from product";
     $result = mysqli_query($connect,$sql);
 ?>
-
 <!-- part ONE //slider -->
 <div id="slider">
     <div class="slider-start">
@@ -15,7 +14,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_01.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_01.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -39,7 +38,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_02.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_02.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -64,7 +63,7 @@
                 <div class="p5 flex-wrap">
 
                     <div class="slider-img">
-                        <img class="img-fluid" src="../assets/img/banner_img_03.jpg" width="588px" height="588px"> 
+                        <img class="img-fluid" src="assets/img/banner_img_03.jpg" width="588px" height="588px"> 
                     </div> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="items-center w-max d-flex flex-width p_l-r">
@@ -118,7 +117,7 @@
         <!-- 2.1 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-            <a href="singleShop.php"><img src="../history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+            <a href="singleShop.php"><img src="history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
@@ -131,7 +130,7 @@
         <!-- 2.2 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-        <a href="singleShop.php"><img src="../history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+        <a href="singleShop.php"><img src="history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
@@ -144,7 +143,7 @@
         <!-- 2.3 -->
         <div class="category-item media-w100 m_t2 text-center">
         <?php foreach ($result as $each): ?>
-        <a href="singleShop.php"><img src="../history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
+        <a href="singleShop.php"><img src="./history_image/<?php echo $each['image'] ?>" width="344px" height="344px" class="category-img"></a>
             <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
             <h5 class="m_t-b2 h5">
                 <?php echo $each['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
@@ -180,7 +179,7 @@
             <div class="featured-card">
                 <div class="featured-setup">
                     <a href="singleShop.php">
-                        <img src="../history_image/<?php echo $each['image'] ?>"  alt="Featured" class="featured-img"> 
+                        <img src="history_image/<?php echo $each['image'] ?>"  alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -207,7 +206,7 @@
             <div class="featured-card">
                 <div class="featured-setup">
                     <a href="singleShop.php">
-                        <img src="../history_image/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
+                        <img src="history_image/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">
@@ -234,7 +233,7 @@
             <div class="featured-card">
                 <div class="featured-setup">
                     <a href="singleShop.php">
-                        <img src="../history_image/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
+                        <img src="history_image/<?php echo $each['image'] ?>" alt="Featured" class="featured-img"> 
                     </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
 
                     <div class="featured-body">

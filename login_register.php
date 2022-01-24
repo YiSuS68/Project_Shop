@@ -1,24 +1,3 @@
-<!-- có lỗi sẽ hiển thị ra, lấy ra lỗi -->
-<?php
-    session_start();
-    if(isset($_COOKIE['remember'])) {
-        $token = $_COOKIE['remember'];
-        require 'admin/connect.php';
-        $sql = "select * from customers where token = '$token' limit 1";
-        $result = mysqli_query($connect,$sql);
-        $number_rows = mysqli_num_rows($result);
-        if ($number_rows == 1) {
-            $each = mysqli_fetch_array($result);
-            $_SESSION['id'] = $each['id'];
-            $_SESSION['lastname'] = $each['lastname'];
-        }
-    }
-    if (isset($_SESSION['id'])) {
-        header('Location: user.php');
-        exit;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,21 +16,17 @@
     <div>
         <!-- navbar -->
         <div>
-            <?php include "customer/component_navbar_shortcut.php" ?>
+            <?php include "component_navbar_shortcut.php" ?>
         </div>
 
 
         <!-- lấy lỗi hiển thị ra -->
-        <?php
-            require 'customer/event_process.php';
-        ?>
         
         <!-- đăng nhập và đăng ký -->
         <div class="center-form">
-            
+
             <!-- part one thanh tab của đăng nhập đăng ký -->
             <div class="tabs">
-
                 <div class="tab-item active">
                     <i class="fas fa-sign-in-alt"></i>
                     Đăng Nhập
@@ -61,16 +36,17 @@
                     <i class="fas fa-sign-out-alt"></i>
                     Đăng Ký
                 </div>
-
                 <div class="line"></div>
             </div>
-        
+
 
             <!-- part two nội dung form của thanh đăng nhập, đăng ký -->
             <div>
-
+                <?php
+                require 'event_signing.php';
+                ?>
                 <!-- 2.1 đăng nhập -->
-                <?php include "login.php" ?>
+                <?php include "signin.php" ?>
 
                 <!-- 2.2 đăng ký -->
                 <?php include "signup.php" ?>

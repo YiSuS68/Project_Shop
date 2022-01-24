@@ -11,8 +11,8 @@ if (isset($_GET['search'])) {
 
 $query_quantity_value="select count(*) from serve where name like '%$search%'";
 $array_quantity_value = mysqli_query($connect,$query_quantity_value);
-$resume_quantitu_value=mysqli_fetch_array($array_quantity_value);
-$quantity_value=$resume_quantitu_value['count(*)'];
+$resume_quantity_value=mysqli_fetch_array($array_quantity_value);
+$quantity_value=$resume_quantity_value['count(*)'];
 
 $quantity_value_one_page=5;
 
@@ -25,3 +25,4 @@ name like '%$search%'
 limit $quantity_value_one_page
 offset $quantity_value_pass";
 $resume=mysqli_query($connect,$query);
+mysqli_close($connect);

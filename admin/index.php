@@ -1,18 +1,22 @@
 <?php 
+session_start();
 if (isset($_COOKIE['remember'])) {
-	session_start();
 	$token = $_COOKIE['remember'];
 	require 'connect.php';
 	$query = "select * from serve where token = '$token' limit 1";
 	$resume = mysqli_query($connect,$query);
-	$each = mysqli_fetch_array($resume);
-	$_SESSION['id'] = $each['id'];
-	$_SESSION['name'] = $each['name'];
-	$_SESSION['level'] = $each['level'];
-}
-if (isset($_SESSION['id'])) {
-	require 'level.php';
-	exit;
+	$number_rows = mysqli_num_rows($resume);
+	if ($number_rows == 1) {
+		$each = mysqli_fetch_array($resume);
+		$_SESSION['id'] = $each['id'];
+		$_SESSION['name'] = $each['name'];
+		$_SESSION['level'] = $each['level'];
+		$level = $each['level'];
+		if (isset($_SESSION['id'])) {
+			require 'level.php';
+			exit;
+		}
+	}
 }
 ?>
 

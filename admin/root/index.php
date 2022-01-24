@@ -3,6 +3,12 @@ session_start();
 if (!isset($_SESSION['id'])){
   header('location:../index.php?error');
   exit;
+}else{
+  $level = $_SESSION['level'];
+  if($level != 3){
+    header('location:../index.php?error');
+    exit;
+  }
 }
 ?>
 <!DOCTYPE html>

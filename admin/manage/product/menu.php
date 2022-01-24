@@ -27,6 +27,11 @@
             NHÀ SẢN XUẤT
           </li>
         </a>
+        <a href="../bill" style="text-decoration: none;">
+          <li class="button">
+            HÓA ĐƠN
+          </li>
+        </a>
       </ul>
     </div>
     <div class="bot">

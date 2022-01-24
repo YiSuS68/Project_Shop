@@ -22,13 +22,14 @@ if($number_rows == 1) {
 	$_SESSION['id'] = $id;
 	$_SESSION['name'] = $each['name'];
 	$_SESSION['level'] = $each['level'];
+	$level = $each['level'];
 	if ($remember) {
 		$token = uniqid('user_',true);
 		$query = "update serve set token = '$token' where id = '$id'";
 		mysqli_query($connect,$query);
 		setcookie('remember',$token, time() + 60*60*24*30);
-		require 'level.php';
 		mysqli_close($connect);
+		require 'level.php';
 	}
 	require 'level.php';
 	mysqli_close($connect);

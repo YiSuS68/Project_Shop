@@ -1,4 +1,4 @@
-<!-- navbar onTop -->
+    <!-- navbar onTop -->
 <div class="d-none position-rel p_t-b items-center setup992" id="navbar">
     <div class="container grey">
         <div class="space-flex">
@@ -12,16 +12,11 @@
 
             <!-- part two -->
             <div>
-                <a style="color: white;" href="user.php">
-                    <?php 
-                    echo $_SESSION['user_name'];
-                    ?>
-                </a>
-                <span> | </span>
-                <a style="color: white;" href="signout.php">
-                    Đăng xuất
-                </a>
-                <br>
+                <p>
+                    <a id="login" class="hover n-decoration grey" href="login_register.php">
+                        Đăng Nhập / Đăng Ký
+                    </a>
+                </p>
                 <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
                     <i class="navbar-icon m_r w fab fa-facebook-f"></i>
                 </a>

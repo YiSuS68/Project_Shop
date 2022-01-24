@@ -1,16 +1,3 @@
-<?php 
-session_start();
-if (!isset($_SESSION['id'])){
-  header('location:../index.php?error');
-  exit;
-}else{
-  $level = $_SESSION['level'];
-  if($level != 2){
-    header('location:../index.php?error');
-    exit;
-  }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,14 +5,17 @@ if (!isset($_SESSION['id'])){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/media.css">
-  <title>QUẢN LÝ</title> 
+  <title>Hóa đơn</title> 
 </head>
 <body>
+  <?php  
+  require '../connect.php';
+  require 'page_and_search.php';
+  ?>
   <div id="div-all">
     <?php 
-    require_once 'menu.php';
+    require_once 'menu.php'
     ?>
   </div>
-</div>
 </body>
 </html>

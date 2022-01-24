@@ -15,8 +15,8 @@
     <div id="main">
 
         <!--navbar-->
-        <?php include "component_navbar_ontop.php" ?>
-        <?php include "component_navbar_shortcut.php" ?>
+        <?php include "customer/component_navbar_ontop.php" ?>
+        <?php include "customer/component_navbar_shortcut.php" ?>
         
 
 

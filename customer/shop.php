@@ -1,29 +1,32 @@
 <!-- liên kết với database -->
 <?php 
-    require 'admin/connect.php';
-    $sql = "SELECT * from product";
-    $result = mysqli_query($connect,$sql);
+require '../admin/connect.php';
+$sql = "SELECT * from product";
+$result = mysqli_query($connect,$sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/media.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Green Shop</title>
 </head>
 <body>
-    
+
     <div id="main">
 
         <!--navbar-->
         <?php include "component_navbar_ontop.php" ?>
         <?php include "component_navbar_shortcut.php" ?>
+        
+
+
         <!-- card category -->
         <div class="containers" id="buynow">
             <div class="flex-wrap">
@@ -118,49 +121,49 @@
                             <div class="buynow-setup_card_start">
                                 <!-- 2.2.1.1 ảnh của sản phẩm -->
                                 <?php foreach ($result as $each): ?>
-                                <div class="buynow-img">
-                                    <img src="history_image/<?php echo $each['image'] ?>"> <!-- lấy ảnh từ db về hiển thị ở đây -->
-                                    <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
-                                        <ul class="n-list_style m_b2">
+                                    <div class="buynow-img">
+                                        <img src="../history_image/<?php echo $each['image'] ?>"> <!-- lấy ảnh từ db về hiển thị ở đây -->
+                                        <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
+                                            <ul class="n-list_style m_b2">
+                                                <li>
+                                                    <a class="buynow-btn" href="#">
+                                                        <i class="far fa-eye">     
+                                                        </i>
+                                                    </a> <!-- di chuyển đến singleShop và lấy toàn bộ thông tin của mặt hàng hiển thị bên singleShop -->
+                                                </li>
+                                                <li>
+                                                    <a class="buynow-btn" href="#">
+                                                        <i class="fas fa-cart-plus">
+                                                        </i>
+                                                    </a>  <!-- thêm sản phẩm vào giỏ hàng -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- thông tin của sản phẩm -->
+                                    <div class="buynow-text">
+                                        <a class="black n-decoration m_b" href="#">
+                                            <?php echo $each['name'] ?>
+                                        </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
+
+                                        <ul class="space-flex n-list_style">
+                                            <li>M/L/X/XL</li> <!-- có thể thêm số size của mặt hàng, hoặc mình tự đặt -->
+                                            <li></li>
+                                        </ul>
+
+                                        <ul class="center-flex n-list_style m_b"> <!-- có thể thêm số lượng sao cho sản phẩm, hoặc mình tự đặt -->
                                             <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye">     
-                                                    </i>
-                                                </a> <!-- di chuyển đến singleShop và lấy toàn bộ thông tin của mặt hàng hiển thị bên singleShop -->
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus">
-                                                    </i>
-                                                </a>  <!-- thêm sản phẩm vào giỏ hàng -->
+                                                <i class="yellow fas fa-star"></i>
+                                                <i class="yellow fas fa-star"></i>
+                                                <i class="yellow fas fa-star"></i>
+                                                <i class="grey fas fa-star"></i>
+                                                <i class="grey fas fa-star"></i>
                                             </li>
                                         </ul>
+                                        <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
                                     </div>
-                                </div>
-
-
-                                <!-- thông tin của sản phẩm -->
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">
-                                        <?php echo $each['name'] ?>
-                                    </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
-
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li> <!-- có thể thêm số size của mặt hàng, hoặc mình tự đặt -->
-                                        <li></li>
-                                    </ul>
-
-                                    <ul class="center-flex n-list_style m_b"> <!-- có thể thêm số lượng sao cho sản phẩm, hoặc mình tự đặt -->
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
-                                </div>
                                 <?php endforeach ?>
                             </div>
                         </div>
@@ -548,7 +551,7 @@
 
 
 
-<!-- phần này đang sửa chữa -->
+        <!-- phần này đang sửa chữa -->
         <!-- Our brand -->
         <div id="brand">
             <div class="containers m_t4 m_b4">
@@ -605,7 +608,7 @@
                 </div>
             </div>
         </div>
-<!-- kết thúc sửa chữa -->
+        <!-- kết thúc sửa chữa -->
 
 
 

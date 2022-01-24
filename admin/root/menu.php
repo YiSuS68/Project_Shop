@@ -31,6 +31,11 @@
                 NHÀ SẢN XUẤT
               </li>
             </a>
+            <a href="../bill" style="text-decoration: none;">
+              <li class="button">
+                HÓA ĐƠN
+              </li>
+            </a>
           </ul>
         </div>
         <div class="bot">
@@ -38,11 +43,11 @@
             <a href="../signout.php" style="text-decoration: none;">
               <li class="button">ĐĂNG XUẤT</li>
             </a>
-              <li class="button">ACCOUNT</li>
-            </ul>
-          </div>
-        </div>
-        <div class="right">
-
+            <li class="button">ACCOUNT</li>
+          </ul>
         </div>
       </div>
+      <div class="right">
+
+      </div>
+    </div>

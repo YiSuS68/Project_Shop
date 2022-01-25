@@ -1,9 +1,9 @@
 <table width="100%" align="center" border="2px">
   <tr>
-    <th colspan="8">HÓA ĐƠN</th>
+    <th colspan="9">HÓA ĐƠN</th>
   </tr>
   <tr>
-    <th>Tên khách hàng</th>
+    <th colspan="2">Họ và tên khách hàng</th>
     <th>Tên nhân viên</th>
     <th>Ngày đặt</th>
     <th>Trạng thái</th>
@@ -14,7 +14,8 @@
   </tr>
   <?php foreach ($resume as $get_bill){ ?>
     <tr>
-      <td style="text-align:center"><?php echo $get_bill['name_customer']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['first_name_customer']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['last_name_customer']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['name_serve']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['date_order']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['status']; ?></td>

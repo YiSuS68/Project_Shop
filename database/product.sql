@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 25, 2022 at 06:51 AM
+-- Generation Time: Jan 25, 2022 at 07:02 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -29,13 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bill` (
   `id` int(11) NOT NULL,
-  `id_detail_bill` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
   `id_serve` int(11) NOT NULL,
   `date_order` date NOT NULL,
   `status` varchar(20) NOT NULL,
   `price_bill` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bill`
+--
+
+INSERT INTO `bill` (`id`, `id_customer`, `id_serve`, `date_order`, `status`, `price_bill`) VALUES
+(1, 5, 11, '2022-01-05', 'Äang giao', 123);
 
 -- --------------------------------------------------------
 
@@ -46,8 +52,8 @@ CREATE TABLE `bill` (
 CREATE TABLE `customer` (
   `id` int(11) NOT NULL,
   `user_name` varchar(50) NOT NULL,
-  `fisrt_name` varchar(25) NOT NULL,
   `last_name` varchar(25) NOT NULL,
+  `first_name` varchar(25) NOT NULL,
   `gender` enum('Nam','Ná»¯','KhÃ¡c') NOT NULL,
   `birth` date NOT NULL,
   `phone` varchar(15) NOT NULL,
@@ -61,8 +67,8 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `user_name`, `fisrt_name`, `last_name`, `gender`, `birth`, `phone`, `address`, `email`, `password`, `token`) VALUES
-(4, 'a', 'sdqw', 'as', 'Nam', '2022-01-05', '0967622166', 'Æ°qeqwewq', 'Æ°qeqweqw', '123', '');
+INSERT INTO `customer` (`id`, `user_name`, `last_name`, `first_name`, `gender`, `birth`, `phone`, `address`, `email`, `password`, `token`) VALUES
+(5, 'a', 'as', '123sad', 'Nam', '2022-01-05', '0967622166', '1dasdasc', 'dqwda21', '12', NULL);
 
 -- --------------------------------------------------------
 
@@ -164,8 +170,7 @@ INSERT INTO `serve` (`id`, `name`, `gender`, `phone`, `identity`, `address`, `le
 ALTER TABLE `bill`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_customer` (`id_customer`),
-  ADD KEY `id_serve` (`id_serve`),
-  ADD KEY `id_detail_bill` (`id_detail_bill`);
+  ADD KEY `id_serve` (`id_serve`);
 
 --
 -- Indexes for table `customer`
@@ -209,13 +214,13 @@ ALTER TABLE `serve`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `detail_bill`

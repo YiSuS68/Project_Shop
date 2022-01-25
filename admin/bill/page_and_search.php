@@ -14,7 +14,7 @@ select count(*)
 from bill
 join customer ON customer.id = bill.id_customer 
 join serve ON serve.id = bill.id_serve 
-where customer.name like '%$search%'";
+where customer.first_name like '%$search%'";
 $array_quantity_value = mysqli_query($connect,$query_quantity_value);
 $resume_quantity_value=mysqli_fetch_array($array_quantity_value);
 $quantity_value=$resume_quantity_value['count(*)'];
@@ -25,12 +25,12 @@ $quantity_page=ceil($quantity_value/$quantity_value_one_page);
 $quantity_value_pass=$quantity_value_one_page*($page-1);
 
 $query = "
-select bill.id, customer.name as 'name_customer', serve.name as 'name_serve', bill.date_order, bill.status, bill.price_bill 
+select bill.id, customer.first_name as 'first_name_customer', serve.name as 'name_serve', bill.date_order, bill.status, bill.price_bill 
 from bill
 join customer ON customer.id = bill.id_customer 
 join serve ON serve.id = bill.id_serve 
-where customer.name like '%$search%' 
-group by bill.id, customer.name, serve.name, bill.date_order, bill.status, bill.price_bill
+where customer.first_name like '%$search%' 
+group by bill.id, customer.first_name, serve.name, bill.date_order, bill.status, bill.price_bill
 limit $quantity_value_one_page
 offset $quantity_value_pass";
 $resume=mysqli_query($connect,$query);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 24, 2022 at 07:17 PM
+-- Generation Time: Jan 25, 2022 at 06:51 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -72,6 +72,7 @@ INSERT INTO `customer` (`id`, `user_name`, `fisrt_name`, `last_name`, `gender`, 
 
 CREATE TABLE `detail_bill` (
   `id` int(11) NOT NULL,
+  `id_bill` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
   `quantity` int(5) NOT NULL,
@@ -178,7 +179,8 @@ ALTER TABLE `customer`
 ALTER TABLE `detail_bill`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_customer` (`id_customer`),
-  ADD KEY `id_product` (`id_product`);
+  ADD KEY `id_product` (`id_product`),
+  ADD KEY `id_bill` (`id_bill`);
 
 --
 -- Indexes for table `producer`
@@ -248,15 +250,15 @@ ALTER TABLE `serve`
 --
 ALTER TABLE `bill`
   ADD CONSTRAINT `bill_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `bill_ibfk_2` FOREIGN KEY (`id_serve`) REFERENCES `serve` (`id`),
-  ADD CONSTRAINT `bill_ibfk_3` FOREIGN KEY (`id_detail_bill`) REFERENCES `detail_bill` (`id`);
+  ADD CONSTRAINT `bill_ibfk_2` FOREIGN KEY (`id_serve`) REFERENCES `serve` (`id`);
 
 --
 -- Constraints for table `detail_bill`
 --
 ALTER TABLE `detail_bill`
   ADD CONSTRAINT `detail_bill_ibfk_2` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `detail_bill_ibfk_3` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`);
+  ADD CONSTRAINT `detail_bill_ibfk_3` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`),
+  ADD CONSTRAINT `detail_bill_ibfk_4` FOREIGN KEY (`id_bill`) REFERENCES `bill` (`id`);
 
 --
 -- Constraints for table `product`

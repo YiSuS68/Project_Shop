@@ -1,7 +1,7 @@
 
 <!-- 2.2 đăng ký -->
 <div class="tab-pane">
-    <form class="login" action="customer/process_signup.php" method="post">
+    <form class="login" action="process_signup.php" method="post">
 
         <!-- 2.2.1 tên đăng nhập -->
         <div class="input-form">
@@ -14,12 +14,12 @@
         <div class="sign-up_name">
             <div class="input-form">
                 <span id="error_last_name"></span>
-                <input class="put-something" type="text" placeholder="Họ" name="first_name" id="last_name">
-                <i class="far fa-comment-dots"></i>
+                <input class="put-something" type="text" placeholder="Họ" name="last_name" id="last_name">
+                <i class="far fa-comment-dots"></i> 
             </div>
             <div class="input-form">
                 <span id="error_first_name"></span>
-                <input class="put-something" type="text" placeholder="Tên" name="last_name" id="first_name">
+                <input class="put-something" type="text" placeholder="Tên" name="first_name" id="first_name">
                 <i class="far fa-comment-dots"></i>
             </div>
         </div>
@@ -33,7 +33,7 @@
                     <option></option>
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
-                    <option value="Khác">Không xác định</option>
+                    <option value="Khác">Khác</option>
                 </select>
                 <i class="fas fa-venus-mars">
                 </i>
@@ -81,8 +81,8 @@
 
         <!-- 2.2.8 nút đăng ký -->
         <div>
-            <button type="button" class="btn-button" onclick="return formValidate()">Đăng ký</button>
+            <button type="button" class="btn-button" onclick="return check_signup()">Đăng ký</button>
         </div>
     </form>
-    <script src="assets/js/regex.js"></script>
+    <script src="assets/js/validate_signup.js"></script>
 </div>

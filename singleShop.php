@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,20 +13,23 @@
 <body>
 
     <?php
-        $id =$_GET['id'];
-        require '../admin/connect.php';
-        $sql = "SELECT * from product
-        where id = $id";
-        $result =mysqli_query($connect,$sql);
-        $each = mysql_fetch_array($result);
+    $id = $_GET['id'];
+    require 'admin/connect.php';
+    $sql = "
+    select product.*,producer.name as name_producer 
+    from product
+    join producer on product.id_producer = producer.id
+    where product.id = '$id'";
+    $result =mysqli_query($connect,$sql);
+    $each = mysqli_fetch_array($result);
     ?>
     
     <div id="main">
 
         <!--navbar-->
-        <?php include "../component_navbar_ontop.php" ?>
-        <?php include "../component_navbar_shortcut.php" ?>
-                
+        <?php include "component_navbar_ontop.php" ?>
+        <?php include "component_navbar_shortcut.php" ?>
+
 
         <!-- single product -->
         <div id="single-product">
@@ -38,7 +41,7 @@
 
                         <!-- 1.1 ảnh to bên trên -->
                         <div class="single-product_setup_img">
-                            <img src="../assets/img/product_single_10.jpg" alt="Product" class="product-imgpro"> <!-- ảnh hiển thị của sản phẩm lấy từ db về -->
+                            <img src="assets/img/product_single_10.jpg" alt="Product" class="product-imgpro"> <!-- ảnh hiển thị của sản phẩm lấy từ db về -->
                         </div> <!-- ảnh trượt bên dưới được ấn sẽ hiển thị ở đây, làm bằng js cần tìm hiểu -->
 
                         <!-- 1.2 thanh trượt ảnh sản phẩm -->
@@ -59,17 +62,17 @@
                                         <div class="flex-wrap">
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_01.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_01.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 1 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_02.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_02.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 2 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_03.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_03.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 3 được lấy từ db về -->
                                             </div>
                                         </div>
@@ -80,17 +83,17 @@
                                         <div class="flex-wrap">
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_01.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_01.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 1 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_02.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_02.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 2 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_03.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_03.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 3 được lấy từ db về -->
                                             </div>
                                         </div>
@@ -101,17 +104,17 @@
                                         <div class="flex-wrap">
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_01.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_01.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 1 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_02.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_02.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 2 được lấy từ db về -->
                                             </div>
                                             <div class="single-product_idk">
                                                 <a href="#"> <!-- ấn vào nó sẽ hiển thị lên ảnh to, cái này làm bằng js không liên quan db -->
-                                                    <img src="../assets/img/product_single_03.jpg" class="product-imgpro">
+                                                    <img src="assets/img/product_single_03.jpg" class="product-imgpro">
                                                 </a>  <!-- ảnh của sản phẩm vd 3 được lấy từ db về -->
                                             </div>
                                         </div>
@@ -151,7 +154,7 @@
                                 <!-- 2.4 hãng, tên nhà sản xuất -->
                                 <ul class="n-list_style m_b2">
                                     <li class="d-inline m-r"><h6 class="h6 m_b">Brand:</h6></li>
-                                    <li class="d-inline m-r"><p class="grey m_b2"><strong><?php echo $each['producer'] ?></strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
+                                    <li class="d-inline m-r"><p class="grey m_b2"><strong><?php echo $each['name_producer'] ?></strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
                                 </ul>
 
                                 <!-- 2.5 nội dung sản phẩm -->
@@ -256,7 +259,7 @@
         
         
         <!-- footer -->
-        <?php include "../component_footer.php" ?>
+        <?php include "component_footer.php" ?>
 
     </div>
 

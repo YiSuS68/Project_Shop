@@ -27,7 +27,7 @@
             </div>
 
             <div class="footer-card">
-                <h2 class="b_b h2 light p_b2 m_b">thông tin thêm</h2>
+                <h2 class="b_b h2 light p_b2 m_b">Thông tin thêm</h2>
                 <ul class="light m_b2 n-list_style">
                     <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
                     <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/about.php">About Us</a></li>
@@ -68,7 +68,7 @@
 
         <!-- part three -->
         <div class="footer-final">
-            <p class="light">© 2021 DEMO J2TEAM. made by <b>Huy</b> and <b>Việt</b></p>
+            <p class="light">© 2021 DEMO J2TEAM. made by <b>Hùng</b> and <b>Việt</b></p>
         </div>
 
     </div>

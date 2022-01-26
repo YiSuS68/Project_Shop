@@ -1,5 +1,13 @@
 <!-- liên kết với database -->
 <?php 
+session_start();
+    // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
+if(empty($_SESSION['id'])) {
+        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+    header('location: ../index.php?error=Hãy đăng nhập đi bạn êi');
+}
+?>
+<?php 
 require '../admin/connect.php';
 $sql = "SELECT * from product";
 $result = mysqli_query($connect,$sql);
@@ -116,11 +124,11 @@ $result = mysqli_query($connect,$sql);
                     <div class="flex-wrap">
 
                         <!-- 2.2.1 sản phẩm ví dụ 1 -->
-
+                        <?php foreach ($result as $each): ?>
                         <div class="buynow-card_start media-w100">
                             <div class="buynow-setup_card_start">
                                 <!-- 2.2.1.1 ảnh của sản phẩm -->
-                                <?php foreach ($result as $each): ?>
+                                
                                     <div class="buynow-img">
                                         <img src="../history_image/<?php echo $each['image'] ?>"> <!-- lấy ảnh từ db về hiển thị ở đây -->
                                         <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
@@ -144,7 +152,7 @@ $result = mysqli_query($connect,$sql);
 
                                     <!-- thông tin của sản phẩm -->
                                     <div class="buynow-text">
-                                        <a class="black n-decoration m_b" href="#">
+                                        <a class="black n-decoration m_b" href="singleShop.php?id=<?php echo $each['id'] ?>">
                                             <?php echo $each['name'] ?>
                                         </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
 
@@ -164,10 +172,11 @@ $result = mysqli_query($connect,$sql);
                                         </ul>
                                         <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
                                     </div>
-                                <?php endforeach ?>
+                                
                             </div>
+                            
                         </div>
-
+                        <?php endforeach ?>
 
                         <!-- 2.2.2 sản phẩm ví dụ 2 -->
                         <div class="buynow-card_start media-w100">
@@ -614,10 +623,10 @@ $result = mysqli_query($connect,$sql);
 
 
         <!-- footer -->
-        <?php include "customer/component_footer.php" ?>
-        
+        <?php include "component_footer.php" ?>
+
     </div>
 
-    <script src="assets/js/index.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 </html>

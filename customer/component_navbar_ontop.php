@@ -12,13 +12,13 @@
 
             <!-- part two -->
             <div>
-                <a style="color: white;" href="user.php">
+                <a class="hover n-decoration light" href="user.php"> xin chào
                     <?php 
                     echo $_SESSION['user_name'];
                     ?>
                 </a>
                 <span> | </span>
-                <a style="color: white;" href="signout.php">
+                <a class="hover n-decoration light" href="signout.php">
                     Đăng xuất
                 </a>
                 <br>

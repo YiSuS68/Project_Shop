@@ -1,3 +1,11 @@
+<?php 
+session_start();
+    // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
+if(empty($_SESSION['id'])) {
+        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+    header('location: ../index.php?error=Hãy đăng nhập đi bạn êi');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -7,8 +7,11 @@ $each = mysqli_fetch_array($resume);
 	</tr>
 	<tr>
 		<th colspan="3">Tên khách hàng</th>
-		<th colspan="3" style="text-align:center">
-			<?php echo $each['name_customer']; ?>
+		<th colspan="1" style="text-align:center">
+			<?php echo $each['first_name_customer']; ?>
+		</th>
+		<th colspan="1" style="text-align:center">
+			<?php echo $each['last_name_customer']; ?>
 		</th>
 	</tr>
 	<tr>

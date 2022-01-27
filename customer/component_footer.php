@@ -16,24 +16,24 @@
             <div class="footer-card">
                 <h2 class="b_b h2 light p_b2 m_b">Các sản phẩm</h2>
                 <ul class="light m_b2 n-list_style">
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">sang trọng</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">đồ thể thao</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">giày nam</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">giày nữ</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">váy phổ biến</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">phụ kiện dụng cụ thể hình</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/shop.php">giày thể thao</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">sang trọng</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">đồ thể thao</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">giày nam</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">giày nữ</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">váy phổ biến</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">phụ kiện dụng cụ thể hình</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="shop.php">giày thể thao</a></li>
                 </ul>
             </div>
 
             <div class="footer-card">
-                <h2 class="b_b h2 light p_b2 m_b">thông tin thêm</h2>
+                <h2 class="b_b h2 light p_b2 m_b">Thông tin thêm</h2>
                 <ul class="light m_b2 n-list_style">
                     <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/about.php">About Us</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/contact.php">Shop Locations</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="about.php">About Us</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="contact.php">Shop Locations</a></li>
                     <li class="footer-inline"><a class="n-decoration light" href="#">FAQs</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="../khach_hang/contact.php">Contact</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="contact.php">Contact</a></li>
                 </ul>
             </div>
         </div>

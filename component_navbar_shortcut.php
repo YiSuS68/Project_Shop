@@ -39,11 +39,11 @@
                         </i>
                     </a>
 
-                    <a class="m_r3" href="#"> <!-- trỏ đến nơi những món hàng đã chọn để chuẩn bị mua -->
-                        <i class="w20 black fas fa-cart-arrow-down">
+                    <!-- <a class="m_r3" href="#">  --><!-- trỏ đến nơi những món hàng đã chọn để chuẩn bị mua -->
+<!--                         <i class="w20 black fas fa-cart-arrow-down">
                         </i>
-                        <span class="pop black">7</span>
-                    </a>  <!-- Thêm popup số lượng bên trên icon với số lượng hàng đã có trong túi đồ -->
+                        <span class="pop black">7</span> -->
+                   <!--  </a> -->  <!-- Thêm popup số lượng bên trên icon với số lượng hàng đã có trong túi đồ -->
                     
                     <a class="m_r3" href="#"> <!-- trỏ đến nơi chứa thông tin của khách hàng đăng ký tài khoản, thêm điều kiện phải đăng nhập mới vào được -->
                         <i class="w20 black fas fa-user">

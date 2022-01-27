@@ -21,21 +21,21 @@
                 <a class="hover n-decoration light" href="signout.php">
                     Đăng xuất
                 </a>
-                <br>
-                <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
-                    <i class="navbar-icon m_r w fab fa-facebook-f"></i>
-                </a>
-                <a class="n-decoration grey" href="https://www.instagram.com" target="_blank">
-                    <i class="navbar-icon m_r w fab fa-instagram"></i>
-                </a>
-                <a class="n-decoration grey" href="https://twitter.com" target="_blank">
-                    <i class="navbar-icon m_r w fab fa-twitter"></i>
-                </a>
-                <a class="n-decoration grey" href="https://www.linkedin.com" target="_blank">
-                    <i class="navbar-icon m_r w fab fa-linkedin"></i>
-                </a>
-            </div>
-
+            <br>
+            <a class="n-decoration grey" href="https://www.facebook.com" target="_blank">
+                <i class="navbar-icon m_r w fab fa-facebook-f"></i>
+            </a>
+            <a class="n-decoration grey" href="https://www.instagram.com" target="_blank">
+                <i class="navbar-icon m_r w fab fa-instagram"></i>
+            </a>
+            <a class="n-decoration grey" href="https://twitter.com" target="_blank">
+                <i class="navbar-icon m_r w fab fa-twitter"></i>
+            </a>
+            <a class="n-decoration grey" href="https://www.linkedin.com" target="_blank">
+                <i class="navbar-icon m_r w fab fa-linkedin"></i>
+            </a>
         </div>
+
     </div>
+</div>
 </div>

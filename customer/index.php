@@ -3,7 +3,21 @@ session_start();
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
 if(empty($_SESSION['id'])) {
         // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
-    header('location: ../index.php?error=Hãy đăng nhập đi bạn êi');
+    header('location: ../login_register.php?not_exists_signin');
+}
+if (isset($_GET['success_order'])) {
+    echo '<script type="text/javascript">
+
+    window.onload = function () { alert("Đặt hàng thành công"); }
+
+    </script>';
+}
+if (isset($_GET['empty_cart'])) {
+    echo '<script type="text/javascript">
+
+    window.onload = function () { alert("Chưa có sản phẩm nào trong giỏ hàng"); }
+
+    </script>';
 }
 ?>
 <!DOCTYPE html>

@@ -4,13 +4,12 @@ session_start();
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
 if(empty($_SESSION['id'])) {
         // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
-    header('location: ../index.php?error=Hãy đăng nhập đi bạn êi');
+    header('location: ../login_register.php?not_exists_signin');
 }
 ?>
 <?php 
 require '../admin/connect.php';
-$sql = "SELECT * from product";
-$result = mysqli_query($connect,$sql);
+require '../page_and_search.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,11 +123,11 @@ $result = mysqli_query($connect,$sql);
                     <div class="flex-wrap">
 
                         <!-- 2.2.1 sản phẩm ví dụ 1 -->
-                        <?php foreach ($result as $each): ?>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <!-- 2.2.1.1 ảnh của sản phẩm -->
-                                
+                        <?php foreach ($resume as $each): ?>
+                            <div class="buynow-card_start media-w100">
+                                <div class="buynow-setup_card_start">
+                                    <!-- 2.2.1.1 ảnh của sản phẩm -->
+
                                     <div class="buynow-img">
                                         <img src="../history_image/<?php echo $each['image'] ?>"> <!-- lấy ảnh từ db về hiển thị ở đây -->
                                         <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
@@ -152,9 +151,9 @@ $result = mysqli_query($connect,$sql);
 
                                     <!-- thông tin của sản phẩm -->
                                     <div class="buynow-text">
-                                        <a class="black n-decoration m_b" href="singleShop.php?id=<?php echo $each['id'] ?>">
+                                        <a class="black n-decoration m_b" href="each_product.php?id=<?php echo $each['id'] ?>">
                                             <?php echo $each['name'] ?>
-                                        </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
+                                        </a> <!-- trỏ đến trang each_product với đầy đủ thông tin của mặt hàng -->
 
                                         <ul class="space-flex n-list_style">
                                             <li>M/L/X/XL</li> <!-- có thể thêm số size của mặt hàng, hoặc mình tự đặt -->
@@ -172,386 +171,33 @@ $result = mysqli_query($connect,$sql);
                                         </ul>
                                         <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
                                     </div>
-                                
+
+                                </div>
+
                             </div>
-                            
-                        </div>
                         <?php endforeach ?>
-
-                        <!-- 2.2.2 sản phẩm ví dụ 2 -->
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-
-                                <!-- 2.2.2.1 ảnh của sản phẩm -->
-                                <div class="buynow-img">
-                                    <img src="../assets/img/shop_02.jpg"> <!-- lấy ảnh từ db về hiển thị ở đây -->
-
-                                    <div class="buynow-hovered"> <!-- di vào nó sẽ hiện ra: thêm vào giỏ hàng, xem mặt hàng -->
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye">     
-                                                    </i>
-                                                </a> <!-- di chuyển đến singleShop và lấy toàn bộ thông tin của mặt hàng hiển thị bên singleShop -->
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus">
-                                                    </i>
-                                                </a>  <!-- thêm sản phẩm vào giỏ hàng -->
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- thông tin của sản phẩm -->
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non
-                                    </a> <!-- trỏ đến trang singleShop với đầy đủ thông tin của mặt hàng -->
-
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li> <!-- có thể thêm số size của mặt hàng, hoặc mình tự đặt -->
-                                        <li></li>
-                                    </ul>
-
-                                    <ul class="center-flex n-list_style m_b"> <!-- có thể thêm số lượng sao cho sản phẩm, hoặc mình tự đặt -->
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_03.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_04.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_05.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_06.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_07.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_08.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="buynow-card_start media-w100">
-                            <div class="buynow-setup_card_start">
-                                <div class="buynow-img">
-                                    <img src="./assets/img/shop_09.jpg">
-                                    <div class="buynow-hovered">
-                                        <ul class="n-list_style m_b2">
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-heart"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="far fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="buynow-btn" href="#">
-                                                    <i class="fas fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="buynow-text">
-                                    <a class="black n-decoration m_b" href="#">Oupidatat non</a>
-                                    <ul class="space-flex n-list_style">
-                                        <li>M/L/X/XL</li>
-                                        <li></li>
-                                    </ul>
-                                    <ul class="center-flex n-list_style m_b">
-                                        <li>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="yellow fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                            <i class="grey fas fa-star"></i>
-                                        </li>
-                                    </ul>
-                                    <p class="text-center">$250.00</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- 2.3 phần này là nút bấm sang trang, nếu sản phẩm nhiều quá 9 thì sẽ sang trang 2... -->
                     <div>
                         <ul class="end-flex n-list_style m_b2">
-                            <li>
-                                <a class="buynow-design_number_disabled">1
-                                </a>
-                            </li> <!-- chỉnh default là trang 1 -->
-
-                            <li>
-                                <a class="buynow-design_number" href="#">2
-                                </a>
-                            </li> <!-- chuyển sang trang 2 nếu có nhiều sản phẩm -->
-
-                            <li>
-                                <a class="buynow-design_number" href="#">3
-                                </a>
-                            </li> <!-- chuyển sang trang 3 nếu có nhiều sản phẩm -->
-                        </ul>
+                         <li>
+                            <?php for ($i=1; $i <=$quantity_page ; $i++) { ?>
+                                <?php if ($page == $i){?>
+                                    <li>
+                                        <a class="buynow-design_number_disabled" href="?page=<?php echo $i ?>&search=<?php echo $search ?>" >
+                                            <span><?php echo $i ?></span>
+                                        </a>
+                                    </li>
+                                <?php }else{ ?>
+                                    <li>
+                                        <a class="buynow-design_number" href="?page=<?php echo $i ?>&search=<?php echo $search ?>" >
+                                            <span><?php echo $i ?></span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
+                        </li>
                     </div>
 
                 </div>
@@ -575,33 +221,33 @@ $result = mysqli_query($connect,$sql);
                             <div class="brand-prev p_l-r self-center">
                                 <a class="black m_b h1" role="button" onclick="minisize(-1)"><i class="light fas fa-chevron-left"></i></a>
                             </div>
-                            
+
                             <!-- slider brand -->
                             <div class="brand-icon p_l-r">
                                 <div class="position-rel">
                                     <div class="position-rel w-100">
                                         <div class="brand-picture position-rel">
                                             <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_01.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_02.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_03.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_04.png" width="110px" height="74px"></a></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"> </div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"> </div>
                                             </div>
                                         </div>
                                         <div class="brand-picture position-rel">
                                             <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_01.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_02.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_03.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_04.png" width="110px" height="74px"></a></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"></div>
                                             </div>
                                         </div>
                                         <div class="brand-picture position-rel">
                                             <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_01.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_02.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_03.png" width="110px" height="74px"></a></div>
-                                                <div class="brand-logo_brand"><a href="#"><img class="brand-img" src="./assets/img/brand_04.png" width="110px" height="74px"></a></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"></div>
+                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"></div>
                                             </div>
                                         </div>
                                     </div>

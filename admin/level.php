@@ -12,5 +12,8 @@
 				header('location:root');
 				exit;
 			}
+			else{
+				header('location:index.php?error');
+			}
 		}
-	}
+	}	

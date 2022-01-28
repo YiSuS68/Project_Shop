@@ -1,4 +1,9 @@
 <?php  
+if (empty($_SESSION['level']))
+{
+  header('location:../index.php?error');
+  die();
+}
 $page=1;
 if (isset($_GET['page'])) {
   $page = $_GET['page'];

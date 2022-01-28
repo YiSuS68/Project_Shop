@@ -1,5 +1,10 @@
 <link rel="stylesheet" href="../event.css">
 <?php 	
+if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+}
 require '../connect.php';
 $query_producer = "select * from producer ";
 $resume_producer=mysqli_query($connect,$query_producer);

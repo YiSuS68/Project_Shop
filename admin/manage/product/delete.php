@@ -1,4 +1,11 @@
 <?php 
+
+session_start();
+if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+}
 if (empty($_GET['id']))
 {
 	header('location:index.php?empty_delete');

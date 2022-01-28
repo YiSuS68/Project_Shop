@@ -1,3 +1,8 @@
+<?php if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+} ?>
 <link rel="stylesheet" type="text/css" href="../event.css">
 <form method="post" action="process_insert.php" enctype="multipart/form-data">
 	<table width="50%" align="center" border="2px">

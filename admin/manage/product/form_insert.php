@@ -1,3 +1,9 @@
+<?php 
+if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+} ?>
 <link rel="stylesheet" href="../event.css">
 <?php 	
 require '../connect.php';

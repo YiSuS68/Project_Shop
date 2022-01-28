@@ -1,8 +1,9 @@
 <?php 
-session_start();
-if (!isset($_SESSION['id'])){
+session_start();  
+if (empty($_SESSION['level']))
+{
   header('location:../index.php?error');
-  exit;
+  die();
 }else{
   $level = $_SESSION['level'];
   if($level != 3){

@@ -1,24 +1,6 @@
-<?php
-if(isset($_COOKIE['remember'])) {
-    $token = $_COOKIE['remember'];
-    require 'admin/connect.php';
-    $sql = "select * from customer where token = '$token' limit 1";
-    $result = mysqli_query($connect,$sql);
-    $number_rows = mysqli_num_rows($result);
-    if ($number_rows == 1) {
-        $each = mysqli_fetch_array($result);
-        $_SESSION['id'] = $each['id'];
-        $_SESSION['user_name'] = $each['user_name'];
-        if (isset($_SESSION['id'])){
-            header('location:customer/index.php');
-            exit;
-        }
-    }
-}        
-?>
 <div class="tab-pane active">
     <form class="login" method="post" action="process_signin.php">
-        
+
         <!-- 2.1.1 nhập tên và mật khẩu -->
         <input class="input-login" type="text" name="user_name" id="user_name" placeholder="Tên đăng nhập" required>
         <i class="fas fa-user"></i>

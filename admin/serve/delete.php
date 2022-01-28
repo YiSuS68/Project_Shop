@@ -1,7 +1,8 @@
 <?php 
-if (empty($_GET['id']))
+session_start();	
+if (empty($_SESSION['level']))
 {
-	header('location:index.php?empty_delete');
+	header('location:index.php?error');
 	die();
 }
 $id =addslashes($_GET['id']);

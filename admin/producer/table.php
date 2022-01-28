@@ -1,3 +1,9 @@
+<?php 
+if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+} ?>
 <table width="100%" align="center" border="2px">
 	<tr>
 		<th colspan="10">NHÀ SẢN XUẤT</th>

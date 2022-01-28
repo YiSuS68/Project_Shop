@@ -35,7 +35,7 @@
 			<tr>
 				<th>Giữ ảnh cũ</th>
 				<td>
-					<img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
+					<img height="100px" src="../../../history_image/<?php echo $each['image'] ?>">
 					<input id="image" type="hidden" name="ole_image" value="<?php echo $each['image'] ?>">
 					<span id="error_image" class="error_validate"></span>
 				</td>

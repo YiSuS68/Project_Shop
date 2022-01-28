@@ -1,3 +1,8 @@
+<?php if (empty($_SESSION['level']))
+{
+	header('location:index.php?error');
+	die();
+} ?>
 <table width="100%" align="center" border="2px">
 	<tr>
 		<th colspan="10">NHÀ SẢN XUẤT</th>
@@ -13,7 +18,7 @@
 	<?php foreach ($resume as $each){ ?>
 		<tr>
 			<td style="text-align:center">
-				<img height="100px" src="../../history_image/<?php echo $each['image'] ?>">
+				<img height="100px" src="../../../history_image/<?php echo $each['image'] ?>">
 			</td>
 			<td style="text-align:center"><?php echo $each['name']; ?></td>
 			<td style="text-align:center"><?php echo $each['phone']; ?></td>

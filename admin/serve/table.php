@@ -1,3 +1,9 @@
+<?php 
+if (empty($_SESSION['id'])){
+  header('location:../index.php?error');
+  exit;
+}
+?>
 <table width="100%" align="center" border="2px">
   <tr>
     <th colspan="11">NHÂN VIÊN</th>

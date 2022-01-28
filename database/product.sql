@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 28, 2022 at 03:45 AM
+-- Generation Time: Jan 28, 2022 at 09:30 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -30,8 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `bill` (
   `id` int(11) NOT NULL,
   `id_serve` int(11) NOT NULL,
-  `id_order` int(11) NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `id_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -45,7 +44,7 @@ CREATE TABLE `customer` (
   `user_name` varchar(50) NOT NULL,
   `last_name` varchar(25) NOT NULL,
   `first_name` varchar(25) NOT NULL,
-  `gender` enum('Nam','Ná»¯','KhÃ¡c') NOT NULL,
+  `gender` enum('Nam','Nữ','Khác') NOT NULL,
   `birth` date NOT NULL,
   `phone` varchar(15) NOT NULL,
   `address` text NOT NULL,
@@ -53,6 +52,13 @@ CREATE TABLE `customer` (
   `password` varchar(255) NOT NULL,
   `token` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `user_name`, `last_name`, `first_name`, `gender`, `birth`, `phone`, `address`, `email`, `password`, `token`) VALUES
+(6, 'YiSuS', 'Nguyễn', 'Hùng', 'Nữ', '2001-03-17', '0967622166', 'Đâu đó', 'goldhungvip01@gmail.com', '123', NULL);
 
 -- --------------------------------------------------------
 
@@ -71,10 +77,8 @@ CREATE TABLE `detail_order` (
 --
 
 INSERT INTO `detail_order` (`id_order`, `id_product`, `quantity`) VALUES
-(11, 1, 5),
-(11, 2, 1),
-(12, 2, 2),
-(12, 3, 2);
+(12, 1, 2),
+(12, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -107,6 +111,14 @@ CREATE TABLE `producer` (
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `producer`
+--
+
+INSERT INTO `producer` (`id`, `name`, `image`, `phone`, `address`) VALUES
+(3, 'Nguyễn Huy Hùng', '1643357058.jpg', '0967622166', 'Nguyễn Huy Hùng'),
+(4, 'Nguyễn Ngọc', '1643357100.jpg', '0123891312', 'Đâu đó');
+
 -- --------------------------------------------------------
 
 --
@@ -124,6 +136,14 @@ CREATE TABLE `product` (
   `id_producer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `description`, `detail`, `image`, `price`, `vote`, `id_producer`) VALUES
+(1, 'Giày sneaker', 'ăe123sad', 'eqwe123sae', '1643357134.jpg', 123421, 123, 3),
+(2, 'đồng hồ', '123asd', 'ád123ewaedaesd', '1643357155.jpg', 12312, 4123, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -133,7 +153,7 @@ CREATE TABLE `product` (
 CREATE TABLE `serve` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `gender` enum('Nam','Ná»¯','KhÃ¡c') NOT NULL,
+  `gender` enum('Nam','Nữ','Khác') NOT NULL,
   `phone` varchar(50) NOT NULL,
   `identity` varchar(50) NOT NULL,
   `address` text NOT NULL,
@@ -143,6 +163,13 @@ CREATE TABLE `serve` (
   `password` varchar(255) NOT NULL,
   `token` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `serve`
+--
+
+INSERT INTO `serve` (`id`, `name`, `gender`, `phone`, `identity`, `address`, `level`, `wage`, `account`, `password`, `token`) VALUES
+(13, 'Nguyễn Huy Hùng', 'Nam', '0967622166', '124124', 'dsadqwe123', 3, 123412, 'ad1', '123', 'user_61f3a235950188.86277624');
 
 --
 -- Indexes for dumped tables
@@ -202,37 +229,37 @@ ALTER TABLE `serve`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `producer`
 --
 ALTER TABLE `producer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `serve`
 --
 ALTER TABLE `serve`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables

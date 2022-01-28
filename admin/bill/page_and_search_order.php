@@ -13,7 +13,7 @@ $query_quantity_value="
 select count(*)
 from `order`
 join customer on customer.id = `order`.id_customer
-where customer.first_name like '%$search%'";
+where `order`.status = '0' and customer.first_name like '%$search%'";
 $array_quantity_value = mysqli_query($connect,$query_quantity_value);
 $resume_quantity_value=mysqli_fetch_array($array_quantity_value);
 $quantity_value=$resume_quantity_value['count(*)'];
@@ -28,9 +28,10 @@ select `order`.id,customer.first_name,customer.last_name,`order`.name_receiver,`
 `order`.status,`order`.date_order,`order`.total_price
 from `order`
 join customer on customer.id = `order`.id_customer
-where customer.first_name like '%$search%'
+where `order`.status = '0' and customer.first_name like '%$search%'
 group by `order`.id,customer.first_name,customer.last_name,`order`.name_receiver,`order`.phone_receiver,`order`.address_receiver,
 `order`.status,`order`.date_order,`order`.total_price
+order by `order`.date_order desc
 limit $quantity_value_one_page
 offset $quantity_value_pass";
 $resume=mysqli_query($connect,$query);

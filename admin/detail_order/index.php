@@ -28,12 +28,22 @@
     <br>
     <br>
     <div style="float: right;">
-      <button style="background-color:red;">
-        <a href="delete_order.php?id=<?php echo $_GET['id']; ?>" style="text-decoration: none; color: white;">Hủy đơn</a>
-      </button>
-      <button style="background-color:green;">
-        <a href="accept_order.php?id=<?php echo $_GET['id']; ?> " style="text-decoration: none; color: white;">Duyệt đơn</a>
-      </button>
+      <?php if ($_GET['type'] === 'order'){ ?>
+        <button style="background-color:blue;">
+          <a href="../bill/index.php" style="text-decoration: none; color: white;">Quay lại</a>
+        </button>
+
+        <button style="background-color:red;">
+          <a href="../bill/delete_bill.php?id=<?php echo $_GET['id']; ?>" style="text-decoration: none; color: white;">Hủy đơn</a>
+        </button>
+        <button style="background-color:green;">
+          <a href="accept_order.php?id=<?php echo $_GET['id']; ?> " style="text-decoration: none; color: white;">Duyệt đơn</a>
+        </button>
+      <?php }else if ($_GET['type'] === 'bill'){?>
+        <button style="background-color:blue;">
+          <a href="../bill/index.php" style="text-decoration: none; color: white;">Quay lại</a>
+        </button>
+      <?php } ?>
     </div>
   </div>
 </body>

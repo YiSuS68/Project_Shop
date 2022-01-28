@@ -1,6 +1,6 @@
 <table width="100%" align="center" border="2px">
   <tr>
-    <th colspan="11">ĐƠN ĐẶT HÀNG</th>
+    <th colspan="11">HÓA ĐƠN ĐÃ DUYỆT</th>
   </tr>
   <tr>
     <th colspan="2">Họ và tên khách hàng</th>
@@ -11,27 +11,23 @@
     <th>Ngày đặt hàng</th>
     <th>Tổng tiền</th>
     <th>Chi tiết</th>
-    <th>Sửa</th>
     <th>Xóa</th>
   </tr>
-  <?php foreach ($resume as $get_order){ ?>
+  <?php foreach ($resume as $get_bill){ ?>
     <tr>
-      <td style="text-align:center"><?php echo $get_order['first_name']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['last_name']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['name_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['phone_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['address_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['status']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['date_order']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['total_price']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['last_name']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['first_name']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['name_receiver']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['phone_receiver']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['address_receiver']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['status']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['date_order']; ?></td>
+      <td style="text-align:center"><?php echo $get_bill['total_price']; ?></td>
       <td style="text-align:center">
-        <a href="../detail_bill?id=<?php echo $get_order['id']; ?>" style="color: black; text-decoration: none;">=></a>
+        <a href="../detail_order?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">=></a>
       </td>
       <td style="text-align:center">
-        <a href="form_update.php?id=<?php echo $get_order['id']; ?>" style="color: blue;">X</a>
-      </td>
-      <td style="text-align:center">
-        <a href="delete.php?id=<?php echo $get_bill['id']; ?>" style="color: red;">X</a>
+        <a href="delete_bill?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">X</a>
       </td>
     </tr>
   <?php } ?>
@@ -40,4 +36,4 @@
   <a  href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
     <span style="margin: 10px 10px; float: left; border: 2px solid black;"><?php echo $i ?> </span>
   </a>
-<?php } ?>
+  <?php } ?>

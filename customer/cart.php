@@ -6,7 +6,7 @@ if(empty($_SESSION['id'])) {
             // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
     header('location: ../login_register.php?not_exists_signin');
 }
-if (!isset($_SESSION['cart'])) {
+if (empty($_SESSION['cart'])) {
     header('location: index.php?empty_cart');
 }
 $cart = $_SESSION['cart'];

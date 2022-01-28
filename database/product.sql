@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 25, 2022 at 07:02 AM
+-- Generation Time: Jan 28, 2022 at 03:45 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -29,19 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bill` (
   `id` int(11) NOT NULL,
-  `id_customer` int(11) NOT NULL,
   `id_serve` int(11) NOT NULL,
-  `date_order` date NOT NULL,
-  `status` varchar(20) NOT NULL,
-  `price_bill` double NOT NULL
+  `id_order` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bill`
---
-
-INSERT INTO `bill` (`id`, `id_customer`, `id_serve`, `date_order`, `status`, `price_bill`) VALUES
-(1, 5, 11, '2022-01-05', 'Äang giao', 123);
 
 -- --------------------------------------------------------
 
@@ -63,26 +54,43 @@ CREATE TABLE `customer` (
   `token` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `customer`
+-- Table structure for table `detail_order`
 --
 
-INSERT INTO `customer` (`id`, `user_name`, `last_name`, `first_name`, `gender`, `birth`, `phone`, `address`, `email`, `password`, `token`) VALUES
-(5, 'a', 'as', '123sad', 'Nam', '2022-01-05', '0967622166', '1dasdasc', 'dqwda21', '12', NULL);
+CREATE TABLE `detail_order` (
+  `id_order` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `detail_order`
+--
+
+INSERT INTO `detail_order` (`id_order`, `id_product`, `quantity`) VALUES
+(11, 1, 5),
+(11, 2, 1),
+(12, 2, 2),
+(12, 3, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail_bill`
+-- Table structure for table `order`
 --
 
-CREATE TABLE `detail_bill` (
+CREATE TABLE `order` (
   `id` int(11) NOT NULL,
-  `id_bill` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
-  `id_product` int(11) NOT NULL,
-  `quantity` int(5) NOT NULL,
-  `price` float NOT NULL
+  `name_receiver` varchar(50) NOT NULL,
+  `phone_receiver` char(20) NOT NULL,
+  `address_receiver` text NOT NULL,
+  `status` int(1) NOT NULL,
+  `date_order` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `total_price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -98,13 +106,6 @@ CREATE TABLE `producer` (
   `phone` varchar(30) NOT NULL,
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `producer`
---
-
-INSERT INTO `producer` (`id`, `name`, `image`, `phone`, `address`) VALUES
-(1, 'Nguyá»…n Huy HoÃ ng', '1643017919.jpg', '0937213131', 'xdxhoasihdqpwhe');
 
 -- --------------------------------------------------------
 
@@ -122,14 +123,6 @@ CREATE TABLE `product` (
   `vote` float NOT NULL,
   `id_producer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `name`, `description`, `detail`, `image`, `price`, `vote`, `id_producer`) VALUES
-(1, 'Nguyá»…n Ngá»c', 'hdiasjdqjwoiej', 'jkldjdqPá»°DOAS', '1643017938.jpg', 321111, 123, 1),
-(2, 'Nguyá»…n VÄƒn Linh', 'sadqweasd', 'qÆ°eqweqwe', '1643017966.jpg', 4321120, 1234, 1);
 
 -- --------------------------------------------------------
 
@@ -152,15 +145,6 @@ CREATE TABLE `serve` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `serve`
---
-
-INSERT INTO `serve` (`id`, `name`, `gender`, `phone`, `identity`, `address`, `level`, `wage`, `account`, `password`, `token`) VALUES
-(9, 'Nguyá»…n Ngá»c', 'Ná»¯', '0353891312', '022201001677', 'Nguyá»…n Ngá»c', 2, 300000, 'ql1', '123', 'user_61eeee56e39af6.64401533'),
-(10, 'Nguyá»…n VÄƒn Linh', 'Nam', '0963123124', '022201001677', 'Báº¯c Ninh', 1, 30000000, '', '', NULL),
-(11, 'Nguyá»…n Huy HÃ¹ng', 'Nam', '0967622166', '022201001677', '23123', 3, 9995650, 'ad1', '123', 'user_61eeee4c618bf2.66047381');
-
---
 -- Indexes for dumped tables
 --
 
@@ -169,8 +153,8 @@ INSERT INTO `serve` (`id`, `name`, `gender`, `phone`, `identity`, `address`, `le
 --
 ALTER TABLE `bill`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_customer` (`id_customer`),
-  ADD KEY `id_serve` (`id_serve`);
+  ADD KEY `id_serve` (`id_serve`),
+  ADD KEY `id_order` (`id_order`);
 
 --
 -- Indexes for table `customer`
@@ -179,13 +163,17 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `detail_bill`
+-- Indexes for table `detail_order`
 --
-ALTER TABLE `detail_bill`
+ALTER TABLE `detail_order`
+  ADD PRIMARY KEY (`id_order`,`id_product`);
+
+--
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_customer` (`id_customer`),
-  ADD KEY `id_product` (`id_product`),
-  ADD KEY `id_bill` (`id_bill`);
+  ADD KEY `id_customer` (`id_customer`);
 
 --
 -- Indexes for table `producer`
@@ -214,7 +202,7 @@ ALTER TABLE `serve`
 -- AUTO_INCREMENT for table `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -223,28 +211,28 @@ ALTER TABLE `customer`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `detail_bill`
+-- AUTO_INCREMENT for table `order`
 --
-ALTER TABLE `detail_bill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `producer`
 --
 ALTER TABLE `producer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `serve`
 --
 ALTER TABLE `serve`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -254,16 +242,14 @@ ALTER TABLE `serve`
 -- Constraints for table `bill`
 --
 ALTER TABLE `bill`
-  ADD CONSTRAINT `bill_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `bill_ibfk_2` FOREIGN KEY (`id_serve`) REFERENCES `serve` (`id`);
+  ADD CONSTRAINT `bill_ibfk_2` FOREIGN KEY (`id_serve`) REFERENCES `serve` (`id`),
+  ADD CONSTRAINT `bill_ibfk_3` FOREIGN KEY (`id_order`) REFERENCES `order` (`id`);
 
 --
--- Constraints for table `detail_bill`
+-- Constraints for table `order`
 --
-ALTER TABLE `detail_bill`
-  ADD CONSTRAINT `detail_bill_ibfk_2` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`),
-  ADD CONSTRAINT `detail_bill_ibfk_3` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`),
-  ADD CONSTRAINT `detail_bill_ibfk_4` FOREIGN KEY (`id_bill`) REFERENCES `bill` (`id`);
+ALTER TABLE `order`
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`);
 
 --
 -- Constraints for table `product`

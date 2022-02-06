@@ -29,10 +29,9 @@
             <div class="footer-card">
                 <h2 class="b_b h2 light p_b2 m_b">Thông tin thêm</h2>
                 <ul class="light m_b2 n-list_style">
-                    <li class="footer-inline"><a class="n-decoration light" href="#">Home</a></li>
+                    <li class="footer-inline"><a class="n-decoration light" href="index.php">Home</a></li>
                     <li class="footer-inline"><a class="n-decoration light" href="about.php">About Us</a></li>
                     <li class="footer-inline"><a class="n-decoration light" href="contact.php">Shop Locations</a></li>
-                    <li class="footer-inline"><a class="n-decoration light" href="#">FAQs</a></li>
                     <li class="footer-inline"><a class="n-decoration light" href="contact.php">Contact</a></li>
                 </ul>
             </div>

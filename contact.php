@@ -50,26 +50,26 @@
                         <!-- 1.1 tên -->
                         <div class="p_l-r m_b2 w-max flex-width768 media-w100">
                             <label class="d-inline" for="inputname">Tên của bạn:</label>
-                            <input type="text" class="login-form_control" id="login-name" name="name" placeholder="Name">
+                            <input type="text" class="login-form_control" id="login-name" name="name" placeholder="nhập tên...">
                         </div>
 
                         <!-- 1.2 email -->
                         <div class="p_l-r m_b2 w-max flex-width768 media-w100">
                             <label class="d-inline" for="inputemail">Email:</label>
-                            <input type="email" class="login-form_control" id="login-email" name="email" placeholder="Email">
+                            <input type="email" class="login-form_control" id="login-email" name="email" placeholder="nhập Email...">
                         </div>
                     </div>
 
                     <!-- part two đề cập đến gì? -->
                     <div class="m_b2">
-                        <label for="inputsubject">Đề cập đến? :</label>
-                        <input type="text" class="login-form_control" id="login-subject" name="subject" placeholder="Subject">
+                        <label for="inputsubject">Đề cập đến:</label>
+                        <input type="text" class="login-form_control" id="login-subject" name="subject" placeholder="đề cập...">
                     </div>
 
                     <!-- part three nội dung đề cập đến? -->
                     <div class="m_b2">
                         <label for="inputmessage">Nội dung đề cập:</label>
-                        <textarea type="text" class="login-form_control" id="login-message" name="message" placeholder="Message" rows="8"></textarea>
+                        <textarea type="text" class="login-form_control" id="login-message" name="message" placeholder="nội dung tin nhắn..." rows="8"></textarea>
                     </div>
 
                     <!-- part four nút gửi -->
@@ -87,7 +87,7 @@
 
 
         <!-- footer -->
-        <?php include "customer/component_footer.php" ?>
+        <?php include "component_footer.php" ?>
 
     </div>
 

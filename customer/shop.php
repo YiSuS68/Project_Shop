@@ -205,67 +205,32 @@ require '../page_and_search.php';
         </div>
 
 
-
-        <!-- phần này đang sửa chữa -->
         <!-- Our brand -->
         <div id="brand">
             <div class="containers m_t4 m_b4">
                 <div class="flex-wrap p_t-b2 text-center">
+
+                    <!-- part one tiêu đề -->
                     <div class="brand-about flex-width p_l-r media-w100">
-                        <h1 class="h1 m_b">Our Brands</h1>
-                        <p class="m_b2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod Lorem ipsum dolor sit amet.</p>
+                        <h1 class="h1 m_b">Các nhãn hiệu tiêu biểu</h1>
+                        <p class="m_b2">Với sự góp mặt của các nhãn hiệu nổi tiếng thế giới như: H&M, adidas, levi's, ...</p>
                     </div>
+
+                    <!-- part two icon -->
                     <div class="brand-slider p_l-r">
-                        <div class="brand-btn flex-wrap">
-                            <!-- prev button -->
-                            <div class="brand-prev p_l-r self-center">
-                                <a class="black m_b h1" role="button" onclick="minisize(-1)"><i class="light fas fa-chevron-left"></i></a>
-                            </div>
-
-                            <!-- slider brand -->
-                            <div class="brand-icon p_l-r">
-                                <div class="position-rel">
-                                    <div class="position-rel w-100">
-                                        <div class="brand-picture position-rel">
-                                            <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"> </div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"> </div>
-                                            </div>
-                                        </div>
-                                        <div class="brand-picture position-rel">
-                                            <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"></div>
-                                            </div>
-                                        </div>
-                                        <div class="brand-picture position-rel">
-                                            <div class="flex-wrap">
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"></div>
-                                                <div class="brand-logo_brand"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- next button -->
-                            <div class="brand-prev p_l-r self-center">
-                                <a class="black m_b h1" role="button" onclick="minisize(1)"><i class="light fas fa-chevron-right"></i></a>
+                        <div class="w100">
+                            <div class="flex-wrap">
+                                <div class="brand-logo_brand"><a href="https://levi.com.vn/" target="_blank"><img class="brand-img" src="../assets/img/brand_01.png" width="110px" height="74px"></a></div>
+                                <div class="brand-logo_brand"><a href="https://www.adidas.com.vn/vi" target="_blank"><img class="brand-img" src="../assets/img/brand_02.png" width="110px" height="74px"></a></div>
+                                <div class="brand-logo_brand"><a href="https://www.nike.com/vn/" target="_blank"><img class="brand-img" src="../assets/img/brand_03.png" width="110px" height="74px"></a></div>
+                                <div class="brand-logo_brand"><a href="https://www.hm.com/vn/" target="_blank"><img class="brand-img" src="../assets/img/brand_04.png" width="110px" height="74px"></a></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- kết thúc sửa chữa -->
-
-
 
 
         <!-- footer -->

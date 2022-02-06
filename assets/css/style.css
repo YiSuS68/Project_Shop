@@ -860,12 +860,12 @@ h1 {
     padding: .375rem .75rem;
     border-radius: .25rem;
 }
-#buynow .buynow-design_number_disabled {
+.buynow-design_number_disabled {
     pointer-events: none;
     border-radius: 0;
     border-top: 0;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-    background-color: #69bb7e;
+    background-color: #1d242d;
     display: block;
     text-decoration: none;
     border: 1px solid #dee2e6;
@@ -873,8 +873,14 @@ h1 {
     color: #fff;
     position: relative;
     padding: 12px 24px;
+    cursor: pointer;
 }
-#buynow .buynow-design_number {
+
+.buynow-design_number:hover {
+    color: #dee2e6;
+    background-color: #56ae6c;
+}
+.buynow-design_number {
     margin-left: -1px;
     padding: .75rem 1.5rem;
     border-radius: 0;
@@ -889,14 +895,6 @@ h1 {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-#collapse-shop_wrapper {
-    overflow: hidden;
-    transition: max-height 300ms;
-    max-height: 0; /* <---hide by default */
-  }
-#collapse-shop_wrapper.open {
-    max-height: 100px; /* <---when open, allow content to expand to take up as much height as it needs, up to e.g. 100px */
-}
 /*====== end shop ======*/
 
 
@@ -1099,4 +1097,43 @@ h1 {
     border: 1px solid transparent;
 }
 /*====== end singleShop ======*/
-   
+.collapsible {
+    background-color: #1d242d;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #56ae6c;
+}
+  
+#content, #content2, #content3 {
+    padding: 0 18px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.addCollapse {
+    max-height: 0;
+}
+
+.addMini {
+    display: block;
+}
+
+.buttonMini {
+    background-color: transparent;
+    border: 0;
+    border-width: 0;
+}
+
+.clickButtonMini {
+    display: none;
+}

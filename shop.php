@@ -31,45 +31,50 @@ require 'page_and_search.php';
 
                 <!-- part one -->
                 <div class="buynow-collapse media-w100 p_l-r">
-                    <h1 class="h1 p_b4 m_b">Categories</h1>
+                    <h1 class="h1 p_b4 m_b">Thể loại</h1>
                     <ul class="n-list_style m_b2">
                         <!-- 1.1 -->
                         <li class="p_b2">
-                            <a class="space-flex m_b n-decoration black" href="#0" id="collapse-shop">Gender
+                            <button class="space-flex m_b n-decoration collapsible" onclick="myCollapse()">Giới tính
                                 <i class="w p_t0 fas fa-chevron-circle-down">
                                 </i>
-                            </a> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
-                            <div id="collapse-shop_wrapper">
-                                <ul class="n-list_style" id="collapse-shop_list">
-                                    <li><a class="n-decoration" href="#">Men</a></li>
-                                    <li><a class="n-decoration" href="#">Women</a></li>
+                            </button> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
+                            <div id="content">
+                                <ul class="n-list_style">
+                                    <li><a class="n-decoration dark hover" href="#">Nam</a></li>
+                                    <li><a class="n-decoration dark hover" href="#">Nữ</a></li>
                                 </ul>
                             </div>
                         </li>
+
                         <!-- 1.2 -->
                         <li class="p_b2">
-                            <a class="space-flex m_b n-decoration black" href="#">Sale
+                            <button class="space-flex m_b n-decoration collapsible" onclick="myCollapse2()">Loại đồ
                                 <i class="w p_t0 fas fa-chevron-circle-down">
                                 </i>
-                            </a>  <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
-
-                            <ul class="n-list_style d-none">
-                                <li><a class="n-decoration" href="#">Sport</a></li>
-                                <li><a class="n-decoration" href="#">Luxury</a></li>
-                            </ul>
+                            </button> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
+                            <div id="content2">
+                                <ul class="n-list_style">
+                                    <li><a class="n-decoration dark hover" href="#">Thể thao</a></li>
+                                    <li><a class="n-decoration dark hover" href="#">Sang trọng</a></li>
+                                </ul>
+                            </div>
                         </li>
+
                         <!-- 1.3 -->
                         <li class="p_b2">
-                            <a class="space-flex m_b n-decoration black" href="#">Product
+                            <button class="space-flex m_b n-decoration collapsible" onclick="myCollapse3()">Sản phẩm
                                 <i class="w p_t0 fas fa-chevron-circle-down">
                                 </i>
-                            </a>  <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 3 lựa chọn -->
+                            </button>  <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 3 lựa chọn -->
 
-                            <ul class="n-list_style d-none">
-                                <li><a class="n-decoration" href="#">Bag</a></li>
-                                <li><a class="n-decoration" href="#">Sweather</a></li>
-                                <li><a class="n-decoration" href="#">Sunglass</a></li>
-                            </ul>
+                            <div id="content3">
+                                <ul class="n-list_style">
+                                    <li><a class="n-decoration dark hover" href="#">Túi</a></li>
+                                    <li><a class="n-decoration dark hover" href="#">Áo dài tay</a></li>
+                                    <li><a class="n-decoration dark hover" href="#">Kính dâm</a></li>
+                                </ul>
+                            </div>
                         </li>
 
                     </ul>
@@ -84,15 +89,15 @@ require 'page_and_search.php';
                         <div class="p_l-r w-max flex-width768 media-w100">
                             <ul class="n-list_style p_t0 p_b2 m_b2">
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">All
+                                    <a class="hover black n-decoration m_b" href="#">TẤT CẢ
                                     </a> <!-- hiển thị tất cả sản phẩm theo cách sắp xếp bình thường --> 
                                 </li>
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">Men's
+                                    <a class="hover black n-decoration m_b" href="#">NAM
                                     </a> <!-- lọc sản phẩm chỉ con trai -->
                                 </li>
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">Women's
+                                    <a class="hover black n-decoration m_b" href="#">NỮ
                                     </a> <!-- lọc sản phẩm chỉ con gái -->
                                 </li>
                             </ul>
@@ -102,9 +107,9 @@ require 'page_and_search.php';
                         <div class="p_l-r p_b4 w-max flex-width768 media-w100">
                             <div class="d-flex">
                                 <select class="buynow-choose">
-                                    <option>Featured</option> <!-- hiển thị mặc định -->
-                                    <option>A to Z</option> <!-- sắp xếp theo thứ tự từ A đến Z bảng chữ cái -->
-                                    <option>Item</option> <!-- sắp xếp theo số lượng đang còn -->
+                                    <option>Đặc sắc</option> <!-- hiển thị mặc định -->
+                                    <option>Từ A đến Z</option> <!-- sắp xếp theo thứ tự từ A đến Z bảng chữ cái -->
+                                    <option>phụ kiện</option> <!-- sắp xếp theo số lượng đang còn -->
                                 </select>
                             </div>
                         </div>

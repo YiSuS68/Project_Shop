@@ -1,7 +1,10 @@
-// button click
+// button click mini index.php
+function myButtonMini() {
+    let downMini = document.getElementById("collapse_btn");
+    downMini.classList.toggle("clickButtonMini");
+}
 
-
-// click slider
+// click slider index.php
 var sliderIndex = 1;
 showSlides(sliderIndex);
 
@@ -25,12 +28,12 @@ function showSlides(n) {
     for ( i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[sliderIndex -1].style.display = "block";
+        slides[sliderIndex - 1].style.display = "block";
         dots[sliderIndex - 1].className += " active";
 }
 
 
-// auto slider
+// auto slider index.php
 // var sliderIndex = 0;
 // showSlides();
 
@@ -50,3 +53,17 @@ function showSlides(n) {
 
 
 // collapse button shop.php
+function myCollapse() {
+    let down = document.getElementById("content");
+    down.classList.toggle("addCollapse");
+}
+
+function myCollapse2() {
+    let down2 = document.getElementById("content2");
+    down2.classList.toggle("addCollapse");
+}
+
+function myCollapse3() {
+    let down3 = document.getElementById("content3");
+    down3.classList.toggle("addCollapse");
+}

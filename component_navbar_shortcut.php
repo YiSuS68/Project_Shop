@@ -6,10 +6,10 @@
         <a class="m_r2 m_b items-center n-decoration" id="logo" href="index.php">Green Shop</a>
 
         <!-- nút bấm khi màn hình thu nhỏ dưới 992px -->
-        <i class="fas fa-bars" id="button_hidden_small"></i>
+        <button class="buttonMini" onclick="myButtonMini()"><i class="fas fa-bars" id="button_hidden_small"></i></button>
 
         <!-- part two -->
-        <div class="header-setup all-center" id="collapse_btn">
+        <div class="header-setup all-center w100" id="collapse_btn">
 
             <!-- 2.1 -->
             <div class="flex-auto">

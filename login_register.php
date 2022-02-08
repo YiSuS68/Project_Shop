@@ -19,7 +19,6 @@
             <?php include "component_navbar_shortcut.php" ?>
         </div>
 
-
         <!-- lấy lỗi hiển thị ra -->
         
         <!-- đăng nhập và đăng ký -->

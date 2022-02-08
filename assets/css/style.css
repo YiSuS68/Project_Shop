@@ -207,6 +207,10 @@ h1 {
 .b_b {
     border-bottom: 1px solid #2d343f;
 }
+
+.m {
+    margin: 8px;
+}
 .m-auto {
     margin: auto;
 }
@@ -1109,7 +1113,7 @@ h1 {
     font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.collapsible:hover {
     background-color: #56ae6c;
 }
   
@@ -1137,3 +1141,182 @@ h1 {
 .clickButtonMini {
     display: none;
 }
+
+/*====== start cart ======*/
+/* tiêu đề */
+.table-title {
+	display: block;
+	padding: 20px;
+	width: 100%;
+}
+
+.table-title h3 {
+	color: #1d242d;
+	font-size: 30px;
+}
+/* hết tiêu đề */
+
+
+/* Table Styles */
+.table-fill {
+	background: white;
+	border-radius: 3px;
+	border-collapse: collapse;
+	height: 320px;
+	margin: auto;
+	padding: 5px;
+	width: 100%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	animation: float 5s infinite;
+}
+
+.bui {
+	color: #d5dde5;
+	background: #1b1e24;
+	border-bottom: 4px solid #9ea7af;
+	border-right: 1px solid #343a45;
+	font-size: 23px;
+	font-weight: 100;
+	padding: 24px;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+}
+
+.bui:first-child {
+	border-top-left-radius: 3px;
+}
+
+.bui:last-child {
+	border-top-right-radius: 3px;
+	border-right: none;
+}
+
+.viet {
+	border-top: 1px solid #c1c3d1;
+	border-bottom-: 1px solid #c1c3d1;
+	color: #1d242d;
+	font-size: 16px;
+	font-weight: normal;
+	text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+.viet:hover, .anh {
+	background: #59ab6e;
+	color: #ffffff;
+	border-top: 1px solid black;
+}
+
+.viet:first-child {
+	border-top: none;
+}
+
+.viet:last-child {
+	border-bottom: none;
+}
+
+.viet:nth-child(odd), .anh {
+	background: #ebebeb;
+}
+
+.viet:nth-child(odd):hover, .anh {
+	background: #59ab6e;
+}
+
+.viet:last-child, .anh:first-child {
+	border-bottom-left-radius: 3px;
+}
+
+.viet:last-child, .anh:last-child {
+	border-bottom-right-radius: 3px;
+}
+
+.anh {
+	background: #ffffff;
+	padding: 20px;
+	text-align: left;
+	vertical-align: middle;
+	font-weight: 300;
+	font-size: 18px;
+	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+	border-right: 1px solid #c1c3d1;
+}
+
+.anh:last-child {
+	border-right: 0px;
+}
+
+
+/*=================== form ===================*/
+.form-address {
+    width: 400px;
+    font-size: 16px;
+  }
+  
+  /* The triangle form is achieved by a CSS hack */
+  .login-triangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: #1b1e24;
+  }
+  
+  .login-header {
+    background: #1b1e24;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .login-container {
+    background: #ebebeb;
+    padding: 12px;
+  }
+  
+  /* Every row inside .login-container is defined with p tags */
+  .form-contact {
+    padding: 12px;
+  }
+  
+  .form-send {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  
+  .form-send[type="text"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  
+  /* Text fields' focus effect */
+  .form-send[type="text"]:focus {
+    border-color: #888;
+  }
+  
+  .form-send[type="submit"] {
+    background: #1b1e24;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .form-send[type="submit"]:hover {
+    background:  #59ab6e;
+  }
+  
+  /* Buttons' focus effect */
+  .form-send[type="submit"]:focus {
+    border-color: #1b1e24;
+  }

@@ -1,17 +1,18 @@
 <?php 
-session_start();  
-if (empty($_SESSION['level']))
-{
-  header('location:../index.php?error');
-  die();
-}else{
-  $level = $_SESSION['level'];
-  if($level != 3){
+  session_start();  
+  if (empty($_SESSION['level']))
+  {
     header('location:../index.php?error');
-    exit;
+    die();
+  }else{
+    $level = $_SESSION['level'];
+    if($level != 3){
+      header('location:../index.php?error');
+      exit;
+    }
   }
-}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

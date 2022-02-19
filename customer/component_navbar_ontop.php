@@ -12,7 +12,7 @@
 
             <!-- part two -->
             <div>
-                <a class="hover n-decoration light" href="user.php"> xin chào
+                <a class="hover n-decoration light" href="user.php"> Xin chào
                     <?php 
                     echo $_SESSION['user_name'];
                     ?>

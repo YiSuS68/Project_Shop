@@ -1,9 +1,10 @@
 <?php 
 session_start();
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
+    // die($_SESSION['user_name']);
 if(empty($_SESSION['id'])) {
         // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
-    header('location: ../login_register.php?not_exists_signin');
+    header('location: ../index.php');
 }
 if (isset($_GET['success_order'])) {
     echo '<script type="text/javascript">
@@ -37,14 +38,14 @@ if (isset($_GET['empty_cart'])) {
     <div id="main">
 
         <!--navbar-->
-        <?php include "component_navbar_ontop.php" ?>
-        <?php include "component_navbar_shortcut.php" ?>
+        <?php require 'component_navbar_ontop.php' ?>
+        <?php require 'component_navbar_shortcut.php' ?>
 
         <!--body-->
-        <?php include "component_index_body.php" ?>
+        <?php require 'component_index_body.php' ?>
 
         <!-- footer -->
-        <?php include "component_footer.php" ?>
+        <?php require 'component_footer.php' ?>
 
     </div>
 

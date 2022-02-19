@@ -1,18 +1,21 @@
 <?php 
-if (empty($_GET['id']))
+session_start();
+if (empty($_SESSION['level']))
 {
-	header('location:index.php?empty_delete');
+	header('location:../bill/index.php?error');
 	die();
 }
-
+if (empty($_GET['id']))
+{
+	header('location:../bill/index.php?empty_delete');
+	die();
+}
 $id =addslashes($_GET['id']);
 
 require '../connect.php';
 
-$query = "delete from producer where id='$id'";
-
+$query = "delete from `order` where id='$id'";
 mysqli_query($connect,$query);
-$error= mysqli_error($connect);
 if ($error){
 	mysqli_close($connect);
 	header('location:index.php?error_delete');
@@ -20,5 +23,6 @@ if ($error){
 }
 else{ 
 	mysqli_close($connect);
-	header('location:index.php?delete');
+	header('location:../bill/index.php?delete');
 }
+	

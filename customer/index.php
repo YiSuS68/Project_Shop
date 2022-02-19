@@ -1,12 +1,13 @@
 <?php 
-    session_start();
-        // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
-    if(empty($_SESSION['id'])) {
-            // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
-        header('location: ../login_register.php?not_exists_signin');
-    }
-    if (isset($_GET['success_order'])) {
-        echo '<script type="text/javascript">
+session_start();
+    // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
+    // die($_SESSION['user_name']);
+if(empty($_SESSION['id'])) {
+        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+    header('location: ../index.php');
+}
+if (isset($_GET['success_order'])) {
+    echo '<script type="text/javascript">
 
             window.onload = function () { alert("Đặt hàng thành công"); }
 
@@ -49,14 +50,14 @@
         <!-- HẾT THÔNG BÁO -->
 
         <!--navbar-->
-        <?php include "component_navbar_ontop.php" ?>
-        <?php include "component_navbar_shortcut.php" ?>
+        <?php require 'component_navbar_ontop.php' ?>
+        <?php require 'component_navbar_shortcut.php' ?>
 
         <!--body-->
-        <?php include "component_index_body.php" ?>
+        <?php require 'component_index_body.php' ?>
 
         <!-- footer -->
-        <?php include "component_footer.php" ?>
+        <?php require 'component_footer.php' ?>
 
     </div>
 

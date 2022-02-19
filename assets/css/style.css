@@ -16,7 +16,7 @@ body {
 }
 
 #main {
-    
+    position: relative;
 }
 
 .bg-black {
@@ -1320,3 +1320,114 @@ h1 {
   .form-send[type="submit"]:focus {
     border-color: #1b1e24;
   }
+
+
+
+/* ====== BẮT ĐẦU CỦA PHẦN THÔNG BÁO ====== */
+
+/* khối tổng của thông báo */
+.open_notify {
+    z-index: 1;
+    position: fixed;
+    right: 0px;
+    top: 10px;
+}
+
+
+/* hiển thị của tổng thông báo */
+.alert {
+    background: #5dd47b;
+    padding: 20px 40px;
+    min-width: 500px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 8px solid #1b8436;
+    opacity: 0;
+    pointer-events: none;
+}
+.alert.showAlert {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+    /* hiệu ứng từ bên phải trượt qua KHI BẬT CÁI BẢNG THÔNG BÁO*/
+    .alert.halo {
+        animation: show_slide 1s ease forwards;
+    }
+    @keyframes show_slide {
+        0%{
+            transform: translateX(100%);
+        }
+        40%{
+            transform: translateX(-10%);
+        }
+        80%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-10px);
+        }
+    }
+    /* hiệu ứng từ bên phải trượt qua KHI TẮT CÁI BẢNG THÔNG BÁO*/
+    .alert.hide {
+        animation: hide_slide 1s ease forwards;
+    }
+    @keyframes hide_slide {
+        0%{
+            transform: translateX(-10px);
+        }
+        40%{
+            transform: translateX(0%);
+        }
+        80%{
+            transform: translateX(-10%);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    }
+
+/* icon */
+.fa-exclamation-circle {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 30px;
+}
+
+/* hiển thị phần chữ */
+.msg {
+    padding: 0 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* khối tổng của nút đóng (x) */
+.close-btnn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #59ab6e;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+
+.close-btnn:hover {
+    background: #71e48e;
+}
+
+/* nút (x) */
+.fa-times {
+    color: black;
+    font-size: 22px;
+    line-height: 40px;
+     
+}
+
+/* ====== KẾT THÚC CỦA PHẦN THÔNG BÁO ====== */

@@ -2,7 +2,7 @@
 session_start();
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
 if(empty($_SESSION['id'])) {
-        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+    // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
     header('location: ../login_register.php?not_exists_signin');
 }
 ?>
@@ -16,22 +16,36 @@ if(empty($_SESSION['id'])) {
     <link rel="stylesheet" href="../assets/css/media.css">
     <link rel="stylesheet" href="../assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>Green Shop</title>
 </head>
 <body>
     <?php
-    $id = $_GET['id'];
-    require '../admin/connect.php';
-    $sql = "
-    select product.*,producer.name as name_producer 
-    from product
-    join producer on product.id_producer = producer.id
-    where product.id = '$id'";
-    $result =mysqli_query($connect,$sql);
-    $each = mysqli_fetch_array ($result);
+        $id = $_GET['id'];
+        require '../admin/connect.php';
+        $sql = "
+        select product.*,producer.name as name_producer 
+        from product
+        join producer on product.id_producer = producer.id
+        where product.id = '$id'";
+        $result = mysqli_query($connect,$sql);
+        $each = mysqli_fetch_array ($result);
     ?>
     
     <div id="main">
+
+        <!-- THÔNG BÁO -->
+        <div class="open_notify">
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Thêm vào giỏ hàng thành công</span>
+                <span class="close-btnn">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+        </div>
+        <!-- HẾT THÔNG BÁO -->
+
         <!--navbar-->
         <?php include "component_navbar_ontop.php" ?>
         <?php include "component_navbar_shortcut.php" ?>
@@ -127,7 +141,7 @@ if(empty($_SESSION['id'])) {
                                         <!-- 2.8.1.2.2  nút thêm vào giỏ hàng -->
                                         <div class="text-five_single">
                                             <button type="submit" class="settup-sotired" name="submit" value="addtocard">
-                                                <a href="add_to_cart.php?id=<?php echo $each['id']; ?>&type=add"$ style="text-decoration: none; color: white;">
+                                                <a onclick="response_addCart();" href="add_to_cart.php?id=<?php echo $each['id']; ?>&type=add"$ style="text-decoration: none; color: white;">
                                                     Thêm vào giỏ hàng
                                                 </a>
                                             </button>

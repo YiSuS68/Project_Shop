@@ -8,22 +8,37 @@
     <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>Green Shop</title>
 </head>
 <body>
+
     <?php
-    $id = $_GET['id'];
-    require 'admin/connect.php';
-    $sql = "
-    select product.*,producer.name as name_producer 
-    from product
-    join producer on product.id_producer = producer.id
-    where product.id = '$id'";
-    $result =mysqli_query($connect,$sql);
-    $each = mysqli_fetch_array ($result);
+        $id = $_GET['id'];
+        require 'admin/connect.php';
+        $sql = "
+        select product.*,producer.name as name_producer 
+        from product
+        join producer on product.id_producer = producer.id
+        where product.id = '$id'";
+        $result =mysqli_query($connect,$sql);
+        $each = mysqli_fetch_array ($result);
     ?>
     
     <div id="main">
+
+        <!-- THÔNG BÁO -->
+        <div class="open_notify">
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Hãy đăng nhập để thực hiện tác vụ này</span>
+                <span class="close-btnn">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+        </div>
+        <!-- HẾT THÔNG BÁO -->
+        
         <!--navbar-->
         <?php include "component_navbar_ontop.php" ?>
         <?php include "component_navbar_shortcut.php" ?>
@@ -112,12 +127,12 @@
 
                                         <!-- 2.8.1.2.1  nút gửi -->
                                         <div class="text-five_single">
-                                            <button type="button" class="settup-sotired" name="submit" value="buy" onclick="require_signin();">Buy</button>
+                                            <button type="button" class="settup-sotired button-cart" name="submit" value="buy" onclick="require_signin();">Mua</button>
                                         </div>
 
                                         <!-- 2.8.1.2.2  nút thêm vào giỏ hàng -->
                                         <div class="text-five_single">
-                                            <button type="button" class="settup-sotired" name="submit" value="addtocard" onclick="require_signin();">Add To Card</button>
+                                            <button type="button" class="settup-sotired button-cart" name="submit" value="addtocard" onclick="require_signin();">Thêm vào giỏ hàng</button>
                                         </div>
                                     </div>
                                 </form>
@@ -133,10 +148,10 @@
 
     </div>
     <script src="assets/js/index.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function require_signin() {  
             alert ("Đăng nhập để mua hàng");  
      }  
- </script>
+ </script> -->
 </body>
 </html>

@@ -1,23 +1,23 @@
 <?php 
-session_start();
-    // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
-if(empty($_SESSION['id'])) {
-        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
-    header('location: ../login_register.php?not_exists_signin');
-}
-if (isset($_GET['success_order'])) {
-    echo '<script type="text/javascript">
+    session_start();
+        // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
+    if(empty($_SESSION['id'])) {
+            // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+        header('location: ../login_register.php?not_exists_signin');
+    }
+    if (isset($_GET['success_order'])) {
+        echo '<script type="text/javascript">
 
-    window.onload = function () { alert("Đặt hàng thành công"); }
+            window.onload = function () { alert("Đặt hàng thành công"); }
 
-    </script>';
-}
-if (isset($_GET['empty_cart'])) {
-    echo '<script type="text/javascript">
+        </script>';
+    }
+    if (isset($_GET['empty_cart'])) {
+        echo '<script type="text/javascript">
 
-    window.onload = function () { alert("Chưa có sản phẩm nào trong giỏ hàng"); }
+            window.onload = function () { alert("Chưa có sản phẩm nào trong giỏ hàng"); }
 
-    </script>';
+        </script>';
 }
 ?>
 <!DOCTYPE html>
@@ -35,6 +35,18 @@ if (isset($_GET['empty_cart'])) {
 <body>
 
     <div id="main">
+
+        <!-- THÔNG BÁO -->
+        <!-- <div class="open_notify">
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Chào mừng bạn đã quay trở lại!</span>
+                <span class="close-btnn">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+        </div> -->
+        <!-- HẾT THÔNG BÁO -->
 
         <!--navbar-->
         <?php include "component_navbar_ontop.php" ?>

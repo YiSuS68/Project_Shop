@@ -8,6 +8,7 @@ $query = "
 insert into bill(id_serve, id_order) 
 values ('$id_serve', '$id_order')";
 mysqli_query($connect,$query);
+// die($query);
 
 $query = "
 update `order` 

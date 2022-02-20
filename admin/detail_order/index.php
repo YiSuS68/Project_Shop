@@ -43,6 +43,9 @@
         <button style="background-color:blue;">
           <a href="../bill/index.php" style="text-decoration: none; color: white;">Quay lại</a>
         </button>
+        <button style="background-color:red;">
+          <a href="../bill/delete_bill.php?id=<?php echo $_GET['id']; ?>" style="text-decoration: none; color: white;">Hủy đơn</a>
+        </button>
       <?php } ?>
     </div>
   </div>

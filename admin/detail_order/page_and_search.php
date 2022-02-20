@@ -36,4 +36,5 @@ group by customer.first_name,customer.last_name,`order`.name_receiver,product.na
 limit $quantity_value_one_page
 offset $quantity_value_pass";
 $resume=mysqli_query($connect,$query);
+// die($query);
 mysqli_close($connect);

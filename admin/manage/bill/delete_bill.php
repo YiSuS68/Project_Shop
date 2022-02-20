@@ -1,10 +1,5 @@
 <?php 
 session_start();
-if (empty($_SESSION['level']))
-{
-	header('location:../bill/index.php?error');
-	die();
-}
 if (empty($_GET['id']))
 {
 	header('location:../bill/index.php?empty_delete');

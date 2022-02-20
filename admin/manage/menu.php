@@ -21,12 +21,7 @@
                 SẢN PHẨM
               </li>
             </a>
-            <a href="producer" style="text-decoration: none;">
-              <li class="button">
-                NHÀ SẢN XUẤT
-              </li>
-            </a>
-            <a href="../bill" style="text-decoration: none;">
+            <a href="bill" style="text-decoration: none;">
               <li class="button">
                 HÓA ĐƠN
               </li>

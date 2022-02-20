@@ -1,12 +1,12 @@
 
 <!-- 2.2 đăng ký -->
 <div class="tab-pane">
-    <form class="login" action="process_signup.php" method="post">
+    <form class="login" onsubmit="return check_signup()" action="process_signup.php" method="post">
 
         <!-- 2.2.1 tên đăng nhập -->
         <div class="input-form">
             <span id="error_user_name"></span>
-            <input class="put-something" type="text" placeholder="Tên đăng nhập" name="user_name" id="user_name">
+            <input class="put-something user_something" type="text" placeholder="Tên đăng nhập" name="user_name" id="user_name">
             <i class="fas fa-user"></i>
         </div>
 
@@ -81,7 +81,7 @@
 
         <!-- 2.2.8 nút đăng ký -->
         <div>
-            <button type="button" class="btn-button" onclick="return check_signup()">Đăng ký</button>
+            <button type="button" class="btn-button" onclick="clickToCheck()">Đăng ký</button>
         </div>
     </form>
     <script src="assets/js/validate_signup.js"></script>

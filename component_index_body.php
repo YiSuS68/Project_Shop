@@ -134,46 +134,48 @@ $result_product_popular = mysqli_query($connect,$query_product_popular);
     <!-- part two -->
     <div class="flex-wrap">
         <!-- 2.1 -->
+        <!-- sản phẩm 1 -->
         <div class="category-item media-w100 m_t2 text-center" style="float:left;">
             <?php foreach ($result_product_best_month_1 as $each_product_best_month_1): ?>
                 <a href="each_product.php?id=<?php echo $each_product_best_month_1['id'] ?>">
                     <img src="history_image/<?php echo $each_product_best_month_1['image'] ?>" width="344px" height="344px" class="category-img">
                 </a>
-                <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
                 <h5 class="m_t-b2 h5">
-                    <?php echo $each_product_best_month_1['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+                    <?php echo $each_product_best_month_1['name'] ?>  
                 </h5>
                 <p class="m_b2 text-center">
                     <a class="category-submit" href="each_product.php?id=<?php echo $each_product_best_month_1['id'] ?>">Tìm hiểu</a>
-                </p> <!-- có link id chỏ đến trang khác -->
+                </p>
             <?php endforeach ?>
         </div>
+
+        <!-- sản phẩm 2 -->
         <div class="category-item media-w100 m_t2 text-center" style="float:left;">
             <?php foreach ($result_product_best_month_2 as $each_product_best_month_2): ?>
                 <a href="each_product.php?id=<?php echo $each_product_best_month_2['id'] ?>">
                     <img src="history_image/<?php echo $each_product_best_month_2['image'] ?>" width="344px" height="344px" class="category-img">
                 </a>
-                <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
                 <h5 class="m_t-b2 h5">
-                    <?php echo $each_product_best_month_2['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+                    <?php echo $each_product_best_month_2['name'] ?>
                 </h5>
                 <p class="m_b2 text-center">
                     <a class="category-submit" href="each_product.php?id=<?php echo $each_product_best_month_2['id'] ?>">Tìm hiểu</a>
-                </p> <!-- có link id chỏ đến trang khác -->
+                </p>
             <?php endforeach ?>
         </div>
+
+        <!-- sản phẩm 3 -->
         <div class="category-item media-w100 m_t2 text-center" style="float:left;">
             <?php foreach ($result_product_best_month_3 as $each_product_best_month_3): ?>
                 <a href="each_product.php?id=<?php echo $each_product_best_month_3['id'] ?>">
                     <img src="history_image/<?php echo $each_product_best_month_3['image'] ?>" width="344px" height="344px" class="category-img">
                 </a>
-                <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
                 <h5 class="m_t-b2 h5">
-                    <?php echo $each_product_best_month_3['name'] ?>  <!-- đây đầu tiên là đồng hồ -->          
+                    <?php echo $each_product_best_month_3['name'] ?>
                 </h5>
                 <p class="m_b2 text-center">
                     <a class="category-submit" href="each_product.php?id=<?php echo $each_product_best_month_3['id'] ?>">Tìm hiểu</a>
-                </p> <!-- có link id chỏ đến trang khác -->
+                </p>
             <?php endforeach ?>
         </div>
     </div>
@@ -197,12 +199,13 @@ $result_product_popular = mysqli_query($connect,$query_product_popular);
 
         <!-- part two -->
         <div class="flex-wrap">
+
             <?php foreach ($result_product_popular as $each_product_popular): ?>
                 <div class="featured-card">
                     <div class="featured-setup">
                         <a href="each_product.php?id=<?php echo $each_product_popular['id']; ?>">
-                            <img src="history_image/<?php echo $each_product_popular['image'] ?>"  alt="Featured" class="featured-img"> 
-                        </a> <!-- ảnh sản phẩm có thể lấy từ db về để hiển thị -->
+                            <img src="history_image/<?php echo $each_product_popular['image'] ?>"  alt="ảnh sản phẩm" class="featured-img"> 
+                        </a>
                         <div class="featured-body">
                             <ul class="featured-evalute">
                                 <li>
@@ -212,7 +215,7 @@ $result_product_popular = mysqli_query($connect,$query_product_popular);
                                     <i class="w-grey fas fa-star"></i>
                                     <i class="w-grey fas fa-star"></i>
                                 </li>
-                                <li class="w-grey"><?php echo $each_product_popular['price'] ?>VNĐ</li> <!-- cập nhập giá từ db về -->
+                                <li class="w-grey"><?php echo $each_product_popular['price'] ?> ₫</li>
                             </ul>
                             <a href="each_product.php?id=<?php echo $each_product_popular['id']; ?>" class="black h2 n-decoration m_b">
                                 <?php echo $each_product_popular['name'] ?>
@@ -227,6 +230,7 @@ $result_product_popular = mysqli_query($connect,$query_product_popular);
                     </div>
                 </div>
             <?php endforeach ?>
+
         </div>
 
 

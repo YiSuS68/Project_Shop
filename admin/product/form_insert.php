@@ -46,7 +46,7 @@ mysqli_close($connect);
 		<tr>
 			<th>Giá</th>
 			<td>
-				<input id="price" type="number" name="price">
+				<input id="price" type="text" name="price">
 				<span id="error_price" class="error_validate"></span>
 			</td>
 		</tr>

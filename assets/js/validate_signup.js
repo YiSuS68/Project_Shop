@@ -36,9 +36,13 @@ function check_signup() {
     let regex_password = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     //validate user_name
-    if (user_name.length ===0) {
+    if (user_name.length === 0) {
         // nếu mà không nhập nó sẽ hiển thị ra
-        error_user_name.innerHTML = 'Tên đăng nhập không được để trống';
+        // error_user_name.innerHTML = 'Tên đăng nhập không được để trống';
+        $(".put-something").notify(
+            "Tên đăng nhập không được để trống", 
+            { position:"right" }
+        );
         check_error = true;
     } else if(!regex_user_name.test(user_name)) {
         // khi mà nhập sai cách thức
@@ -165,3 +169,10 @@ function check_signup() {
             return false;
         }
     }
+
+function clickToCheck() {
+    $(".user_something").notify(
+        "I'm to the right of this box", 
+        { position:"right" }
+      );
+}

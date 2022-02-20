@@ -82,25 +82,25 @@ if(empty($_SESSION['id'])) {
                                     <i class="yellow fas fa-star"></i>
                                     <i class="grey fas fa-star"></i>
                                     <span class="d-inline dark">
-                                        Rating 4.8 | <?php echo $each['vote'] ?> Reactions
+                                        Rating 4.8 | <?php echo $each['vote'] ?> Lượt đánh giá
                                     </span> <!-- có thể tự thêm hoặc làm bằng db (nó không quan trọng lắm) -->
                                 </p>
 
                                 <!-- 2.4 hãng, tên nhà sản xuất -->
                                 <ul class="n-list_style m_b2">
                                     <li class="d-inline m-r"><h6 class="h6 m_b">Brand:</h6></li>
-                                    <li class="d-inline m-r"><p class="grey m_b2"><strong><?php echo $each['name_producer'] ?></strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
+                                    <li class="d-inline m-r"><p class="green m_b2"><strong><?php echo $each['name_producer'] ?></strong></p></li> <!-- lấy tên nhà sản xuất từ db lắp vào -->
                                 </ul>
 
                                 <!-- 2.5 nội dung sản phẩm -->
                                 <h6 class="h6 m_b">Mô tả:</h6>
-                                <p class="h6 m_b2">
+                                <p class="m_b2">
                                     <?php echo $each['description'] ?>
                                 </p> <!-- thêm phần nội dung nhiều chữ từ db vào đây -->
 
                                 <!-- Chi tiết sản phẩm-->
                                 <h6 class="h6 m_b">Chi tiết:</h6>
-                                <p class="h6 m_b2">
+                                <p class="m_b2">
                                     <?php echo $each['detail'] ?>
                                 </p>
 

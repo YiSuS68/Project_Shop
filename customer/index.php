@@ -3,8 +3,14 @@ session_start();
     // kiểm tra xem đã đăng nhập chưa, hiện tại là kiểm tra id
     // die($_SESSION['user_name']);
 if(empty($_SESSION['id'])) {
-        // nếu mà chưa đăng nhập sẽ bị đẩy về phần đăng nhập
+        // nếu mà chưa đăng nhập sẽ bị đẩy về phần trang chủ
     header('location: ../index.php');
+} else {
+    echo '<script type="text/javascript">
+
+        window.onload = function () { alert("Chào mừng bạn đã quay trở lại!"); }
+
+    </script>';
 }
 if (isset($_GET['success_order'])) {
     echo '<script type="text/javascript">
@@ -36,18 +42,6 @@ if (isset($_GET['success_order'])) {
 <body>
 
     <div id="main">
-
-        <!-- THÔNG BÁO -->
-        <!-- <div class="open_notify">
-            <div class="alert hide">
-                <span class="fas fa-exclamation-circle"></span>
-                <span class="msg">Chào mừng bạn đã quay trở lại!</span>
-                <span class="close-btnn">
-                    <span class="fas fa-times"></span>
-                </span>
-            </div>
-        </div> -->
-        <!-- HẾT THÔNG BÁO -->
 
         <!--navbar-->
         <?php require 'component_navbar_ontop.php' ?>

@@ -20,7 +20,16 @@
       <td style="text-align:center"><?php echo $get_order['name_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_order['phone_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_order['address_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_order['status']; ?></td>
+      <td style="text-align:center">
+        <?php 
+        $status = $get_order['status'];
+        if ($status == 0) {
+          echo 'Chưa duyệt';
+        }elseif ($status == 1) {
+          echo 'Đã duyệt';
+        }
+        ?>
+      </td>
       <td style="text-align:center"><?php echo $get_order['date_order']; ?></td>
       <td style="text-align:center"><?php echo $get_order['total_price']; ?> VND</td>
       <td style="text-align:center">
@@ -36,4 +45,4 @@
   <a  href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
     <span style="margin: 10px 10px; float: left; border: 2px solid black;"><?php echo $i ?> </span>
   </a>
-<?php } ?>
+  <?php } ?>

@@ -81,7 +81,7 @@
 
         <!-- 2.2.8 nút đăng ký -->
         <div>
-            <button type="button" class="btn-button" onclick="clickToCheck()">Đăng ký</button>
+            <button type="submit" class="btn-button" onclick="clickToCheck()">Đăng ký</button>
         </div>
     </form>
     <script src="assets/js/validate_signup.js"></script>

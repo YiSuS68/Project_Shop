@@ -1,27 +1,27 @@
-function check_signup() {
-    let check_error = false;
+function check_validation() {
+    // let check_error = false;
     // lấy id của user_name và chỗ hiển thị lỗi
-    let user_name = document.getElementById('user_name').value;
-    let last_name = document.getElementById('last_name').value;
-    let first_name = document.getElementById('first_name').value;
-    let gender = document.getElementById('gender').value;
-    let birth = document.getElementById('birth').value;
-    let phone = document.getElementById('phone').value;
-    let address = document.getElementById('address').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let confirm_password = document.getElementById('confirm_password').value;
+    var user_name = document.forms["signUp"]['user_name'].value;
+    var last_name = document.forms["signUp"]['last_name'].value;
+    var first_name = document.forms["signUp"]['first_name'].value;
+    var gender = document.forms["signUp"]['gender'].value;
+    var birth = document.forms["signUp"]['birth'].value;
+    var phone = document.forms["signUp"]['phone'].value;
+    var address = document.forms["signUp"]['address'].value;
+    var email = document.forms["signUp"]['email'].value;
+    var password = document.forms["signUp"]['password'].value;
+    var confirm_password = document.forms["signUp"]['confirm_password'].value;
 
-    let error_user_name = document.getElementById('error_user_name');
-    let error_last_name = document.getElementById('error_last_name');
-    let error_first_name = document.getElementById('error_first_name');
-    let error_birth = document.getElementById('error_birth');
-    let error_gender = document.getElementById('error_gender');
-    let error_phone = document.getElementById('error_phone');
-    let error_email = document.getElementById('error_email');
-    let error_address = document.getElementById('error_address');
-    let error_password = document.getElementById('error_password');
-    let error_confirm_password = document.getElementById('error_confirm_password');
+    // let error_user_name = document.forms["signUp"]('error_user_name');
+    // let error_last_name = document.forms["signUp"]('error_last_name');
+    // let error_first_name = document.forms["signUp"]('error_first_name');
+    // let error_birth = document.forms["signUp"]('error_birth');
+    // let error_gender = document.forms["signUp"]('error_gender');
+    // let error_phone = document.forms["signUp"]('error_phone');
+    // let error_email = document.forms["signUp"]('error_email');
+    // let error_address = document.forms["signUp"]('error_address');
+    // let error_password = document.forms["signUp"]('error_password');
+    // let error_confirm_password = document.forms["signUp"]('error_confirm_password');
 
     // điều kiện user_name số ký tự từ 8 đến 20, không sử dụng lặp lại '_' và '.' vd:'__' '..', '_' và '.' không được đứng cạnh nhau vd:'._', '_' và '.' không được đứng ở đầu hoặc cuối, chỉ chứa chữ số '_' và '.'
     let regex_user_name = /^[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]$/;
@@ -35,144 +35,169 @@ function check_signup() {
     // điều kiện của password (không được dưới 8 ký tự, có chữ hoa, có chữ thường, có số và có ký tự đặc biệt)
     let regex_password = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+
     //validate user_name
-    if (user_name.length === 0) {
+    if (user_name == "") {
         // nếu mà không nhập nó sẽ hiển thị ra
-        // error_user_name.innerHTML = 'Tên đăng nhập không được để trống';
-        $(".put-something").notify(
-            "Tên đăng nhập không được để trống", 
-            { position:"right" }
-        );
-        check_error = true;
+        document.getElementById('user_something_empty').style.display = 'block';
+        document.getElementById('user_something_err').style.display = 'none';
+        return false;
     } else if(!regex_user_name.test(user_name)) {
         // khi mà nhập sai cách thức
-        error_user_name.innerHTML = 'Tên đăng nhập không hợp lệ!, vui lòng nhập lại.';
-        check_error = true;
+        document.getElementById('user_something_err').style.display = 'block';
+        document.getElementById('user_something_empty').style.display = 'none';
+        return false;
     } else {
-        // khi đúng rồi sẽ không hiển thị ra gì
-        error_user_name.innerHTML = '';
+        // nhap dung
+        document.getElementById('user_something_err').style.display = 'none';
+        document.getElementById('user_something_empty').style.display = 'none';
     }
+
 
     // validate họ
-    if (last_name.length ===0) {
+    // if (last_name == "") {
+    //     // nếu mà không nhập nó sẽ hiển thị ra
+    //     document.getElementById('lastName_something_empty').style.display = 'block';
+    //     document.getElementById('lastName_something_err').style.display = 'none';
+    // } else if(!regex_last_name.test(last_name)) {
+    //     // khi mà nhập sai cách thức
+    //     document.getElementById('lastName_something_err').style.display = 'block';
+    //     document.getElementById('lastName_something_empty').style.display = 'none';
+    // } else {
+    //     // nhap dung
+    //     document.getElementById('lastName_something_err').style.display = 'none';
+    //     document.getElementById('lastName_something_empty').style.display = 'none';
+    // }
+
+    if (last_name == "") {
         // nếu mà không nhập nó sẽ hiển thị ra
-        error_last_name.innerHTML = 'Họ không được để trống';
-        check_error = true;
-    } else if(!regex_last_name.test(last_name)) {
-        // khi mà nhập sai cách thức
-        error_last_name.innerHTML = 'Họ không hợp lệ!, vui lòng nhập lại.';
-        check_error = true;
+        document.getElementById('lastName_something_empty').style.display = 'block';
+        document.getElementById('lastName_something_err').style.display = 'none';
+        return false;
     } else {
-        // khi đúng rồi sẽ không hiển thị ra gì
-        error_last_name.innerHTML = '';
+        // nhap dung
+        document.getElementById('lastName_something_err').style.display = 'none';
+        document.getElementById('lastName_something_empty').style.display = 'none';
     }
+
 
     //validate tên
-    if (first_name.length === 0) {
-        // nếu mà không nhập nó sẽ hiển thị ra
-        error_first_name.innerHTML = 'Tên không được không được để trống';
-        check_error = true;
-    } else if(!regex_first_name.test(first_name)) {
-        // khi mà nhập sai cách thức
-        error_first_name.innerHTML = 'Tên không được không hợp lệ!, vui lòng nhập lại.';
-        check_error = true;
-    } 
-    else {
-        // khi đúng rồi sẽ không hiển thị ra gì
-        error_first_name.innerHTML = '';
-    }
+    // if (first_name == "") {
+    //     // nếu mà không nhập nó sẽ hiển thị ra
+    //     document.getElementById('firstName_something_empty').style.display = 'block';
+    //     document.getElementById('firstName_something_err').style.display = 'none';
+    // } else if(!regex_first_name.test(first_name)) {
+    //     // khi mà nhập sai cách thức
+    //     document.getElementById('firstName_something_err').style.display = 'block';
+    //     document.getElementById('firstName_something_empty').style.display = 'none';
+    // } else {
+    //     // nhap dung
+    //     document.getElementById('firstName_something_err').style.display = 'none';
+    //     document.getElementById('firstName_something_empty').style.display = 'none';
+    // }
 
+    if (first_name == "") {
+        // nếu mà không nhập nó sẽ hiển thị ra
+        document.getElementById('firstName_something_empty').style.display = 'block';
+        document.getElementById('firstName_something_err').style.display = 'none';
+        return false;
+    } else {
+        // nhap dung
+        document.getElementById('firstName_something_err').style.display = 'none';
+        document.getElementById('firstName_something_empty').style.display = 'none';
+    }
+    
 
     //validate giới tính
-    if (gender.length === 0) {
+    if (gender.selectedIndex < 1) {
         // nếu mà không nhập nó sẽ hiển thị ra
-        error_gender.innerHTML = 'Giới tính không được để trống';
-    }else{
-        // khi đúng rồi sẽ không hiển thị ra gì
-        error_gender.innerHTML = '';
+        document.getElementById('gender_something_empty').style.display = 'block';
+        return false;
+    } else {
+        document.getElementById('gender_something_empty').style.display = 'none';
     }
+
 
     // validate ngày sinh
-    if(birth.length === 0)
-    {
-        document.getElementById('error_birth').innerHTML = 'Ngày sinh không được để trống';
-        check_error = true;
-    }else{
-        document.getElementById('error_birth').innerHTML = '';
+    if(birth == "") {
+        document.getElementById('birth_something_empty').style.display = 'block';
+        return false;
+    } else {
+        document.getElementById('birth_something_empty').style.display = 'none';
     }
+    
 
     //validate số điện thoại
-    if(phone.length === 0)
-    {
-        document.getElementById('error_phone').innerHTML = 'Số điện thoại không được để trống';
-        check_error = true;
-    }else {
-        if (!regex_phone.test(phone)) {
-            document.getElementById('error_phone').innerHTML = 'Số điện thoại không hợp lệ';
-            check_error = true;
-        }else {
-            document.getElementById('error_phone').innerHTML = '';
-        }
+    if(phone == "") {
+        //
+        document.getElementById('phone_something_empty').style.display = 'block';
+        document.getElementById('phone_something_err').style.display = 'none';
+        return false;
+    } else if (!regex_phone.test(phone)) {
+        //
+        document.getElementById('phone_something_err').style.display = 'block';
+        document.getElementById('phone_something_empty').style.display = 'none';
+        return false;
+    } else {
+        document.getElementById('phone_something_err').style.display = 'none';
+        document.getElementById('phone_something_empty').style.display = 'none';
     }
+
 
     //validate địa chỉ
-    if(address.length === 0)
-    {
-        document.getElementById('error_address').innerHTML = 'Địa chỉ không được để trống';
-        check_error = true;
-    }else{
-        document.getElementById('error_address').innerHTML = '';
-    }
-    // bắt đầu vào điều kiện email
-    if (email.length === 0) {
-        // nếu mà không nhập nó sẽ hiển thị ra
-        error_email.innerHTML = 'Email không được để trống';
-        check_error = true;
-    } else if(!regex_email.test(email)) {
-        // khi mà nhập email sai cách thức
-        error_email.innerHTML = 'Email không hợp lệ!, vui lòng nhập lại.';
-        check_error = true;
+    if(address == "") {
+        document.getElementById('address_something_empty').style.display = 'block';
+        return false;
     } else {
-        // khi đúng rồi sẽ không hiển thị ra gì
-        error_email.innerHTML = '';
+        document.getElementById('address_something_empty').style.display = 'none';
     }
+
+    
+    // validate email
+    if (email == "") {
+        // nếu mà không nhập nó sẽ hiển thị ra
+        document.getElementById('email_something_empty').style.display = 'block';
+        document.getElementById('email_something_err').style.display = 'none';
+        return false;
+    } else if(!regex_email.test(email)) {
+        //
+        document.getElementById('email_something_err').style.display = 'block';
+        document.getElementById('email_something_empty').style.display = 'none';
+        return false;
+    } else {
+        document.getElementById('email_something_err').style.display = 'none';
+        document.getElementById('email_something_empty').style.display = 'none';
+    }
+
 
     // bắt đầu vào điều kiện password
-    if (password.length === 0) {
-            // nếu mà không nhập nó sẽ hiển thị ra
-            error_password.innerHTML = 'Mật khẩu không được để trống';
-            check_error = true;
-        } else if(!regex_password.test(password)) {
-            // khi mà nhập password sai cách thức
-            error_password.innerHTML = 'Mật khẩu không hợp lệ!, vui lòng nhập lại.';
-            check_error = true;
-        } else {
-            // khi đúng rồi sẽ không hiển thị ra gì
-            error_password.innerHTML = '';
-        }
-
-    // bắt đầu vào, kiểm tra xem có trùng với password bên trên không?, và các điều kiện để trống
-    if (confirm_password.length === 0) {
-            // nếu mà không nhập nó sẽ hiển thị ra
-            error_confirm_password.innerHTML = 'Vui lòng điền xác nhận lại mật khẩu, không được để trống';
-            check_error = true;
-        } else if (confirm_password === password) {
-            // nếu không giống mật khẩu trên
-            error_confirm_password.innerHTML ='';
-        } else {
-            error_confirm_password.innerHTML = 'Mật khẩu xác nhận và mật khẩu không trùng nhau';
-            check_error = true;
-        }
-
-        if (check_error) 
-        {
-            return false;
-        }
+    if (password == "") {
+        // nếu mà không nhập nó sẽ hiển thị ra
+        document.getElementById('password_something_empty').style.display = 'block';
+        document.getElementById('password_something_err').style.display = 'none';
+        return false;
+    } else if(!regex_password.test(password)) {
+        // khi mà nhập password sai cách thức
+        document.getElementById('password_something_err').style.display = 'block';
+        document.getElementById('password_something_empty').style.display = 'none';
+        return false;
+    } else {
+        document.getElementById('password_something_err').style.display = 'none';
+        document.getElementById('password_something_empty').style.display = 'none';
     }
 
-function clickToCheck() {
-    $(".user_something").notify(
-        "I'm to the right of this box", 
-        { position:"right" }
-      );
+    // bắt đầu vào, kiểm tra xem có trùng với password bên trên không?, và các điều kiện để trống
+    if (confirm_password == "") {
+        // nếu mà không nhập nó sẽ hiển thị ra
+        document.getElementById('confirmPassword_something_empty').style.display = 'block';
+        document.getElementById('confirmPassword_something_err').style.display = 'none';
+        return false;
+        } else if (confirm_password === password) {
+        document.getElementById('confirmPassword_something_err').style.display = 'block';
+        document.getElementById('confirmPassword_something_empty').style.display = 'none';
+        return false;
+        } else {
+            document.getElementById('confirmPassword_something_err').style.display = 'none';
+            document.getElementById('confirmPassword_something_empty').style.display = 'none';
+        }
 }

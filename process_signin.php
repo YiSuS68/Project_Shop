@@ -10,11 +10,11 @@ $user_name = addslashes($_POST['user_name']);
 $password = addslashes($_POST['password']);
 
         // kiểm tra xem có tích vào remember không
-if (isset($_POST['remember'])) {
-    $remember = true;
-}else{
-    $remember = false;
-}
+    if (isset($_POST['remember'])) {
+        $remember = true;
+    }else{
+        $remember = false;
+    }
 
         // liên kết file đến database
 require './admin/connect.php';

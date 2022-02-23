@@ -20,14 +20,21 @@
       <td style="text-align:center"><?php echo $get_bill['name_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['phone_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['address_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_bill['status']; ?></td>
+      <td style="text-align:center">
+        <?php 
+        $status = $get_bill['status'];
+        if ($status == 1) {
+          echo 'Đã duyệt';
+        }
+        ?>
+      </td>
       <td style="text-align:center"><?php echo $get_bill['date_order']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['total_price']; ?></td>
       <td style="text-align:center">
         <a href="../detail_order?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">=></a>
       </td>
       <td style="text-align:center">
-        <a href="delete_bill?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">X</a>
+        <a href="delete_bill.php?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">X</a>
       </td>
     </tr>
   <?php } ?>

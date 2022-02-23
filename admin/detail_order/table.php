@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 $each = mysqli_fetch_array($resume);
 $sum_price = 0;
 ?>

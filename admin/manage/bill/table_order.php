@@ -27,7 +27,7 @@
         <a href="../detail_order?id=<?php echo $get_order['id']; ?>&type=order" style="color: red; text-decoration: none;">=></a>
       </td>
       <td style="text-align:center">
-        <a href="delete_bill?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">X</a>
+        <a href="delete_bill.php?id=<?php echo $get_bill['id']; ?>&type=bill" style="color: red; text-decoration: none;">X</a>
       </td>
     </tr>
   <?php } ?>

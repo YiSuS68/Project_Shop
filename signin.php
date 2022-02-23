@@ -2,9 +2,9 @@
     <form class="login" method="post" action="process_signin.php">
 
         <!-- 2.1.1 nhập tên và mật khẩu -->
-        <input class="input-login" type="text" name="user_name" id="user_name" placeholder="Tên đăng nhập" required>
+        <input class="input-login" type="text" name="user_name" id="user_name" placeholder="Tên đăng nhập">
         <i class="fas fa-user"></i>
-        <input class="input-login" type="password" name="password" id="password" placeholder="Mật khẩu" required>
+        <input class="input-login" type="password" name="password" id="password" placeholder="Mật khẩu">
         <i class="fas fa-key"></i>
         <!-- <a href="#0" class="hide-password">Show</a> -->
 

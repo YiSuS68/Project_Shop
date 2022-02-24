@@ -10,7 +10,7 @@ if(isset($_COOKIE['remember'])) {
         $each = mysqli_fetch_array($result);
         $_SESSION['id'] = $each['id'];
         $_SESSION['user_name'] = $each['user_name'];
-        if (empty($_SESSION['id'])){
+        if (isset($_SESSION['id'])){
             header('location:customer\index.php');
             exit;
         }

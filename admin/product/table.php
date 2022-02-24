@@ -11,6 +11,7 @@ if (empty($_SESSION['level']))
   </tr>
   <tr>
     <th>Tên sản phẩm</th>
+    <th>Tên nhà sản xuất</th>
     <th>Mô tả</th>
     <th>Nội dung</th>
     <th>Ảnh</th>
@@ -22,6 +23,17 @@ if (empty($_SESSION['level']))
   <?php foreach ($resume as $each){ ?>
     <tr>
       <td style="text-align:center"><?php echo $each['name']; ?></td>
+      <td>
+        <?php 
+        require '../connect.php';
+        $id_producer = $each['id_producer'];
+        $query_1="select * from producer where id like '$id_producer'";
+        $resume_1=mysqli_query($connect,$query_1);
+        $each_producer=mysqli_fetch_array($resume_1);
+        echo $each_producer['name'];
+        mysqli_close($connect);
+        ?>
+      </td>
       <td style="text-align:center"><p><?php echo nl2br($each['description']); ?></p></td>
       <td style="text-align:center"><?php echo nl2br($each['detail']); ?></td>
       <td style="text-align:center">

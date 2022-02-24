@@ -99,8 +99,8 @@
 
         <!-- 2.2.8 nút đăng ký -->
         <div>
-            <input type="submit" value="Submit">
-            <!-- <button class="btn-button" type="button" onclick="return check_validation()">Đăng ký</button> -->
+            <!-- <input type="submit" value="Submit"> -->
+            <button class="btn-button" type="submit" onclick="return check_validation()">Đăng ký</button>
 
         </div>
     </form>

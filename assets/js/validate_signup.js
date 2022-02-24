@@ -192,12 +192,12 @@ function check_validation() {
         document.getElementById('confirmPassword_something_empty').style.display = 'block';
         document.getElementById('confirmPassword_something_err').style.display = 'none';
         return false;
-        } else if (confirm_password === password) {
-        document.getElementById('confirmPassword_something_err').style.display = 'block';
+        } else if (confirm_password == password) {
+        document.getElementById('confirmPassword_something_err').style.display = 'none';
         document.getElementById('confirmPassword_something_empty').style.display = 'none';
-        return false;
         } else {
-            document.getElementById('confirmPassword_something_err').style.display = 'none';
+            document.getElementById('confirmPassword_something_err').style.display = 'block';
             document.getElementById('confirmPassword_something_empty').style.display = 'none';
+            return false;
         }
 }

@@ -51,8 +51,11 @@ if (empty($_SESSION['level']))
 		<tr>
 			<th>Cấp bậc</th>
 			<td>
-				<input id="level" type="number" name="level">
-				<span id="error_level" class="error_validate">1.NV | 2.QL | 3.AD</span>
+				<select id="level" name="level">	
+					<option value="1">Nhân Viên</option>
+					<option value="2">Quản Lý</option>
+				</select>
+				<span id="error_level" class="error_validate"></span>
 			</td>
 		</tr>
 		<tr>

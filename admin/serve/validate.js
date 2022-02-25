@@ -85,32 +85,21 @@ function check()
 		document.getElementById('error_level').innerHTML = 'Cấp bậc không được để trống';
 		check_error = true;
 	}else{
-		if (level == 1 || level == 2 || level == 3){
+		if (level == 1 || level == 2){
 			document.getElementById('error_level').innerHTML = '';
-				if(level == 1)
-	{
-		document.getElementById('error_account').innerHTML = '';
-	}else if (level == 2) 
-	{
-		if(account.length === 0)
-		{
-			document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
-			check_error = true;
-		}else {
-			document.getElementById('error_account').innerHTML = '';
-		}
-	}else if (level == 3) {
-		if(account.length === 0)
-		{
-			document.getElementById('error_account').innerHTML = 'Admin cần có tài khoản';
-			check_error = true;
-		}else {
-			document.getElementById('error_account').innerHTML = '';
-		}
-	}
-		}else {
-			document.getElementById('error_level').innerHTML = 'Cấp bậc không hợp lệ(1.NV | 2.QL | 3.AD)';
-			check_error = true;
+			if(level == 1)
+			{
+				document.getElementById('error_account').innerHTML = '';
+			}else if (level == 2) 
+			{
+				if(account.length === 0)
+				{
+					document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
+					check_error = true;
+				}else {
+					document.getElementById('error_account').innerHTML = '';
+				}
+			}
 		}
 	}
 
@@ -125,8 +114,7 @@ function check()
 	//validate account
 	if(level == 1)
 	{
-		document.getElementById('error_account').innerHTML = '';
-		document.getElementById('error_account').disabled = true;
+		document.getElementById('error_account').innerHTML = 'Nhân viên cần có tài khoản';
 	}else if (level == 2) 
 	{
 		if(account.length === 0)
@@ -136,34 +124,17 @@ function check()
 		}else {
 			document.getElementById('error_account').innerHTML = '';
 		}
-	}else if (level == 3) {
-		if(account.length === 0)
-		{
-			document.getElementById('error_account').innerHTML = 'Admin cần có tài khoản';
-			check_error = true;
-		}else {
-			document.getElementById('error_account').innerHTML = '';
-		}
 	}
 
 	//validate mật khẩu
 	if(level == 1)
 	{
-		document.getElementById('error_password').innerHTML = '';
-		document.getElementById('error_password').disabled = true;
+		document.getElementById('error_password').innerHTML = 'Nhân viên cần có mật khẩu';
 	}else if (level == 2) 
 	{
 		if(password.length === 0)
 		{
 			document.getElementById('error_password').innerHTML = 'Quản lý cần có mật khẩu';
-			check_error = true;
-		}else {
-			document.getElementById('error_password').innerHTML = '';
-		}
-	}else if (level == 3) {
-		if(password.length === 0)
-		{
-			document.getElementById('error_password').innerHTML = 'Admin cần có mật khẩu';
 			check_error = true;
 		}else {
 			document.getElementById('error_password').innerHTML = '';

@@ -9,7 +9,7 @@ if (empty($_POST['user_name']
 $user_name = addslashes($_POST['user_name']);
 $password = addslashes($_POST['password']);
 
-        // kiểm tra xem có tích vào remember không
+    // kiểm tra xem có tích vào remember không
     if (isset($_POST['remember'])) {
         $remember = true;
     }else{

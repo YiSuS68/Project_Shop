@@ -165,7 +165,7 @@ require 'page_and_search.php';
                                                 <i class="grey fas fa-star"></i>
                                             </li>
                                         </ul>
-                                        <p class="text-center"><?php echo $each['price'] ?>VNĐ</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
+                                        <p class="text-center"><?php echo $each['price'] ?> ₫</p> <!-- hiển thị giá của sản phẩm lấy từ db về -->
                                     </div>
 
                                 </div>

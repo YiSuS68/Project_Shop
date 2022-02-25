@@ -32,9 +32,11 @@ function require_signin() {
 }
 
 
+
+
 // thông báo của giỏ hàng khi thêm hàng thành công
 function response_addCart() {
-    alert("thêm vào giỏ hàng thành công");
+    alert("thêm vào giỏ hàng thành công!");
 }
 
 
@@ -43,6 +45,7 @@ function myButtonMini() {
     let downMini = document.getElementById("collapse_btn");
     downMini.classList.toggle("clickButtonMini");
 }
+
 
 // click slider index.php
 var sliderIndex = 1;
@@ -108,3 +111,6 @@ function myCollapse3() {
     down3.classList.toggle("addCollapse");
 }
 
+function demo_in2 () {
+    console.log("haha");
+}

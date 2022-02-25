@@ -1,3 +1,14 @@
+        <!-- THÔNG BÁO -->
+        <div class="open_notify">
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Hãy đăng nhập để thực hiện tác vụ này</span>
+                <span class="close-btnn">
+                    <span class="fas fa-times"></span>
+                </span>
+            </div>
+        </div>
+        <!-- HẾT THÔNG BÁO -->
 <!-- navbar directional -->
 <div class="position-rel space-flex-wrap p_t-b items-center setup992 bg-white" id="header-navbar">   
     <div class="items-center space-flex container flex-inhe">
@@ -34,7 +45,7 @@
                     </div>
                 </div>
 
-                <a class="unsee m_r3" href="#"> <!-- thêm chức năng để tìm kiếm những sản phẩm của shop, trỏ đến popup tìm kiếm (làm thêm) -->
+                <a class="unsee m_r3" onclick="demo_in2 ()" href="#0"> <!-- thêm chức năng để tìm kiếm những sản phẩm của shop, trỏ đến popup tìm kiếm (làm thêm) -->
                     <i class="w20 black fas fa-search">
                     </i>
                 </a>

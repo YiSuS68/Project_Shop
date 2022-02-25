@@ -1,13 +1,13 @@
 <?php
-if (empty($_POST['user_name']
-    || $_POST['password'])) 
+if (empty($_POST['user_name_signin']
+    || $_POST['password_signin'])) 
 {
     header('location:login_register.php?empty_signin');
     die();
 }
     // lấy dữ liệu từ form 
-$user_name = addslashes($_POST['user_name']);
-$password = addslashes($_POST['password']);
+$user_name = addslashes($_POST['user_name_signin']);
+$password = addslashes($_POST['password_signin']);
 
     // kiểm tra xem có tích vào remember không
     if (isset($_POST['remember'])) {

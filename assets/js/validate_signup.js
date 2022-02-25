@@ -215,5 +215,4 @@ function check_validation_signin() {
     } else {
         document.getElementById('password_signin_empty').style.display = 'none';
     }
-
 }

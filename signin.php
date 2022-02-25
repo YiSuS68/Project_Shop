@@ -7,6 +7,7 @@
         <i class="fas fa-user"></i>
         <span id="password_signin_empty" class="show-error">Mật khẩu không được để trống!</span>
         <input class="input-login" type="password" name="password" id="password" placeholder="Mật khẩu">
+
         <i class="fas fa-key"></i>
         <!-- <a href="#0" class="hide-password">Show</a> -->
 

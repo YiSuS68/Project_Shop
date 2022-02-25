@@ -48,6 +48,7 @@ if ($number_rows == 1) {
     }
     header('location:customer/index.php');
 } else {
+
     header('location:login_register.php?error_sigin');
     exit;
 }

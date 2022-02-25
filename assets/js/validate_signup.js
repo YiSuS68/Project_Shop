@@ -197,8 +197,8 @@ function check_validation() {
     // }
 
 function check_validation_signin() {
-    var user_name_signin = document.forms["signIn"]['user_name_signin'].value;
-    var password_signin = document.forms["signIn"]['password_signin'].value;
+    var user_name_signin = document.forms["signIn"]['user_name'].value;
+    var password_signin = document.forms["signIn"]['password'].value;
 
     //validate username
     if(user_name_signin == "") {

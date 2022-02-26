@@ -81,7 +81,7 @@ require '../page_and_search.php';
                                 <ul class="n-list_style">
                                     <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Túi</a></li>
                                     <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Áo dài tay</a></li>
-                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Kính dâm</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Kính râm</a></li>
                                 </ul>
                             </div>
                         </li>

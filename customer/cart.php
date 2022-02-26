@@ -133,7 +133,8 @@
             </p>
           <p class="form-contact"><input class="form-send" type="submit" value="Đặt Hàng"></p>
         </form>
-      </div>
+        </div>
+
         <!-- footer -->
         <?php include "component_footer.php" ?>
 

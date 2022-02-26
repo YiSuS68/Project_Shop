@@ -8,14 +8,10 @@ mysqli_query($connect,$query);
 
 $query = "delete from `order` where id='$id'";
 mysqli_query($connect,$query);
-
+$error= mysqli_error($connect);
 if ($error){
 	mysqli_close($connect);
 	header('location:index.php?error_delete');
-	die();
+}else{
+	header('location:user.php');
 }
-else{ 
-	mysqli_close($connect);
-	header('location:index.php?delete');
-}
-	

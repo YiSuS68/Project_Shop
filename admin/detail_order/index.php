@@ -12,10 +12,10 @@
   ?>
   <div style="width: 100%; height: 100%;">
     <div style="width: 50%; height: 12%; float: left;">
-      <form>
+<!--       <form>
         Tìm kiếm tên sản phẩm<br>
         <input type="search" name="search" value="<?php echo $search ?>">
-      </form>
+      </form> -->
     </div>
     <div style="width: 50%; height: 12%; float: left;">
       <?php 

@@ -53,7 +53,10 @@ $password = addslashes($_POST['password']);
             header('location:customer/index.php');
             mysqli_close($connect);
         }
-        header('location:customer/index.php');
+        echo '<script type="text/javascript">
+            alert("Đăng nhập thành công!");
+            location="customer/index.php";
+        </script>';
     } else {
 
         echo '<script type="text/javascript">

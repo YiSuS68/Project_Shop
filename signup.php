@@ -6,7 +6,7 @@
         <!-- 2.2.1 tên đăng nhập -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label">Tên đăng nhập: </label>
+                <label class="input-label">Tên đăng nhập:(*) </label>
                 <span id="user_something_empty" class="show-error"> Không được để trống!</span>
                 <span id="user_something_err" class="show-error"> Phải nhiều hơn 8 ký tự, không chứa ký tự đặc biệt và phải có chữ và số</span>
             </div>
@@ -17,7 +17,7 @@
         <!-- 2.2.2 họ và tên -->
         <div class="sign-up_name">
             <div class="input-form">
-                <label class="input-label">Họ:</label>
+                <label class="input-label">Họ:(*) </label>
                 <span id="lastName_something_empty" class="show-error">Không được để trống!</span>
                 <span id="lastName_something_err" class="show-error">Tên họ nhập không đúng</span>
    
@@ -25,7 +25,7 @@
                 <i class="far fa-comment-dots"></i> 
             </div>
             <div class="input-form">
-                <label class="input-label">Tên:</label>
+                <label class="input-label">Tên:(*) </label>
                 <span id="firstName_something_empty" class="show-error">Không được để trống!</span>
                 <span id="firstName_something_err" class="show-error">Tên không đúng</span>
                 <input class="put-something" type="text" placeholder="Nhập tên" name="first_name" id="firstName_something">
@@ -48,7 +48,7 @@
                 </i>
             </div>
             <div class="input-form">
-                <label class="input-label" for="birth">Ngày Sinh: </label>
+                <label class="input-label" for="birth">Ngày Sinh:(*) </label>
                 <span id="birth_something_empty" class="show-error">Ngày sinh không được để trống!</span>
                 <input class="put-something " type="date" name="birth" id="birth_something">
                 <i class="fas fa-table">
@@ -58,7 +58,7 @@
         <!-- 2.2.3 số điện thoại -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label" for="phone">Số điện thoại: </label>
+                <label class="input-label" for="phone">Số điện thoại:(*) </label>
                 <span id="phone_something_empty" class="show-error">Không được để trống!</span>
                 <span id="phone_something_err" class="show-error">Phải có 10 số, và phải theo đầu nhà mạng của Việt Nam VD: viettel: 037..., vina: 083...</span>
             </div>
@@ -68,7 +68,7 @@
         <!-- địa chỉ -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label" for="address">Địa chỉ: </label>
+                <label class="input-label" for="address">Địa chỉ:(*) </label>
                 <span id="address_something_empty" class="show-error">Không được để trống!</span>
             </div>
             <input class="put-something" type="text" placeholder="Nhập địa chỉ..." name="address" id="address_something">
@@ -78,7 +78,7 @@
         <!-- 2.2.4 email -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label" for="email">Email: </label>
+                <label class="input-label" for="email">Email:(*) </label>
                 <span id="email_something_empty" class="show-error">Không được để trống!</span>
                 <span id="email_something_err" class="show-error">Hãy nhập đúng cách thức của 1 email VD: abcd123@gmail.com</span>
             </div>
@@ -89,7 +89,7 @@
         <!-- 2.2.5 mật khẩu -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label" for="password">Mật khẩu: </label>
+                <label class="input-label" for="password">Mật khẩu:(*) </label>
                 <span id="password_something_empty" class="show-error">Không được để trống!</span>
                 <span id="password_something_err" class="show-error">Phải bao gồm: chữ cái in hoa, in thường, số, ký tự đặc biệt, nhiều hơn 8 ký tự</span>
             </div>
@@ -100,7 +100,7 @@
         <!-- 2.2.6 nhập lại mật khẩu -->
         <div class="input-form">
             <div class="d-flex">
-                <label class="input-label" for="confirm_password">Nhập lại mật khẩu: </label>
+                <label class="input-label" for="confirm_password">Nhập lại mật khẩu:(*) </label>
                 <span id="confirmPassword_something_empty" class="show-error">Không được để trống!</span>
                 <span id="confirmPassword_something_err" class="show-error">Không trùng với mật khẩu đã nhập trước đó!</span>
             </div>

@@ -60,7 +60,7 @@
                 <lablel class="footer-label" for="Hellodue">Email</lablel>
                 <div class="footer-input">
                     <input type="email" class="form-control" id="Hellodue" placeholder="email">
-                    <button type="submit"class="footer-subscribe">subscribe</button>
+                    <button type="button" class="footer-subscribe" onclick="myButtonMini()">Nhận giới thiệu qua email</button>
                 </div>
             </div>
         </div>

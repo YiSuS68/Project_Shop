@@ -2,7 +2,7 @@
 session_start();
 $id =addslashes($_GET['id']);
 
-require '../connect.php';
+require '../admin/connect.php';
 $query = "delete from detail_order where id_order='$id'";
 mysqli_query($connect,$query);
 
@@ -16,6 +16,6 @@ if ($error){
 }
 else{ 
 	mysqli_close($connect);
-	header('location:../bill/index.php?delete');
+	header('location:index.php?delete');
 }
 	

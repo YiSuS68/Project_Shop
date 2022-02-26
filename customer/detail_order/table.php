@@ -31,7 +31,7 @@ $sum_price = 0;
 		<tr>
 			<td style="text-align:center"><?php echo $get_detail_order['name']; ?></td>
 			<td style="text-align:center">
-				<img height="100px" src="../../../history_image/<?php echo $get_detail_order['image'] ?>">
+				<img height="100px" src="../../history_image/<?php echo $get_detail_order['image'] ?>">
 			</td>
 			<td style="text-align:center">
 				<?php echo $get_detail_order['quantity']; ?>

@@ -84,8 +84,20 @@
 			<tr>
 				<th>Cấp bậc</th>
 				<td>
-					<input id="level" type="text" name="level" value="<?php echo $each['level'] ?>">
-					<span id="error_level" class="error_validate">1.NV | 2.QL | 3.AD</span>
+					<select id="level" name="level">	
+						<option value="1" <?php if ($each['level'] == 1){ ?>
+							selected
+						<?php } ?>>
+							Nhân Viên
+						</option>
+						<option value="2" <?php if ($each['level'] == 2){ ?>
+							selected
+						<?php } ?>>
+							Quản Lý
+						</option>
+					</select>
+
+					<span id="error_level" class="error_validate"></span>
 				</td>
 			</tr>
 			<tr>

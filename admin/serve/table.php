@@ -28,7 +28,7 @@ if (empty($_SESSION['id'])){
       <td style="text-align:center"><?php echo $get_serve['phone']; ?></td>
       <td style="text-align:center"><?php echo $get_serve['identity']; ?></td>
       <td style="text-align:center"><?php echo $get_serve['address']; ?></td>
-      <td style="text-align:center">
+      <td style="text-align:center">    
         <?php 
         if ($get_serve['level'] == 1) {
           echo 'Nhân viên';

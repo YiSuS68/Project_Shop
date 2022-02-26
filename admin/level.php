@@ -1,4 +1,5 @@
 <?php 
+// die($level);
 if($level == 1){
 	header('location:manage');
 	exit;
@@ -8,6 +9,7 @@ if($level == 1){
 		exit;
 	}
 	else{
+		// die('0');
 		header('location:index.php?error');
 	}
 }	

@@ -27,12 +27,13 @@ if(!isset($_SESSION['id'])) {
 
         <!--body-->
         <div style="width: 100%px; height:200px;">
+            <?php require "table_bill.php" ?>
+       </div>
+       <!-- footer -->
+       <?php include "component_footer.php" ?>
 
-         </div>
-        <!-- footer -->
-        <?php include "component_footer.php" ?>
 
-    </div>
+   </div>
 
 </body>
 </html>

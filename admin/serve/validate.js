@@ -79,29 +79,6 @@ function check()
 		}
 	}
 
-	//validate cấp bậc
-	if(level.length === 0)
-	{
-		document.getElementById('error_level').innerHTML = 'Cấp bậc không được để trống';
-		check_error = true;
-	}else{
-		if (level == 1 || level == 2){
-			document.getElementById('error_level').innerHTML = '';
-			if(level == 1)
-			{
-				document.getElementById('error_account').innerHTML = '';
-			}else if (level == 2) 
-			{
-				if(account.length === 0)
-				{
-					document.getElementById('error_account').innerHTML = 'Quản lý cần có tài khoản';
-					check_error = true;
-				}else {
-					document.getElementById('error_account').innerHTML = '';
-				}
-			}
-		}
-	}
 
 	//validate lương
 	if(wage.length === 0)
@@ -114,7 +91,13 @@ function check()
 	//validate account
 	if(level == 1)
 	{
-		document.getElementById('error_account').innerHTML = 'Nhân viên cần có tài khoản';
+		if(account.length === 0)
+		{
+			document.getElementById('error_account').innerHTML = 'Nhân viên cần có tài khoản';
+			check_error = true;
+		}else {
+			document.getElementById('error_account').innerHTML = '';
+		}
 	}else if (level == 2) 
 	{
 		if(account.length === 0)
@@ -129,7 +112,13 @@ function check()
 	//validate mật khẩu
 	if(level == 1)
 	{
-		document.getElementById('error_password').innerHTML = 'Nhân viên cần có mật khẩu';
+		if(account.length === 0)
+		{
+			document.getElementById('error_password').innerHTML = 'Nhân viên cần có mật khẩu';
+			check_error = true;
+		}else {
+			document.getElementById('error_password').innerHTML = '';
+		}
 	}else if (level == 2) 
 	{
 		if(password.length === 0)

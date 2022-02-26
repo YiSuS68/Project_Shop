@@ -112,5 +112,5 @@ function myCollapse3() {
 }
 
 function demo_in2 () {
-    console.log("haha");
+    alert("tính năng đang được phát triển! Cảm ơn bạn đã ấn vào ❤️❤️❤️");
 }

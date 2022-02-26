@@ -39,7 +39,7 @@
                 <div class="header-search m_t2 m_b4">
                     <div class="header-input">
                         <input type="text" class="search-time black" id="inputMobileSearch" placeholder="Search...">
-                        <div class="search-icon black">
+                        <div class="search-icon black" onclick="demo_in2 ()" href="#0">
                             <i class="search w20 fas fa-search"></i>
                         </div>
                     </div>

@@ -40,7 +40,10 @@ mysqli_query($connect,$sql);
 // lưu lại id gồm(user_name, email, phone) và tên sau
         $_SESSION['id'] = $id;
         $_SESSION['user_name'] = $user_name;
-        header("location:customer/index.php");
+        echo '<script type="text/javascript">
+        alert("Bạn đã đăng ký thành công!");
+        location="customer/index.php";
+        </script>';
         // đóng kết nối sau xử lý
         mysqli_close($connect);
 

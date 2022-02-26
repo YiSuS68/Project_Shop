@@ -75,7 +75,7 @@
                     <!-- part four nút gửi -->
                     <div class="flex-wrap">
                         <div class="login-formsetup_container">
-                            <button type="submit" class="submit-btn">Hãy nói chuyện</button>
+                            <button type="button" onclick="demo_in2 ()" href="#0" class="submit-btn">Hãy nói chuyện</button>
                         </div>
                     </div>
                     

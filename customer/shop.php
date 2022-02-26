@@ -50,8 +50,8 @@ require '../page_and_search.php';
                             </button> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
                             <div id="content">
                                 <ul class="n-list_style">
-                                    <li><a class="n-decoration dark hover" href="#">Nam</a></li>
-                                    <li><a class="n-decoration dark hover" href="#">Nữ</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Nam</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Nữ</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -64,8 +64,8 @@ require '../page_and_search.php';
                             </button> <!-- chỉnh để nó trượt xuống 1 đoạn hiển thị ra thêm 2 lựa chọn -->
                             <div id="content2">
                                 <ul class="n-list_style">
-                                    <li><a class="n-decoration dark hover" href="#">Thể thao</a></li>
-                                    <li><a class="n-decoration dark hover" href="#">Sang trọng</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Thể thao</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Sang trọng</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -79,9 +79,9 @@ require '../page_and_search.php';
 
                             <div id="content3">
                                 <ul class="n-list_style">
-                                    <li><a class="n-decoration dark hover" href="#">Túi</a></li>
-                                    <li><a class="n-decoration dark hover" href="#">Áo dài tay</a></li>
-                                    <li><a class="n-decoration dark hover" href="#">Kính dâm</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Túi</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Áo dài tay</a></li>
+                                    <li><a class="n-decoration dark hover"onclick="demo_in2 ()" href="#0">Kính dâm</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -98,15 +98,15 @@ require '../page_and_search.php';
                         <div class="p_l-r w-max flex-width768 media-w100">
                             <ul class="n-list_style p_t0 p_b2 m_b2">
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">TẤT CẢ
+                                    <a class="hover black n-decoration m_b"onclick="demo_in2 ()" href="#0">TẤT CẢ
                                     </a> <!-- hiển thị tất cả sản phẩm theo cách sắp xếp bình thường --> 
                                 </li>
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">NAM
+                                    <a class="hover black n-decoration m_b"onclick="demo_in2 ()" href="#0">NAM
                                     </a> <!-- lọc sản phẩm chỉ con trai -->
                                 </li>
                                 <li class="d-inline m_r">
-                                    <a class="hover black n-decoration m_b" href="#">NỮ
+                                    <a class="hover black n-decoration m_b"onclick="demo_in2 ()" href="#0">NỮ
                                     </a> <!-- lọc sản phẩm chỉ con gái -->
                                 </li>
                             </ul>

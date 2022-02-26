@@ -28,13 +28,13 @@
                 <div class="header-search m_t2 m_b4">
                     <div class="header-input">
                         <input type="text" class="search-time black" id="inputMobileSearch" placeholder="Search...">
-                        <div class="search-icon black">
+                        <div class="search-icon black" onclick="demo_in2 ()" href="#0">
                             <i class="search w20 fas fa-search"></i>
                         </div>
                     </div>
                 </div>
 
-                    <a class="unsee m_r3" href="#"> <!-- thêm chức năng để tìm kiếm những sản phẩm của shop, trỏ đến popup tìm kiếm (làm thêm) -->
+                    <a class="unsee m_r3" onclick="demo_in2 ()" href="#0"> <!-- thêm chức năng để tìm kiếm những sản phẩm của shop, trỏ đến popup tìm kiếm (làm thêm) -->
                         <i class="w20 black fas fa-search">
                         </i>
                     </a>

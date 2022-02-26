@@ -6,7 +6,7 @@
     die();
   }else{
     $level = $_SESSION['level'];
-    if($level != 3){
+    if($level != 2){
       header('location:../index.php?error');
       exit;
     }

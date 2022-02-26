@@ -5,14 +5,10 @@ $id_order = $_GET['id'];
 $status = 0;
 require '../connect.php';
 $query = "
-insert into bill(id_serve, id_order) 
-values ('$id_serve', '$id_order')";
-mysqli_query($connect,$query);
-// die($query);
-
-$query = "
 update `order` 
-set status='1'
+set 
+status='1',
+id_serve='$id_serve'
 where id= '$id_order'";
 mysqli_query($connect,$query);
 

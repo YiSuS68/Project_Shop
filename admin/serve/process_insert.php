@@ -19,6 +19,7 @@ $phone = addslashes($_POST['phone']);
 $identity = addslashes($_POST['identity']);
 $address = addslashes($_POST['address']);
 $level = addslashes($_POST['level']);
+// die($level);
 $wage = addslashes($_POST['wage']);
 $account = addslashes($_POST['account']);
 $password = addslashes($_POST['password']);

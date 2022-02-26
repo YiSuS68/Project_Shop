@@ -1,7 +1,7 @@
     <div id="div-top">
       <div class="left">
         <a href="index.php" style="text-decoration: none;">
-          <h1>ADMIN</h1>
+          <h1>QUẢN LÝ</h1>
         </a>
       </div>
       <div class="right" >

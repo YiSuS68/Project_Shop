@@ -36,6 +36,7 @@ where product.name like '%$search%' and id_order =$id
 group by customer.first_name,customer.last_name,`order`.name_receiver,product.name,product.image,detail_order.quantity,product.price
 limit $quantity_value_one_page
 offset $quantity_value_pass";
+
 $resume=mysqli_query($connect,$query);
 // die($resume);
 // die($query);

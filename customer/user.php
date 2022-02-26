@@ -25,14 +25,14 @@ if(!isset($_SESSION['id'])) {
         <?php include "component_navbar_ontop.php" ?>
         <?php include "component_navbar_shortcut.php" ?>
 
-         <!--body-->
-         <div style="width: 100%px; height:200px;">
-             
-         </div>
-        <!-- footer -->
-        <?php include "component_footer.php" ?>
+        <!--body-->
+        <div style="width: 100%px; height:200px;">
+            <?php require "table_bill.php" ?>
+       </div>
+       <!-- footer -->
+       <?php include "component_footer.php" ?>
 
-    </div>
+   </div>
 
 </body>
 </html>

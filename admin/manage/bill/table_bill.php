@@ -3,6 +3,7 @@
     <th colspan="11">HÓA ĐƠN ĐÃ DUYỆT</th>
   </tr>
   <tr>
+    <th>Người duyệt</th>
     <th colspan="2">Họ và tên khách hàng</th>
     <th>Người nhận hàng</th>
     <th>Số điện thoại</th>
@@ -15,12 +16,20 @@
   </tr>
   <?php foreach ($resume as $get_bill){ ?>
     <tr>
+      <td style="text-align:center"><?php echo $get_bill['name']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['last_name']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['first_name']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['name_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['phone_receiver']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['address_receiver']; ?></td>
-      <td style="text-align:center"><?php echo $get_bill['status']; ?></td>
+      <td style="text-align:center">
+        <?php 
+        $status = $get_bill['status'];
+        if ($status == 1) {
+          echo 'Đã duyệt';
+        }
+        ?>
+      </td>
       <td style="text-align:center"><?php echo $get_bill['date_order']; ?></td>
       <td style="text-align:center"><?php echo $get_bill['total_price']; ?></td>
       <td style="text-align:center">

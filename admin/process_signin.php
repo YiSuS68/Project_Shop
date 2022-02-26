@@ -13,8 +13,9 @@ require 'connect.php';
 $query = "select * from serve 
 where account ='$account' and password ='$password'";
 $resume = mysqli_query($connect,$query);
-$number_rows = mysqli_num_rows($resume);
-
+$number_rows = mysqli_num_rows($resume);	
+// die($resume);
+// die('0');
 if($number_rows == 1) {
 	session_start();
 	$each = mysqli_fetch_array($resume);
@@ -30,6 +31,7 @@ if($number_rows == 1) {
 		setcookie('remember',$token, time() + 60*60*24*30);
 		mysqli_close($connect);
 		require 'level.php';
+	
 	}
 	require 'level.php';
 	mysqli_close($connect);

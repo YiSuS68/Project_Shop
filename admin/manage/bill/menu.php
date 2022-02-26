@@ -1,7 +1,7 @@
 <div id="div-top">
   <div class="left">
-    <a href="../root" style="text-decoration: none;">
-      <h1>QUẢN LÝ</h1>
+    <a href="../index.php" style="text-decoration: none;">
+      <h2>NHÂN VIÊN</h2>
     </a>
   </div>
   <div class="right" >
@@ -22,7 +22,7 @@
           </li>
         </a>
         <a href="../bill" style="text-decoration: none;">
-          <li class="button" id="active">
+          <li class="button">
             HÓA ĐƠN
           </li>
         </a>

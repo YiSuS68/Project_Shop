@@ -3,7 +3,6 @@
     <div style="width: 50%; height: 100%; float: left; ">
       <?php 
       require '../event_crud.php';
-      require 'page_and_search_order.php';
       ?>
     </div>
     <div style="width: 50%; height: 100%; float: left;">
@@ -16,14 +15,15 @@
   <div class="bot" style="width: 100%; height: 89%;">
     <div>
       <?php 
-      require 'table_order.php';
+      require 'page_and_search_bill.php';
+      require 'table_bill.php';
       ?>
     </div>
   </div>
 </div>
 <div style="width:100%; height: 50%;">
   <?php 
-  require 'page_and_search_bill.php';
-  require 'table_bill.php';
+  require 'page_and_search_order.php';
+  require 'table_order.php';
   ?>
 </div>
